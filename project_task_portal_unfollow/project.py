@@ -3,44 +3,51 @@
 # For copyright and license notices, see __openerp__.py file in module root
 # directory
 ##############################################################################
-from openerp import models, api
+from openerp import models, api, fields
 
 
-class task(models.Model):
+class project(models.Model):
+    _inherit = 'project.project'
+
+    unfollow_portal_users = fields.Boolean(
+        'Unfollow Portal Users',
+        help='Unfollow Portal Users from new tasks?',
+        )
+
+
+class project_task(models.Model):
     _inherit = 'project.task'
 
-    def create(self, cr, uid, vals, context=None):
-
-        task_id = super(task, self).create(cr, uid, vals, context=context)
-
+    @api.model
+    def create(self, vals):
+        task = super(project_task, self).create(vals)
+        if not task.project_id.unfollow_portal_users:
+            return task
         partner_to_unfollow_ids = []
-        for partner in self.browse(
-                cr, uid, task_id, context=context).message_follower_ids:
-            if partner.user_ids:
-                for user in partner.user_ids:
-                    if not self.pool['res.users'].has_group(
-                            cr, user.id, 'base.group_user'):
-                        partner_to_unfollow_ids.append(partner.id)
+        for follower in task.message_follower_ids:
+            if follower.user_ids:
+                for user in follower.user_ids:
+                    if not user.sudo(user).user_has_groups('base.group_user'):
+                        partner_to_unfollow_ids.append(user.partner_id.id)
                         continue
             else:
-                partner_to_unfollow_ids.append(partner.id)
-        self.message_unsubscribe(
-            cr, uid, [task_id], partner_to_unfollow_ids, context=None)
-        return task_id
+                partner_to_unfollow_ids.append(user.partner_id.id)
+        task.message_unsubscribe(partner_to_unfollow_ids)
+        return task
 
     @api.one
     def write(self, vals):
-        task_id = super(task, self).write(vals)
+        res = super(project_task, self).write(vals)
+        if not self.project_id.unfollow_portal_users:
+            return res
         partner_to_unfollow_ids = []
-        for partner in self.message_follower_ids:
-            if partner.user_ids:
-                for user in partner.user_ids:
-                    if not self.pool['res.users'].has_group(
-                            self._cr,
-                            user.id, 'base.group_user'):
-                        partner_to_unfollow_ids.append(partner.id)
+        for follower in self.message_follower_ids:
+            if follower.user_ids:
+                for user in follower.user_ids:
+                    if not user.sudo(user).user_has_groups('base.group_user'):
+                        partner_to_unfollow_ids.append(user.partner_id.id)
                         continue
             else:
-                partner_to_unfollow_ids.append(partner.id)
+                partner_to_unfollow_ids.append(user.partner_id.id)
         self.message_unsubscribe(partner_to_unfollow_ids)
-        return task_id
+        return res

@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Project Task Portal Unfollow',
-    'version': '8.0.1.0.0',
+    'version': '8.0.1.0.1',
     'category': 'Project',
     'sequence': 14,
     'summary': '',
@@ -36,7 +36,8 @@
         'project',
     ],
     'data': [
-        'subtype.xml'
+        'subtype.xml',
+        'project_view.xml',
     ],
     'demo': [
     ],
