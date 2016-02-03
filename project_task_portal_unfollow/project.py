@@ -11,8 +11,8 @@ class project(models.Model):
 
     unfollow_portal_users = fields.Boolean(
         'Unfollow Portal Users',
-        help='Unfollow Portal Users from new tasks?',
-        )
+        help='Unfollow Portal Users from new tasks?'
+    )
 
 
 class project_task(models.Model):
@@ -28,10 +28,10 @@ class project_task(models.Model):
             if follower.user_ids:
                 for user in follower.user_ids:
                     if not user.sudo(user).user_has_groups('base.group_user'):
-                        partner_to_unfollow_ids.append(user.partner_id.id)
+                        partner_to_unfollow_ids.append(follower.id)
                         continue
             else:
-                partner_to_unfollow_ids.append(user.partner_id.id)
+                partner_to_unfollow_ids.append(follower.id)
         task.message_unsubscribe(partner_to_unfollow_ids)
         return task
 
@@ -45,9 +45,9 @@ class project_task(models.Model):
             if follower.user_ids:
                 for user in follower.user_ids:
                     if not user.sudo(user).user_has_groups('base.group_user'):
-                        partner_to_unfollow_ids.append(user.partner_id.id)
+                        partner_to_unfollow_ids.append(follower.id)
                         continue
             else:
-                partner_to_unfollow_ids.append(user.partner_id.id)
+                partner_to_unfollow_ids.append(follower.id)
         self.message_unsubscribe(partner_to_unfollow_ids)
         return res
