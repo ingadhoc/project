@@ -27,6 +27,7 @@
     'description': """
 Project Issue Views Modifications
 =================================
+Will be depreceated
 * Hide Version on tree view
     """,
     'author':  'ADHOC SA',
