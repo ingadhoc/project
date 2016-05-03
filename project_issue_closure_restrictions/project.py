@@ -13,11 +13,11 @@ class project_issue(models.Model):
     @api.one
     @api.constrains('stage_id')
     def validate_issue(self):
-        if self.task_id and self.stage_id.fold == True:
+        if self.task_id and self.stage_id.closed:
             task_open = self.env['project.task'].search(
-                    [('id', '=', self.task_id.id),
-                     ('stage_id.fold', '!=', True)])
+                [('id', '=', self.task_id.id),
+                 ('stage_id.closed', '!=', True)])
             if task_open:
-                raise Warning(
-                    _("You can not close an issue with active task, we consider active task the one in stages without option 'folded'"))
-
+                raise Warning(_(
+                    "You can not close an issue with active task, we consider"
+                    " active task the one in stages without option 'closed'"))

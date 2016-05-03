@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Project Issue Closure Restrictions',
-    'version': '8.0.1.0.0',
+    'version': '8.0.1.0.1',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -28,15 +28,17 @@
 Project Issue Closure Restrictions
 ==================================
 You can only close Issue if:
-    - They don't have any active task (we consider active task the ones in stages without option "folded")
+    - They don't have any active task (we consider active task the ones in
+    stages without option "folded")
     """,
-    'author':  'ADHOC SA',
+    'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
     'images': [
     ],
     'depends': [
-        'project_task_issues',
+        'sale_service',     # for closed field
+        'project_task_issues',   # for related task field
     ],
     'data': [
     ],
