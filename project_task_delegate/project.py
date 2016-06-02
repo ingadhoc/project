@@ -15,6 +15,6 @@ class project(models.Model):
         string="Task Delegate")
 
     @api.one
-    @api.depends('child_ids')
+    @api.depends('parent_ids')
     def _compute_task_count(self):
-        self.task_count_delegate = len(self.child_ids)
+        self.task_count_delegate = len(self.parent_ids)
