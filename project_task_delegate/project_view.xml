@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+
+        <record id="view_task_kanban" model="ir.ui.view">
+            <field name="name">project.task.form</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_kanban"/>
+            <field name="arch" type="xml">
+                <field name="priority" position="after">
+                    <field name="task_count_delegate"/>
+                </field>
+                <xpath expr="//div[@class='oe_kanban_content']//field[@name='project_id']" position="after">
+                    <div groups="project.group_delegate_task">
+                        Task Delegate
+                        <field name="task_count_delegate"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+     
+
+        <record id="view_task_form" model="ir.ui.view">
+            <field name="name">project.task.form</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <field name="planned_hours" position="after">
+                    <field name="task_count_delegate" groups="project.group_delegate_task"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_task_search_form" model="ir.ui.view">
+            <field name="name">project.task.search.form.inh</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_search_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="task_count_delegate" filter_domain="[('task_count_delegate', '>',self)]"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>
