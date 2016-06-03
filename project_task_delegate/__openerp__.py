@@ -37,6 +37,7 @@ Project Task Delegate
         'project',
     ],
     'data': [
+        'data/project_data.xml',
         'project_view.xml',
     ],
     'demo': [
