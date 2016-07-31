@@ -20,14 +20,14 @@
 ##############################################################################
 {
     'name': 'Project Task Portal Unfollow',
-    'version': '8.0.1.1.1',
+    'version': '9.0.1.0.0',
     'category': 'Project',
     'sequence': 14,
     'summary': '',
     'description': """
 
     """,
-    'author':  'ADHOC SA',
+    'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
     'images': [
@@ -43,7 +43,7 @@
     ],
     'test': [
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application': False,
 }

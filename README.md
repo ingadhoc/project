@@ -1,6 +1,6 @@
-[![Runbot Status](http://runbot.adhoc.com.ar/runbot/badge/flat/25/8.0.svg)](http://runbot.adhoc.com.ar/runbot/repo/github-com-ingadhoc-project-25)
-[![Build Status](https://travis-ci.org/ingadhoc/project.svg?branch=8.0)](https://travis-ci.org/ingadhoc/project)
-[![Coverage Status](https://coveralls.io/repos/ingadhoc/project/badge.png?branch=8.0)](https://coveralls.io/r/ingadhoc/project?branch=8.0)
+[![Runbot Status](http://runbot.adhoc.com.ar/runbot/badge/flat/25/9.0.svg)](http://runbot.adhoc.com.ar/runbot/repo/github-com-ingadhoc-project-25)
+[![Build Status](https://travis-ci.org/ingadhoc/project.svg?branch=9.0)](https://travis-ci.org/ingadhoc/project)
+[![Coverage Status](https://coveralls.io/repos/ingadhoc/project/badge.png?branch=9.0)](https://coveralls.io/r/ingadhoc/project?branch=9.0)
 [![Code Climate](https://codeclimate.com/github/ingadhoc/project/badges/gpa.svg)](https://codeclimate.com/github/ingadhoc/project)
 
 # ADHOC project
@@ -13,7 +13,7 @@ This part will be replaced when running the oca-gen-addons-table script from OCA
 
 Translation Status
 ------------------
-[![Transifex Status](https://www.transifex.com/projects/p/ingadhoc-project-8-0/chart/image_png)](https://www.transifex.com/projects/p/ingadhoc-project-8-0)
+[![Transifex Status](https://www.transifex.com/projects/p/ingadhoc-project-9-0/chart/image_png)](https://www.transifex.com/projects/p/ingadhoc-project-9-0)
 
 ----
 

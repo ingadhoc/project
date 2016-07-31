@@ -21,7 +21,7 @@
 
 {
     'name': 'Long Term Projects',
-    'version': '8.0.1.1.0',
+    'version': '9.0.1.0.0',
     'author': 'OpenERP SA',
     'website': 'http://www.openerp.com',
     'license': 'AGPL-3',
@@ -57,7 +57,7 @@ Features:
         'wizard/project_compute_phases_view.xml',
         'wizard/project_compute_tasks_view.xml',
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
 }
 

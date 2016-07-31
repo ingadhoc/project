@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Project Issue Views Modifications',
-    'version': '8.0.1.0.0',
+    'version': '9.0.1.0.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -30,7 +30,7 @@ Project Issue Views Modifications
 Will be depreceated
 * Hide Version on tree view
     """,
-    'author':  'ADHOC SA',
+    'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
     'images': [
@@ -45,7 +45,7 @@ Will be depreceated
     ],
     'test': [
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application': False,
 }

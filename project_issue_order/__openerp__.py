@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Project Issue Order',
-    'version': '8.0.1.0.0',
+    'version': '9.0.1.0.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -30,7 +30,7 @@ Project Issue Order
 Add sequence field to issues and change default order to the following criteria:
     "priority desc, sequence, date_deadline, duration, create_date desc"
     """,
-    'author':  'ADHOC SA',
+    'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
     'images': [
@@ -45,7 +45,7 @@ Add sequence field to issues and change default order to the following criteria:
     ],
     'test': [
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application': False,
 }

@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Project Task Description in HTML',
-    'version': '8.0.1.0.0',
+    'version': '9.0.1.0.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -29,7 +29,7 @@ Project Task Description in HTML
 ================================
 Changes description type on tasks to html
     """,
-    'author':  'ADHOC SA',
+    'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
     'images': [
@@ -43,7 +43,7 @@ Changes description type on tasks to html
     ],
     'test': [
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application': False,
 }

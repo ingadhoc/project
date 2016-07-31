@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Project Issue Solutions',
-    'version': '8.0.1.0.0',
+    'version': '9.0.1.0.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -29,7 +29,7 @@ Project Issue Solutions
 =======================
 Add new object call solutions and adds a m2o field from issues to solutions
     """,
-    'author':  'ADHOC SA',
+    'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
     'images': [
@@ -46,7 +46,7 @@ Add new object call solutions and adds a m2o field from issues to solutions
     ],
     'test': [
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application': False,
 }

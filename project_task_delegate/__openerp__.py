@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Project Task Delegate',
-    'version': '8.0.0.0.0',
+    'version': '9.0.1.0.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -44,7 +44,7 @@ Project Task Delegate
     ],
     'test': [
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application': False,
 }

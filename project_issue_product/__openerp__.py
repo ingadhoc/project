@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Project Issue Product',
-    'version': '8.0.1.0.0',
+    'version': '9.0.1.0.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -29,7 +29,7 @@ Project Issue Product
 =====================
 Adds product field on Issues (M2O) and issue field on products (O2M)
     """,
-    'author':  'ADHOC SA',
+    'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
     'images': [
@@ -47,7 +47,7 @@ Adds product field on Issues (M2O) and issue field on products (O2M)
     ],
     'test': [
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application': False,
 }

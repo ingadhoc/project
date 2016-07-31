@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Project and Analytic Account integration impprovements',
-    'version': '8.0.1.0.0',
+    'version': '9.0.1.0.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -31,7 +31,7 @@ Project and Analytic Account integration impprovements.
 Adds domains restriction to project task so that only projets that use task and are not in cancelled, done or tempalte state, can be choosen. 
 Adds domains restriction to timesheet records so that only
     """,
-    'author':  'ADHOC SA',
+    'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
     'images': [
@@ -47,7 +47,7 @@ Adds domains restriction to timesheet records so that only
     ],
     'test': [
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application': False,
 }
