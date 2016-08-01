@@ -24,13 +24,6 @@
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
-    'description': """
-Project Closure Restrictions
-============================
-You can only close projects if:
-    - They don't have any active task (we consider active task the ones in stages without option "folded")
-    - The related analytic account (contract) is closed
-    """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
@@ -45,7 +38,7 @@ You can only close projects if:
     ],
     'test': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }
