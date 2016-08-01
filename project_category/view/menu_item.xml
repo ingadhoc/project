@@ -12,8 +12,8 @@
 
         <menuitem name="Type"
             id="category"
-            parent="base.menu_definitions"
-            sequence="1"/>
+            parent="base.menu_main_pm"
+            sequence="101"/>
 
         <menuitem name="Project Type"
             id="project_category"
