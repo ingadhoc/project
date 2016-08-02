@@ -6,14 +6,14 @@
             <field name="model">project.task</field>
             <field name="inherit_id" ref="project.view_task_form2"/>
             <field name="arch" type="xml">
-                <field name="categ_ids" position="after">
+                <field name="date_deadline" position="after">
                     <field name="issue_id"/>
                 </field>
-                <page string="Extra Info" position="after">
+                <xpath expr="//notebook/page[2]" position="after">
                     <page string="Issues">
                         <field name="issue_ids"/>
-                    </page>
                 </page>
+                </xpath>
 
             </field>
         </record>

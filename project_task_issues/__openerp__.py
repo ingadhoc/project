@@ -24,11 +24,6 @@
     'category': 'Project',
     'sequence': 14,
     'summary': '',
-    'description': """
-Project Task Issues
-==================================
-.
-    """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
@@ -39,13 +34,13 @@ Project Task Issues
         'project',
     ],
     'data': [
-    'view/task_issue_view.xml'
+        'view/task_issue_view.xml',
     ],
     'demo': [
     ],
     'test': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': True,
 }
