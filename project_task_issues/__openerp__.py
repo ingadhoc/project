@@ -34,7 +34,7 @@
         'project',
     ],
     'data': [
-    'view/task_issue_view.xml'
+        'view/task_issue_view.xml',
     ],
     'demo': [
     ],
