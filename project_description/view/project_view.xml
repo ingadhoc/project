@@ -34,11 +34,11 @@
             <field name="model">project.project</field>
             <field name="inherit_id" ref="project.edit_project"/>
             <field name="arch" type="xml">
-                <page name="team" position="before">
-                    <page name="description" string="Terms and Conditions" position="before">
+                <xpath expr="//sheet/notebook/page[1]" position="after">
+                    <page string="Description">
                         <field name="description"/>
-                    </page>
                 </page>
+                </xpath>
             </field>
         </record>
 
