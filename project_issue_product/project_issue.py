@@ -1,13 +1,15 @@
- #-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+##############################################################################
+# For copyright and license notices, see __openerp__.py file in module root
+# directory
+##############################################################################
+from openerp import fields, models
 
 
-from openerp.osv import fields, osv, orm
-
-class project_issue(osv.osv):
+class project_issue(models.Model):
     _inherit = 'project.issue'
+    product_id = fields.Many2one('product.product',
+                                 string='Product')
 
-    _columns = {
-        'product_id': fields.many2one('product.product','Product'),
-    }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
