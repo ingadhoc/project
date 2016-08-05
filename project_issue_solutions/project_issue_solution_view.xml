@@ -7,11 +7,11 @@
             <field name="model">project.issue.solution</field>
             <field name="arch" type="xml">
                 <search string="Solution">   
-                    <field name="name" string="Everywhere" filter_domain="['|','|','|',('name','ilike',self),('issue_description','ilike',self),('solution_description','ilike',self),('categ_ids','ilike',self)]"/>
+                    <field name="name" string="Everywhere" filter_domain="['|','|','|',('name','ilike',self),('issue_description','ilike',self),('solution_description','ilike',self),('tags_ids','ilike',self)]"/>
                     <field name="name"/>
                     <field name="issue_description"/>
                     <field name="solution_description"/>
-                    <field name="categ_ids"/>   
+                    <field name="tags_ids"/>
                 </search>                 
             </field>
         </record>
@@ -22,7 +22,7 @@
             <field name="arch" type="xml">
                 <tree string="Solution">   
                     <field name="name"/>
-                    <field name="categ_ids"/>   
+                    <field name="tags_ids"/>
                 </tree>                
             </field>
         </record>
@@ -36,8 +36,8 @@
                         <h1>
                             <field name="name" placeholder="Name..." class="oe_inline"/>
                         </h1>
-                        <label for="categ_ids" class="oe_edit_only"/>
-                        <field name="categ_ids" widget="many2many_tags"/>    
+                        <label for="tags_ids" class="oe_edit_only"/>
+                        <field name="tags_ids" widget="many2many_tags"/>
                         <notebook>
                             <page string="Description">
                                 <group col="1">
