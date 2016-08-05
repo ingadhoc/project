@@ -30,8 +30,8 @@
     'images': [
     ],
     'depends': [
-            'project_issue_solutions',
-            'project_issue_product',
+        'project_issue_solutions',
+        'project_issue_product',
     ],
     'data': [
         'project_issue_solution_view.xml',
