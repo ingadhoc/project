@@ -36,6 +36,7 @@
         'project_view.xml',
     ],
     'demo': [
+        'demo/project_task_contract_demo.yml'
     ],
     'test': [
     ],
