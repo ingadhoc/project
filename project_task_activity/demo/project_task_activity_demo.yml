@@ -7,6 +7,7 @@
     name: Activity demo 4
     user_id: base.user_root
 
+
 -
   !function {model: project.task.activity, name: action_done, id: project_task_activity_demo_0}:
   - model: project.task.activity
@@ -24,3 +25,64 @@
   !function {model: project.task.activity, name: action_cancel, id: project_task_activity_demo_1}:
   - model: project.task.activity
     eval: "[obj(ref('project_task_activity_demo_1')).id]"
+
+-
+  !record {model: project.task.activity, id: project_task_activity_demo_2}:
+    task_id: project.project_task_data_1
+    project_id: project.project_project_data
+    user_id: base.user_demo
+    name: Activity demo 6
+    user_id: base.user_root
+    state: done
+
+-
+  !function {model: project.task.activity, name: action_cancel, id: project_task_activity_demo_2}:
+  - model: project.task.activity
+    eval: "[obj(ref('project_task_activity_demo_2')).id]"
+
+
+-
+  !record {model: project.task.activity, id: project_task_activity_demo_3}:
+    task_id: project.project_task_data_1
+    project_id: project.project_project_data
+    user_id: base.user_demo
+    name: Activity demo 7
+    user_id: base.user_root
+    state: pending
+
+-
+  !function {model: project.task, name: _get_activities_progress, id: project_task_activity_demo_3}:
+  - model: project.task
+    activity_ids: project_task_activity_demo_3
+    eval: "[obj(ref('project_task_activity_demo_3')).id]"
+
+
+-
+  !record {model: project.task.activity, id: project_task_activity_demo_4}:
+    task_id: project.project_task_data_1
+    project_id: project.project_project_1
+    user_id: base.user_demo
+    name: Activity demo 8
+    user_id: base.user_root
+    state: done
+
+-
+  !function {model: project.project, name: _get_task_activity, id: project_task_activity_demo_4}:
+  - model: project.project
+    eval: "[obj(ref('project_task_activity_demo_4')).id]"
+
+-
+  !function {model: project.project, name: _get_activities_todo, id: project_task_activity_demo_1}:
+  - model: project.project
+    eval: "[obj(ref('project_task_activity_demo_1')).id]"
+
+-
+  !function {model: project.project, name: _get_activities_done, id: project_task_activity_demo_2}:
+  - model: project.project
+    eval: "[obj(ref('project_task_activity_demo_2')).id]"
+
+-
+  !function {model: project.project, name: _get_progress_activities, id: project_task_activity_demo_3}:
+  - model: project.project
+    eval: "[obj(ref('project_task_activity_demo_3')).id]"
+
