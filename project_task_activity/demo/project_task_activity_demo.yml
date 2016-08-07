@@ -6,7 +6,11 @@
     user_id: base.user_demo
     name: Activity demo 4
     user_id: base.user_root
-    action: 'action_done'
+
+-
+  !function {model: project.task.activity, name: action_done, id: project_task_activity_demo_0}:
+  - model: project.task.activity
+    eval: "[obj(ref('project_task_activity_demo_0')).id]"
 
 -
   !record {model: project.task.activity, id: project_task_activity_demo_1}:
@@ -15,4 +19,8 @@
     user_id: base.user_demo
     name: Activity demo 5
     user_id: base.user_root
-    action: 'action_cancel'
+
+-
+  !function {model: project.task.activity, name: action_cancel, id: project_task_activity_demo_1}:
+  - model: project.task.activity
+    eval: "[obj(ref('project_task_activity_demo_1')).id]"
