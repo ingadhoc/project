@@ -42,16 +42,19 @@ class account_analytic_account(models.Model):
         '''
         if vals.get('task_project_type') != 'contract_project':
             return False
-        return super(account_analytic_account, self)._trigger_project_creation(vals)
+        return super(account_analytic_account,
+                     self)._trigger_project_creation(vals)
 
     # @api.onchange('template_id')
     # def on_change_template(self):
     #     res = super(account_analytic_account,
-    #                 self).on_change_template(template_id, date_start=date_start)
+    #                 self).on_change_template(template_id,
+    #                                          date_start=date_start)
     #     if self.template_id and 'value' in res:
-    #         # template = self.search(cr, uid, template_id, context=context)
-    #         res['value']['task_project_type'] = self.template_id.task_project_type
-    #         res['value']['other_project_id'] = self.template_id.other_project_id
+    #         res['value']['task_project_type'] = \
+    #             self.template_id.task_project_type
+    #         res['value']['other_project_id'] = \
+    #             self.template_id.other_project_id
     #     return res
 
 
