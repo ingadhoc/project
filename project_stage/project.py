@@ -12,12 +12,17 @@ class project_type(models.Model):
     _description = 'Project Stage'
     _order = 'sequence'
 
-    name = fields.Char('Stage Name', required=True, translate=True)
+    name = fields.Char(string='Stage Name',
+                       required=True,
+                       translate=True)
     description = fields.Text('Description')
     sequence = fields.Integer('Sequence')
     case_default = fields.Boolean(
         'Default for New Projects',
-        help="If you check this field, this stage will be proposed by default on each new project. It will not assign this stage to existing projects.")
+        help="If you check this field, this stage "
+             "will be proposed by default on each "
+             "new project. It will not assign this "
+             "stage to existing projects.")
     fold = fields.Boolean(
         'Folded in Kanban View',
         help='This stage is folded in the kanban view when'
@@ -39,10 +44,13 @@ class project(models.Model):
          ('done', 'Ready for next stage')],
         'Kanban State',
         track_visibility='onchange',
-        help="A task's kanban state indicates special situations affecting it:\n"
+        help="A task's kanban state indicates special "
+             "situations affecting it:\n"
         " * Normal is the default situation\n"
-        " * Blocked indicates something is preventing the progress of this task\n"
-        " * Ready for next stage indicates the task is ready to be pulled to the next stage",
+        " * Blocked indicates something is preventing "
+             "the progress of this task\n"
+        " * Ready for next stage indicates the task is ready "
+             "to be pulled to the next stage",
         required=False,
         copy=False)
 

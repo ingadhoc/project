@@ -31,11 +31,11 @@
             <field name="model">project.project</field>
             <field name="inherit_id" ref="project.view_project_kanban"/>
             <field name="arch" type="xml">
-                <kanban class="oe_background_grey">
+                <kanban class="oe_background_grey o_kanban_dashboard o_project_kanban">
                     <field name="stage_id"/>
                     <field name="sequence"/>
                 </kanban>
-                <kanban class="oe_background_grey" position="attributes">
+                <kanban class="oe_background_grey o_kanban_dashboard o_project_kanban" position="attributes">
                     <attribute name="default_group_by">stage_id</attribute>
                 </kanban>
             </field>
