@@ -36,7 +36,7 @@
     state: done
 
 -
-  !function {model: project.task.activity, name: action_cancel, id: project_task_activity_demo_2}:
+  !function {model: project.task.activity, name: action_done, id: project_task_activity_demo_2}:
   - model: project.task.activity
     eval: "[obj(ref('project_task_activity_demo_2')).id]"
 
