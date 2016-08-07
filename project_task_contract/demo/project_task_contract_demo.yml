@@ -51,13 +51,6 @@
     name: Prepare Requirements Document Demo 1
     color: 3
     analytic_account_id: account_analytic_account_demo_1
-    activity_ids:
-      - name: Activity demo 6
-        project_id: project.project_project_data
-        user_id: base.user_demo
-      - name: Activity demo 7
-        project_id: project.project_project_data
-        user_id: base.user_demo
 
 -
   !record {model: project.task, id: project_task_my_demo_2}:
@@ -69,13 +62,7 @@
     name: Prepare Requirements Document Demo 1
     color: 3
     analytic_account_id: account_analytic_account_demo_2
-    activity_ids:
-      - name: Activity demo 4
-        project_id: project.project_project_data
-        user_id: base.user_demo
-      - name: Activity demo 5
-        project_id: project.project_project_data
-        user_id: base.user_demo
+
 
 
 
