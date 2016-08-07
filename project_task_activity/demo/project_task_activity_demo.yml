@@ -6,9 +6,8 @@
     user_id: base.user_demo
     name: Activity demo 4
     user_id: base.user_root
+    action: 'action_done'
 
--
-  !workflow {model: project.task.activity, action: action_done, ref: project_task_activity_demo_0}
 -
   !record {model: project.task.activity, id: project_task_activity_demo_1}:
     task_id: project.project_task_data_1
@@ -16,6 +15,4 @@
     user_id: base.user_demo
     name: Activity demo 5
     user_id: base.user_root
-
--
-  !workflow {model: project.task.activity, action: action_cancel, ref: project_task_activity_demo_1}
+    action: 'action_cancel'
