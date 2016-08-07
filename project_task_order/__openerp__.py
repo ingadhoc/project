@@ -24,12 +24,6 @@
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
-    'description': """
-Project Order
-===================
-Change default tasks order to the following criteria:
-    "priority desc, sequence, date_deadline, duration, create_date desc"
-    """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
@@ -44,7 +38,7 @@ Change default tasks order to the following criteria:
     ],
     'test': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }
