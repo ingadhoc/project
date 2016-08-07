@@ -6,7 +6,6 @@
 
 
 from openerp import fields, models
-from openerp.tools.translate import _
 
 
 class project_task_type(models.Model):
