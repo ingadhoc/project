@@ -40,6 +40,7 @@
         'security/ir.model.access.csv'
     ],
     'demo': [
+        'demo/project_task_activity_demo.yml'
     ],
     'test': [
     ],
