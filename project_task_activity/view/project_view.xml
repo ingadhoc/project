@@ -69,7 +69,7 @@
                     <field name="progress_activities"/>
                     <field name="activity_ids" invisible="1"/>
                 </field>
-                <div class="text-center oe_kanban_alias" position="after">
+                <div t-if="record.alias_name.value and record.alias_domain.value" position="after">
                     <div class="oe_kanban_project" style="width:130px; height: 80px; margin: 0 auto; min-height: 80px;" attrs="{'invisible':[('activity_ids', '=', [])]}">
                         <field name="progress_activities"  widget="gauge" />
                     </div>
@@ -86,7 +86,7 @@
                 <field name="analytic_account_id" position="after">
                     <field name="activity_ids" invisible="1"/>
                 </field>
-                <div class="oe_right oe_button_box">
+                <div class="oe_button_box">
                     <button class="oe_inline oe_stat_button" type="action" attrs="{'invisible':[('activity_ids','=', [])]}" name="%(project_task_activity.action_activity)d"
                     context="{'search_default_project_id': active_id,'search_default_group_task_id': 1}">
                             <field string="Activities" name="progress_activities" widget="percentpie"/>
