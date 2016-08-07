@@ -36,6 +36,7 @@
         'view/activities_menuitem.xml',
         'view/project_view.xml',
         'view/task_view.xml',
+        'view/project_activity_data.xml',
         'security/ir.model.access.csv'
     ],
     'demo': [
