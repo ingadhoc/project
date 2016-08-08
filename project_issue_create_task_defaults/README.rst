@@ -6,6 +6,7 @@
 Project Issue Create Task Defaults
 ==================================
 
+This module change the context task_id field in project issue.
 
 Installation
 ============
