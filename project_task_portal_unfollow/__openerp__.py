@@ -37,6 +37,7 @@
         'project_view.xml',
     ],
     'demo': [
+        'demo/project_task_portal_unfollow_demo.yml'
     ],
     'test': [
     ],
