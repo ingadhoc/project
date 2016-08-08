@@ -24,9 +24,6 @@
     'category': 'Project',
     'sequence': 14,
     'summary': '',
-    'description': """
-
-    """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
@@ -43,7 +40,7 @@
     ],
     'test': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }
