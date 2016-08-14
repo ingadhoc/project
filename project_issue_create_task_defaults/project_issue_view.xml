@@ -8,7 +8,8 @@
             <field name="inherit_id" ref="project_issue.project_issue_form_view"/>
             <field name="arch" type="xml">       
                 <field name="task_id" position="attributes">
-                    <attribute name="context">{'default_project_id':project_id,'default_name':name,'default_categ_ids':categ_ids,'default_description':issue_description}</attribute>
+                    <attribute name="context">{'default_project_id':project_id,'default_name':name,'default_categ_ids':tag_ids,'default_description':description}</attribute>
+
                 </field>
             </field>
         </record>
