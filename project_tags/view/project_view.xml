@@ -20,9 +20,12 @@
             <field name="model">project.project</field>
             <field name="inherit_id" ref="project.edit_project"/>
             <field name="arch" type="xml">
-                <p position="after">
-                    <field name="project_tag_ids" widget="many2many_tags"/>
-                </p>
+                <xpath expr="//div[@name='options_active']" position="after">
+                    <div>
+                        <label for="project_tag_ids" class="oe_inline"/>
+                        <field name="project_tag_ids" widget="many2many_tags"/>
+                    </div>
+                </xpath>
             </field>
         </record>
 
@@ -35,7 +38,7 @@
                 <field name="doc_count" position="after">
                     <field name="project_tag_ids"/>
                 </field>
-                <div class="oe_kanban_project_avatars" position="after">
+                <div class="o_project_kanban_manage" position="after">
                     <div class="oe_kanban_footer_left" style="margin-top:5px;">
                         <field name="project_tag_ids"/>
                     </div>
