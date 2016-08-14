@@ -7,7 +7,7 @@
             <field name="model">project.task</field>
             <field name="inherit_id" ref="project.view_task_form2"/>
             <field name="arch" type="xml">
-                <field name="work_ids" position="before">
+                <field name="description" position="after">
                     <label for="activity_ids" string="Activities"/>
                     <field name="activity_ids">
                         <tree editable="top" colors="gray:state == 'cancel';blue:state == 'pending'">
@@ -32,7 +32,7 @@
             <field name="model">project.task</field>
             <field name="inherit_id" ref="project.view_task_kanban"/>
             <field name="arch" type="xml">
-                <field name="categ_ids" position="after">
+                <field name="tag_ids" position="after">
                     <field name="activities_progress"/>
                     <field name="activity_ids" invisible="1"/>
                 </field>

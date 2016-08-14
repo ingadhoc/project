@@ -27,10 +27,6 @@
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
     'summary': '',
-    'description': """
-Project Task Activity
-=====================
-""",
     'depends': [
         'project',
     ],
@@ -40,13 +36,15 @@ Project Task Activity
         'view/activities_menuitem.xml',
         'view/project_view.xml',
         'view/task_view.xml',
+        'view/project_activity_data.xml',
         'security/ir.model.access.csv'
     ],
     'demo': [
+        'demo/project_task_activity_demo.yml'
     ],
     'test': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }

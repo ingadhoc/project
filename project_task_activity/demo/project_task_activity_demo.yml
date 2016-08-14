@@ -1,0 +1,159 @@
+
+-
+  !record {model: project.task.activity, id: project_task_activity_demo_0}:
+    task_id: project.project_task_data_1
+    project_id: project.project_project_data
+    name: Activity demo 4
+    user_id: base.user_root
+
+
+-
+  !function {model: project.task.activity, name: action_done, id: project_task_activity_demo_0}:
+  - model: project.task.activity
+    eval: "[obj(ref('project_task_activity_demo_0')).id]"
+
+-
+  !record {model: project.task.activity, id: project_task_activity_demo_1}:
+    task_id: project.project_task_data_1
+    project_id: project.project_project_data
+    user_id: base.user_demo
+    name: Activity demo 5
+
+-
+  !function {model: project.task.activity, name: action_cancel, id: project_task_activity_demo_1}:
+  - model: project.task.activity
+    eval: "[obj(ref('project_task_activity_demo_1')).id]"
+
+-
+  !record {model: project.task.activity, id: project_task_activity_demo_2}:
+    task_id: project.project_task_data_1
+    project_id: project.project_project_data
+    user_id: base.user_demo
+    name: Activity demo 6
+    state: done
+
+-
+  !function {model: project.task.activity, name: action_done, id: project_task_activity_demo_2}:
+  - model: project.task.activity
+    eval: "[obj(ref('project_task_activity_demo_2')).id]"
+
+-
+  !record {model: project.task, id: project_task_my_demo_1}:
+    planned_hours: !eval 40.0
+    remaining_hours: !eval 40.0
+    user_id: base.user_demo
+    priority: 0
+    project_id: project.project_project_1
+    name: Prepare Requirements Document Demo
+    color: 3
+    activity_ids:
+      - name: Activity demo 6
+        project_id: project.project_project_data
+        user_id: base.user_demo
+      - name: Activity demo 7
+        project_id: project.project_project_data
+        user_id: base.user_demo
+
+-
+  !function {model: project.task, name: _get_activities_progress, id: project_task_my_demo_1}:
+  - model: project.task
+    eval: "[obj(ref('project_task_my_demo_1')).id]"
+
+-
+  !record {model: project.project, id: project_project_my_demo_1}:
+    state: open
+    user_id: base.user_demo
+    partner_id: portal.partner_demo_portal
+    name: Project Demo
+    color: 3
+    date_start: !eval time.strftime('%Y-%m-01 10:00:00')
+    activity_ids:
+      - name: Activity demo 8
+        user_id: base.user_demo
+        task_id: project.project_task_data_1
+      - name: Activity demo 9
+        user_id: base.user_demo
+        task_id: project.project_task_data_1
+
+-
+  !function {model: project.project, name: _get_task_activity, id: project_project_my_demo_1}:
+  - model: project.project
+    eval: "[obj(ref('project_project_my_demo_1')).id]"
+
+
+-
+  !record {model: project.project, id: project_project_my_demo_2}:
+    state: open
+    user_id: base.user_demo
+    partner_id: portal.partner_demo_portal
+    name: Project Demo 2
+    color: 3
+    date_start: !eval time.strftime('%Y-%m-01 10:00:00')
+    activity_ids:
+      - name: Activity demo 10
+        user_id: base.user_demo
+        task_id: project.project_task_data_1
+        state: done
+      - name: Activity demo 11
+        user_id: base.user_demo
+        task_id: project.project_task_data_1
+        state: done
+
+
+-
+  !function {model: project.project, name: _get_activities_todo, id: project_project_my_demo_2}:
+  - model: project.project
+    eval: "[obj(ref('project_project_my_demo_2')).id]"
+
+
+-
+  !record {model: project.project, id: project_project_my_demo_3}:
+    state: open
+    user_id: base.user_demo
+    partner_id: portal.partner_demo_portal
+    name: Project Demo 3
+    color: 3
+    date_start: !eval time.strftime('%Y-%m-01 10:00:00')
+    activity_ids:
+      - name: Activity demo 12
+        user_id: base.user_demo
+        task_id: project.project_task_data_1
+        state: done
+      - name: Activity demo 13
+        user_id: base.user_demo
+        task_id: project.project_task_data_1
+        state: done
+
+-
+  !function {model: project.project, name: _get_activities_done, id: project_project_my_demo_3}:
+  - model: project.project
+    eval: "[obj(ref('project_project_my_demo_3')).id]"
+
+-
+  !record {model: project.project, id: project_project_my_demo_4}:
+    state: open
+    user_id: base.user_demo
+    partner_id: portal.partner_demo_portal
+    name: Project Demo 4
+    color: 3
+    date_start: !eval time.strftime('%Y-%m-01 10:00:00')
+    activity_ids:
+      - name: Activity demo 12
+        user_id: base.user_demo
+        task_id: project.project_task_data_1
+      - name: Activity demo 13
+        user_id: base.user_demo
+        task_id: project.project_task_data_1
+
+-
+  !function {model: project.project, name: _get_progress_activities, id: project_project_my_demo_4}:
+  - model: project.project
+    eval: "[obj(ref('project_project_my_demo_4')).id]"
+
+
+
+
+
+
+
+
