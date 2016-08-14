@@ -24,11 +24,6 @@
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
-    'description': """
-Project Issue Product
-=====================
-Adds product field on Issues (M2O) and issue field on products (O2M)
-    """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
@@ -47,7 +42,7 @@ Adds product field on Issues (M2O) and issue field on products (O2M)
     ],
     'test': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }
