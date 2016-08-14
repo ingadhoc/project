@@ -12,7 +12,7 @@
                 <field name="priority" position="after">
                     <field name="task_count_delegate"/>
                 </field>
-                <xpath expr="//div[@class='oe_kanban_content']//field[@name='project_id']" position="after">
+                <xpath expr="//field[@name='project_id']" position="after">
                     <div groups="project.group_delegate_task">
                         Task Delegate
                         <field name="task_count_delegate"/>
