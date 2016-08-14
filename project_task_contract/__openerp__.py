@@ -24,10 +24,6 @@
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
-    'description': """
-Project Task Contract
-=====================
-    """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
@@ -40,10 +36,11 @@ Project Task Contract
         'project_view.xml',
     ],
     'demo': [
+        'demo/project_task_contract_demo.yml'
     ],
     'test': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }
