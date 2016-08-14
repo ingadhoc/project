@@ -1,8 +1,12 @@
- #-*- coding: utf-8 -*-
-from openerp.osv import fields, osv
+# -*- coding: utf-8 -*-
+##############################################################################
+# For copyright and license notices, see __openerp__.py file in module root
+# directory
+##############################################################################
+from openerp import fields, models
 
 
-class project_isssue_solution(osv.osv):
+class project_isssue_solution(models.Model):
 
     """ Note """
     _name = 'project.issue.solution'
@@ -10,12 +14,14 @@ class project_isssue_solution(osv.osv):
     _description = "Project Issue Solution"
     _order = 'name'
 
-    _columns = {
-        'name': fields.char(string='Name', required=True),
-        'solution_description': fields.html('Solution Description'),
-        'issue_description': fields.html('Issue Description'),
-        'categ_ids': fields.many2many('project.category', string='Tags'),
-        'project_issue_ids': fields.one2many('project.issue', 'project_issue_solution_id', string='Issues'),
-    }
+    name = fields.Char(string='Name', required=True)
+    solution_description = fields.Html(string='Solution Description')
+    issue_description = fields.Html(string='Issue Description')
+    tags_ids = fields.Many2many('project.tags',
+                                string='Tags')
+    project_issue_ids = fields.One2many('project.issue',
+                                        'project_issue_solution_id',
+                                        string='Issues')
+
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
