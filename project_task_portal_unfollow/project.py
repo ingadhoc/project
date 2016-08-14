@@ -24,7 +24,7 @@ class project_task(models.Model):
         if not task.project_id.unfollow_portal_users:
             return task
         partner_to_unfollow_ids = []
-        for follower in task.message_follower_ids:
+        for follower in task.message_partner_ids:
             if follower.user_ids:
                 for user in follower.user_ids:
                     if not user.sudo(user).user_has_groups('base.group_user'):
@@ -41,7 +41,7 @@ class project_task(models.Model):
         if not self.project_id.unfollow_portal_users:
             return res
         partner_to_unfollow_ids = []
-        for follower in self.message_follower_ids:
+        for follower in self.message_partner_ids:
             if follower.user_ids:
                 for user in follower.user_ids:
                     if not user.sudo(user).user_has_groups('base.group_user'):
