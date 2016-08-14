@@ -32,7 +32,7 @@
             <field name="model">project.task</field>
             <field name="inherit_id" ref="project.view_task_tree2"/>
             <field name="arch" type="xml">
-                <field name="date_end" position="after">
+                <field name="stage_id" position="after">
                     <field name="phase_id" invisible="True"/>
                 </field>
             </field>
@@ -55,9 +55,11 @@
             <field name="model">project.task.phase</field>
             <field name="arch" type="xml">
                 <form string="Task Phase">
-                    <group>
-                        <field name="name"/>
-                    </group>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
                 </form>
             </field>
         </record>
@@ -80,7 +82,7 @@
             <field name="view_id" ref="task_phase_tree"/>
         </record>
 
-        <menuitem action="open_task_phase_form" id="menu_task_phases_view" parent="base.menu_definitions" sequence="5"/>
+        <menuitem action="open_task_phase_form" id="menu_task_phases_view" parent="project.menu_project_config" sequence="5"/>
 
     </data>
 </openerp>
