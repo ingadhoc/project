@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="project_issue.project_issue_form_view"/>
             <field name="arch" type="xml">
                <!-- Replace statistics for dates-->
-                <group string="Statistics" position="replace">
+                <xpath expr="//page[@name='extra_info']/group[1]" position="after">
                     <group string="Dates">
                         <!-- Fecha de creacion -->
                         <field name="create_date"/>                    
@@ -18,7 +18,7 @@
                         <!--  Fecha de asignacion -->
                         <field name="date_open" string="Assignation Date" readonly="False"/>
                     </group>
-                </group>
+                </xpath>
 
                 <form>
                     <!-- Dejamos los campos porlas dudas -->
