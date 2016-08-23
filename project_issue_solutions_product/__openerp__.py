@@ -24,18 +24,14 @@
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
-    'description': """
-Project Issue Solutions Product
-===============================
-    """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
     'images': [
     ],
     'depends': [
-            'project_issue_solutions',
-            'project_issue_product',
+        'project_issue_solutions',
+        'project_issue_product',
     ],
     'data': [
         'project_issue_solution_view.xml',
@@ -45,7 +41,7 @@ Project Issue Solutions Product
     ],
     'test': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }
