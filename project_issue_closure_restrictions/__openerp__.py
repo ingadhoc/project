@@ -24,13 +24,6 @@
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
-    'description': """
-Project Issue Closure Restrictions
-==================================
-You can only close Issue if:
-    - They don't have any active task (we consider active task the ones in
-    stages without option "folded")
-    """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
@@ -46,7 +39,7 @@ You can only close Issue if:
     ],
     'test': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }
