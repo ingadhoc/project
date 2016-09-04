@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Portal Issue Solutions',
-    'version': '8.0.1.0.0',
+    'version': '8.0.1.1.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -39,6 +39,7 @@ Portal Issue Solutions
     ],
     'data': [
         'security/ir.model.access.csv',
+        'project_issue_view.xml',
     ],
     'demo': [
     ],

@@ -16,8 +16,10 @@
                         </group>
                     </page>
                 </page>
+                <!-- aprovechamos apoenrle a esta pag que sea solo para empleados ya que el campo es solo para empleados -->
                 <page string="Description" position="attributes">                
                     <attribute name="string">Internal Description</attribute>
+                    <attribute name="groups">base.group_user</attribute>
                 </page>                        
             </field>
         </record>

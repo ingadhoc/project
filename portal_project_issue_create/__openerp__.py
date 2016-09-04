@@ -21,7 +21,7 @@
 
 {
     'name': 'Portal Project Issue Create',
-    'version': '8.0.0.0.0',
+    'version': '8.0.0.1.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -40,6 +40,7 @@ Portal Project Issue Create
     'data': [
         'security/ir.model.access.csv',
         'security/portal_security.xml',
+        'project_issue_view.xml',
     ],
     'demo': [
     ],

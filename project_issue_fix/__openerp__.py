@@ -27,6 +27,8 @@
     'description': """
 Project Issue Fix
 =================
+* Use same rule for employees as in task so that they can create issues on
+projects of type "followers only"
     """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
