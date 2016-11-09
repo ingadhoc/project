@@ -13,6 +13,3 @@ class project_issue(models.Model):
                                                 string='Linked Solution')
     issue_description = fields.Html(string='Issue Description')
     solution_description = fields.Html(string='Solution Description')
-
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

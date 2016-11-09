@@ -55,4 +55,3 @@ class project(models.Model):
         copy=False)
 
     _order = "sequence"
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

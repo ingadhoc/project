@@ -15,4 +15,3 @@ class project(models.Model):
         'project_id',
         'project_tag_id',
         string='Tags')
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

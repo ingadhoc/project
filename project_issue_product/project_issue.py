@@ -10,6 +10,3 @@ class project_issue(models.Model):
     _inherit = 'project.issue'
     product_id = fields.Many2one('product.product',
                                  string='Product')
-
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

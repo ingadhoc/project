@@ -17,5 +17,3 @@ class project_issue(models.Model):
                               default=10,
                               help="Gives the sequence order when "
                                    "displaying a list of tasks.")
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

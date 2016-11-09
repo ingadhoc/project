@@ -76,4 +76,3 @@ class project(models.Model):
         if self.analytic_account_id:
             self.project_id = self.analytic_account_id.other_project_id
             self.partner_id = self.analytic_account_id.partner_id
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

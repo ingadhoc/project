@@ -22,6 +22,3 @@ class project_isssue_solution(models.Model):
     project_issue_ids = fields.One2many('project.issue',
                                         'project_issue_solution_id',
                                         string='Issues')
-
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

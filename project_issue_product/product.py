@@ -11,5 +11,3 @@ class product_product(models.Model):
     project_issue_ids = fields.One2many('project.issue',
                                         'product_id',
                                         string='Issues')
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
