@@ -9,5 +9,8 @@ from openerp import models, fields
 class account_analytic_account(models.Model):
     _inherit = 'account.analytic.account'
 
-    description = fields.Text('Description',
-                              help="Account analytic account description")
+    # para simplificar volvemos a crear el mismo campo que ya existia antes
+    description = fields.Text(
+        'Description',
+        help="Account analytic account description"
+    )
