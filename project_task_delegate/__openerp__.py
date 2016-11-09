@@ -19,7 +19,7 @@
 #
 ##############################################################################
 {
-    'name': 'Project Task Delegate',
+    'name': 'Count Nbr of Delegated Task',
     'version': '9.0.1.0.0',
     'category': 'Projects & Services',
     'sequence': 14,
@@ -40,7 +40,7 @@
     ],
     'test': [
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application': False,
 }

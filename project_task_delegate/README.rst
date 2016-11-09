@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=====================
-Project Task Delegate
-=====================
+============================
+Count Nbr of Delegated Task
+============================
 
-This module add a delegate count field in project task.
+This module add a field that counts how many delegated task exists per task.
 
 Installation
 ============

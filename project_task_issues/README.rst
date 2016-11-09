@@ -6,7 +6,7 @@
 Project Task Issues
 ===================
 
-This module add and show a issue field and show issues in project task.
+Show in tasks the related issues (o2m field) and also the main issue (the first one) with a m2o field.
 
 Installation
 ============

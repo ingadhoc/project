@@ -12,7 +12,7 @@ class project(models.Model):
     task_count_delegate = fields.Integer(
         compute="_compute_task_count",
         store=True,
-        string="Task Delegate")
+        string="# Parent Task")
 
     @api.one
     @api.depends('parent_ids')

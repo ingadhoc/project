@@ -11,7 +11,7 @@
 
         <menuitem name="Project Stages"
             id="project_stages"
-            parent="base.menu_project_config_project"
+            parent="project.menu_project_config"
             action="action_project_stage"
             sequence="4"/>
     </data>

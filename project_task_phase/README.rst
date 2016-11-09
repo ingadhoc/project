@@ -6,7 +6,9 @@
 Project Task Phase
 ==================
 
-This module add project phases to tasks.
+This module createsa new model "Project Phase" (with name and sequence) add a link (m2o) on tasks to phases. This way you can group tasks in different phases of a project.
+
+Note that phases are defined globaly and not per project.
 
 Installation
 ============
