@@ -5,6 +5,7 @@
 =====================
 Project Duplicate FIX
 =====================
+
 Deletes messages of the new project when you duplicate a project.
 
 Installation

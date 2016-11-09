@@ -21,7 +21,7 @@
 
 {
     'name': 'Project Duplicate Analytic Hierachy',
-    'version': '8.0.0.0.0',
+    'version': '9.0.1.0.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -44,7 +44,7 @@ as it is done when making copy of project
     ],
     'test': [
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application': False,
 }
