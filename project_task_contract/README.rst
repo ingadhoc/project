@@ -6,7 +6,9 @@
 Project Task Contract
 =====================
 
-This module add fields task project in account_analytic_account.
+This module add allow to set contracts per task. Usefull if you use one project per kind of service and each task is like a customer project/contract. With this module a project would be like a category / kind of service you offer.
+
+Not recommended if you use projects in the standar way.
 
 Installation
 ============

@@ -14,7 +14,7 @@
                 </field>
                 <xpath expr="//field[@name='project_id']" position="after">
                     <div groups="project.group_delegate_task">
-                        Task Delegate
+                        # Delegated Task
                         <field name="task_count_delegate"/>
                     </div>
                 </xpath>

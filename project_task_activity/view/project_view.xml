@@ -61,7 +61,8 @@
             </field>
         </record>
 
-        <record id="view_project_kanban" model="ir.ui.view">
+<!-- falta arreglar estas vistas pero la verdad preferiría no usar mas este modulo -->
+<!--         <record id="view_project_kanban" model="ir.ui.view">
             <field name="name">project.kanban</field>
             <field name="model">project.project</field>
             <field name="inherit_id" ref="project.view_project_kanban"/>
@@ -77,9 +78,9 @@
                 </div>
                 
             </field>
-        </record>
+        </record> -->
 
-        <record id="view_project_edit_project" model="ir.ui.view">
+<!--         <record id="view_project_edit_project" model="ir.ui.view">
             <field name="name">project.form</field>
             <field name="model">project.project</field>
             <field name="inherit_id" ref="project.edit_project"/>
@@ -94,6 +95,6 @@
                     </button>
                 </div>
             </field>
-        </record>
+        </record> -->
     </data>
 </openerp>
