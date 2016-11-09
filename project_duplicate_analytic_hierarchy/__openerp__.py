@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Copyright (C) 2015  ADHOC SA  (http://www.adhoc.com.ar)
-#    All Rights Reserved.
+#    Sistemas ADHOC - ADHOC SA
+#    https://launchpad.net/~sistemas-adhoc
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,30 +18,33 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
+
 {
-    'name': 'Project Issue Solutions Product',
-    'version': '9.0.1.0.0',
+    'name': 'Project Duplicate Analytic Hierachy',
+    'version': '8.0.0.0.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
+    'description': """
+Project Duplicate Analytic Hierachy
+===================================
+When creating project from template, duplicate de analytic account hierachy
+as it is done when making copy of project
+    """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
-    'license': 'AGPL-3',
     'images': [
     ],
     'depends': [
-        'project_issue_solutions',
-        'project_issue_product',
+        'project',
     ],
     'data': [
-        'project_issue_solution_view.xml',
-        'project_issue_view.xml',
     ],
     'demo': [
     ],
     'test': [
     ],
     'installable': True,
-    'auto_install': True,
+    'auto_install': False,
     'application': False,
 }

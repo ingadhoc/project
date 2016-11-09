@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Copyright (C) 2015  ADHOC SA  (http://www.adhoc.com.ar)
-#    All Rights Reserved.
+#    Sistemas ADHOC - ADHOC SA
+#    https://launchpad.net/~sistemas-adhoc
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,23 +18,28 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
+
 {
-    'name': 'Project Issue Solutions Product',
-    'version': '9.0.1.0.0',
+    'name': 'Portal Project Issue Create',
+    'version': '8.0.0.1.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
+    'description': """
+Portal Project Issue Create
+===========================
+
+    """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
-    'license': 'AGPL-3',
     'images': [
     ],
     'depends': [
-        'project_issue_solutions',
-        'project_issue_product',
+        'portal_project_issue',
     ],
     'data': [
-        'project_issue_solution_view.xml',
+        'security/ir.model.access.csv',
+        'security/portal_security.xml',
         'project_issue_view.xml',
     ],
     'demo': [
@@ -42,6 +47,6 @@
     'test': [
     ],
     'installable': True,
-    'auto_install': True,
+    'auto_install': False,
     'application': False,
 }

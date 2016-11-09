@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+    <record model="ir.rule" id="project_issue.issue_user_rule">
+        <field name="domain_force">[
+            '|',
+                ('project_id.privacy_visibility', 'in', ['public', 'portal', 'employees']),
+                '|',
+                    '&amp;',
+                        ('project_id.privacy_visibility', '=', 'followers'),
+                        ('project_id.message_follower_ids', 'in', [user.partner_id.id]),
+                    '|',
+                        ('message_follower_ids', 'in', [user.partner_id.id]),
+                        ('user_id', '=', user.id)
+            ]</field>
+        </record>
+    </data>
+</openerp>

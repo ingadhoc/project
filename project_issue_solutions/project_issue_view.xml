@@ -17,8 +17,10 @@
                         </group>
                     </page>
                 </xpath>
-                 <xpath expr="//sheet/notebook/page[1]" position="attributes">
+                <!-- aprovechamos apoenrle a esta pag que sea solo para empleados ya que el campo es solo para empleados -->
+                 <xpath expr="//sheet/notebook/page[2]" position="attributes">
                     <attribute name="string">Internal Description</attribute>
+                    <attribute name="groups">base.group_user</attribute>
                 </xpath>
             </field>
         </record>

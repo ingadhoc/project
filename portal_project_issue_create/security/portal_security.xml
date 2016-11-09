@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+<!-- ya no seria necesaria porque modificamos para que si portal user crea entonces asigne a el -->
+
+<!-- This is because sometimes it gives error depending on the user assigned to the issue -->
+<!--     <record model="ir.rule" id="portal_project_res_partner">
+        <field name="name">Portal Res Partner read</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+            <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+            <field name="domain_force">[(1,'=',1)]</field>
+            <field eval="0" name="perm_unlink"/>
+            <field eval="0" name="perm_write"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="0" name="perm_create"/>
+    </record> -->
+    </data>
+</openerp>
