@@ -35,6 +35,7 @@
     ],
     'data': [
         'security/ir.model.access.csv',
+        'project_issue_view.xml',
     ],
     'demo': [
     ],
