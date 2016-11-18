@@ -6,8 +6,7 @@
 Project Issue Order
 ===================
 
-Add sequence field to issues and change default order to the following criteria:
-    "priority desc, sequence, date_deadline, duration, create_date desc"
+Add sequence field to issues and change default order to the following criteria: "priority desc, sequence, date_deadline, duration, create_date desc"
 
 Installation
 ============

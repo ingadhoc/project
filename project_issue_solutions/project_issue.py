@@ -6,10 +6,16 @@
 from openerp import fields, models
 
 
-class project_issue(models.Model):
+class ProjectIssue(models.Model):
     _inherit = 'project.issue'
 
-    project_issue_solution_id = fields.Many2one('project.issue.solution',
-                                                string='Linked Solution')
-    issue_description = fields.Html(string='Issue Description')
-    solution_description = fields.Html(string='Solution Description')
+    project_issue_solution_id = fields.Many2one(
+        'project.issue.solution',
+        string='Linked Solution'
+    )
+    issue_description = fields.Html(
+        string='Issue Description'
+    )
+    solution_description = fields.Html(
+        string='Solution Description'
+    )

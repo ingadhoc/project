@@ -7,9 +7,12 @@ Project Issue Closure Restrictions
 ==================================
 
 This module ensures that:
-You can only close Issue if:
+You can only close an Issue if:
     - They don't have any active task (we consider active task the ones in
     stages without option "folded")
+
+You can only close projects if:
+    - They don't have any active issue (we consider active issues the ones in stages without option "folded")
 
 Installation
 ============

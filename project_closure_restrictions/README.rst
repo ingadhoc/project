@@ -7,7 +7,7 @@ Project Closure Restrictions
 ============================
 This module ensures that:
 You can only close projects if:
-    - They don't have any active task (we consider active task the ones in stages without option "folded")
+    - They don't have any active task (we consider active tasks the ones in stages without option "folded")
 
 Installation
 ============

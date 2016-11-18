@@ -4,10 +4,10 @@
 # directory
 ##############################################################################
 from openerp import models, api, _
-from openerp.exceptions import Warning
+from openerp.exceptions import ValidationError
 
 
-class project_project(models.Model):
+class ProjectProject(models.Model):
     _inherit = 'project.project'
 
     @api.one
@@ -17,10 +17,10 @@ class project_project(models.Model):
             for project in self:
                 if project.task_ids:
                     tasks_open = project.env['project.task'].search(
-                        [('id', 'in', [x.id for x in project.task_ids]),
+                        [('id', 'in', project.task_ids.ids),
                          ('stage_id.fold', '!=', True)])
                     if tasks_open:
-                        raise Warning(
+                        raise ValidationError(
                             _("You can not close a project with active task,"
                               " we consider active task the one in stages "
                               "without option 'folded'"))

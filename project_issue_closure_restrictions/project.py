@@ -4,10 +4,29 @@
 # directory
 ##############################################################################
 from openerp import models, api, _
-from openerp.exceptions import Warning
+from openerp.exceptions import ValidationError
 
 
-class project_issue(models.Model):
+class ProjectProject(models.Model):
+    _inherit = 'project.project'
+
+    @api.one
+    @api.constrains('state')
+    def validate_state_from_issues(self):
+        if self.state == 'close':
+            for project in self:
+                if project.issue_ids:
+                    issues_open = project.env['project.issue'].search(
+                        [('id', 'in', project.issue_ids.ids),
+                         ('stage_id.fold', '!=', True)])
+                    if issues_open:
+                        raise ValidationError(
+                            _("You can not close a project with active issues,"
+                              " we consider active issue the one in stages "
+                              "without option 'folded'"))
+
+
+class ProjectIssue(models.Model):
     _inherit = 'project.issue'
 
     @api.one
@@ -18,6 +37,6 @@ class project_issue(models.Model):
                 [('id', '=', self.task_id.id),
                  ('stage_id.closed', '!=', True)])
             if task_open:
-                raise Warning(_(
+                raise ValidationError(_(
                     "You can not close an issue with active task, we consider"
                     " active task the one in stages without option 'closed'"))

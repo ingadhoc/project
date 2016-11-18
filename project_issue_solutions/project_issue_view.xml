@@ -2,6 +2,17 @@
 <openerp>
     <data>
 
+        <record model="ir.ui.view" id="view_project_issue_filter">
+            <field name="name">Project Issue Tracker filter</field>
+            <field name="model">project.issue</field>
+            <field name="inherit_id" ref="project_issue.view_project_issue_filter"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="project_issue_solution_id"/>
+                </field>
+            </field>
+        </record>
+
         <record model="ir.ui.view" id="project_issue_form_view">
             <field name="name">Project Issue Tracker Form</field>
             <field name="model">project.issue</field>
