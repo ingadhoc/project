@@ -6,9 +6,11 @@
             <field name="model">project.project</field>
             <field name="inherit_id" ref="project.view_project_kanban"/>
             <field name="arch" type="xml">
-                <a name="%(project.act_project_project_2_project_task_all)d" position="attributes">
-                    <attribute name="type">open</attribute>
-                </a>
+                <div t-if="record.use_tasks.raw_value" position="before">
+                    <div>
+                        <a type="open"/>
+                    </div>
+                </div>
             </field>
         </record>
     </data>
