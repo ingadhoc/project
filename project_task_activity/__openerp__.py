@@ -38,6 +38,7 @@
         'view/task_view.xml',
         'view/project_activity_data.xml',
         'security/ir.model.access.csv'
+        'security/project_security.xml',
     ],
     'demo': [
         'demo/project_task_activity_demo.yml'
