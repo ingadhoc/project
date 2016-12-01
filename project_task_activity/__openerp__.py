@@ -20,7 +20,7 @@
 ##############################################################################
 {
     "name": "Project Task Activity",
-    'version': '8.0.0.2.0',
+    'version': '8.0.0.3.0',
     'category': 'Tools',
     'sequence': 14,
     'author':  'ADHOC SA',
@@ -40,7 +40,8 @@ Project Task Activity
         'view/activities_menuitem.xml',
         'view/project_view.xml',
         'view/task_view.xml',
-        'security/ir.model.access.csv'
+        'security/ir.model.access.csv',
+        'security/project_security.xml',
     ],
     'demo': [
     ],
