@@ -62,7 +62,7 @@
             <field name="model">project.task</field>
             <field name="inherit_id" ref="project.view_task_form2"/>
             <field name="arch" type="xml">
-                <field name="analytic_account_id" position="replace">
+                <field name="analytic_account_id" position="replace"/>
                 <field name="project_id" position="before">
                     <field name="analytic_account_id"/>
                 </field>
