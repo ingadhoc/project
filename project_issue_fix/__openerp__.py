@@ -29,6 +29,7 @@ Project Issue Fix
 =================
 * Use same rule for employees as in task so that they can create issues on
 projects of type "followers only"
+* Show task field on issues to all users (by default technical features only)
     """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
@@ -39,7 +40,8 @@ projects of type "followers only"
         'project_issue',
     ],
     'data': [
-        'security/portal_security.xml'
+        'security/portal_security.xml',
+        'project_issue_view.xml',
     ],
     'demo': [
     ],

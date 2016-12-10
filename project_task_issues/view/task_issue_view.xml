@@ -11,10 +11,21 @@
                 </field>
                 <xpath expr="//notebook/page[2]" position="after">
                     <page string="Issues">
-                        <field name="issue_ids"/>
-                </page>
+                        <field name="issue_ids">
+                            <!-- we overwrite tree view because original raise an error because of decoration-bf="message_needaction==True" -->
+                            <!-- TODO take this to an inherited view -->
+                            <tree>
+                                <field name="id"/>
+                                <!-- <field name="message_needaction" invisible="1"/> -->
+                                <field name="name" string="Feature description"/>
+                                <field name="partner_id"/>
+                                <field name="priority" string="Priority"/>
+                                <field name="user_id"/>
+                                <field name="stage_id" widget="selection" readonly="1"/>
+                            </tree>
+                        </field>
+                    </page>
                 </xpath>
-
             </field>
         </record>
 	</data>
