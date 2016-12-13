@@ -55,7 +55,7 @@
         user_id: base.user_demo
 
 -
-  !function {model: project.task, name: _get_activities_progress, id: project_task_my_demo_1}:
+  !function {model: project.task, name: _get_activities_done, id: project_task_my_demo_1}:
   - model: project.task
     eval: "[obj(ref('project_task_my_demo_1')).id]"
 
