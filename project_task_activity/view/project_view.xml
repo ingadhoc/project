@@ -62,7 +62,7 @@
         </record>
 
 <!-- falta arreglar estas vistas pero la verdad preferiría no usar mas este modulo -->
-<!--         <record id="view_project_kanban" model="ir.ui.view">
+        <record id="view_project_kanban" model="ir.ui.view">
             <field name="name">project.kanban</field>
             <field name="model">project.project</field>
             <field name="inherit_id" ref="project.view_project_kanban"/>
@@ -73,14 +73,14 @@
                 </field>
                 <div t-if="record.alias_name.value and record.alias_domain.value" position="after">
                     <div class="oe_kanban_project" style="width:130px; height: 80px; margin: 0 auto; min-height: 80px;" attrs="{'invisible':[('activity_ids', '=', [])]}">
-                        <field name="progress_activities"  widget="gauge" />
+                        <field name="progress_activities"  widget="gauge"/>
                     </div>
                 </div>
                 
             </field>
-        </record> -->
+        </record>
 
-<!--         <record id="view_project_edit_project" model="ir.ui.view">
+        <record id="view_project_edit_project" model="ir.ui.view">
             <field name="name">project.form</field>
             <field name="model">project.project</field>
             <field name="inherit_id" ref="project.edit_project"/>
@@ -95,6 +95,6 @@
                     </button>
                 </div>
             </field>
-        </record> -->
+        </record>
     </data>
 </openerp>
