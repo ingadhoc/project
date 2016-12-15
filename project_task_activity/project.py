@@ -5,7 +5,7 @@
 ##############################################################################
 from openerp import models, api, fields, _
 from datetime import datetime
-import json
+# import json
 
 
 class project_task_activity(models.Model):
@@ -47,28 +47,38 @@ class project_task_activity(models.Model):
         self.state = 'cancel'
 
 
-class project_task(models.Model):
+class ProjectTask(models.Model):
     _inherit = 'project.task'
 
     activity_ids = fields.One2many(
         'project.task.activity', 'task_id', 'Activity', copy=True)
-    activities_progress = fields.Char(
-        string=_("Progress"),
-        compute='_get_activities_progress')
+    activities_done = fields.Char(
+        string="Activities Done",
+        compute='_get_activities_done')
+    activities_total = fields.Char(
+        string="Activities Total",
+        compute='_get_activities_total')
 
     @api.one
     @api.depends('activity_ids.state')
-    def _get_activities_progress(self):
-        res = []
+    def _get_activities_done(self):
+        count = 0
         for activity in self.activity_ids:
             if activity.state == 'done':
-                res.insert(0, {'tooltip': activity.name, 'value': 1})
-            elif activity.state != 'cancel':
-                res.insert(0, {'tooltip': activity.name, 'value': 0})
-        self.activities_progress = json.dumps(res)
+                count = count + 1
+        self.activities_done = count
+
+    @api.one
+    @api.depends('activity_ids.state')
+    def _get_activities_total(self):
+        count = 0
+        for activity in self.activity_ids:
+            if activity.state != 'cancel':
+                count = count + 1
+        self.activities_total = count
 
 
-class project_project(models.Model):
+class ProjectProject(models.Model):
     _inherit = 'project.project'
 
     activity_ids = fields.One2many(
