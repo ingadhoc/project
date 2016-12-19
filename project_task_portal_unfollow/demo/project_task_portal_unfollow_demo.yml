@@ -1,0 +1,27 @@
+
+-
+  !record {model: project.project, id: project_project_my_demo_unfollow_1}:
+    state: open
+    user_id: base.user_demo
+    partner_id: portal.partner_demo_portal
+    name: Project Demo Unfollow 1
+    color: 3
+    date_start: !eval time.strftime('%Y-%m-01 10:00:00')
+    unfollow_portal_users: True
+
+-
+  !record {model: project.project, id: project_project_my_demo_unfollow_2}:
+    state: open
+    user_id: base.user_demo
+    partner_id: portal.partner_demo_portal
+    name: Project Demo Unfollow 2
+    color: 3
+    date_start: !eval time.strftime('%Y-%m-01 10:00:00')
+    unfollow_portal_users: False
+
+
+
+
+
+
+
