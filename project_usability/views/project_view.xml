@@ -12,6 +12,24 @@
                 </field>
             </field>
         </record>
+
+
+        <record id="edit_project" model="ir.ui.view">
+            <field name="name">project.project.inherit</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <group>
+                        <field name="date_start"/>
+                        <field name="date"/>
+                    </group>
+                </field>
+                <field name="sequence" position="before">
+                    <field name="analytic_account_id"/>
+                </field>
+            </field>
+        </record>
         
     </data>
 </openerp>
