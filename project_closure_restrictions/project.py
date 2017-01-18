@@ -13,6 +13,11 @@ class ProjectProject(models.Model):
     @api.one
     @api.constrains('state')
     def validate_state(self):
+        if self.analytic_account_id.account_type != 'closed':
+            raise ValidationError(_(
+                "You can not cancel the project if the analytic account is not"
+                "closed"))
+
         if self.state == 'close':
             for project in self:
                 if project.task_ids:
