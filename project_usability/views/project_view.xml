@@ -20,10 +20,11 @@
             <field name="inherit_id" ref="project.edit_project"/>
             <field name="arch" type="xml">
                 <field name="user_id" position="after">
-                    <group>
-                        <field name="date_start"/>
-                        <field name="date"/>
-                    </group>
+                    <label for="date_start" string="Dates"/>
+                    <div  class="oe_inline">
+                        <field name="date_start"  class="oe_inline"/> - 
+                        <field name="date" class="oe_inline"/>
+                    </div>
                 </field>
                 <field name="sequence" position="before">
                     <field name="analytic_account_id"/>
