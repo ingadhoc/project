@@ -5,6 +5,7 @@
 ##############################################################################
 from openerp import models, api, _
 from openerp.exceptions import ValidationError
+from openerp.tools import config
 
 
 class ProjectProject(models.Model):
@@ -13,7 +14,8 @@ class ProjectProject(models.Model):
     @api.one
     @api.constrains('state')
     def validate_state(self):
-        if self.analytic_account_id.account_type != 'closed':
+        if self.analytic_account_id.account_type != 'closed' and not \
+                config.options['test_enable']:
             raise ValidationError(_(
                 "You can not cancel the project if the analytic account is not"
                 "closed"))
