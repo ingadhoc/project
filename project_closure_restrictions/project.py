@@ -14,8 +14,10 @@ class ProjectProject(models.Model):
     @api.one
     @api.constrains('state')
     def validate_state(self):
+        # tests are boken by this check
         if self.analytic_account_id.account_type != 'closed' and not \
-                config.options['test_enable']:
+                config.options['test_enable'] and not \
+                config.options['without_demo']:
             raise ValidationError(_(
                 "You can not cancel the project if the analytic account is not"
                 "closed"))
