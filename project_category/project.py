@@ -25,4 +25,4 @@ class project(models.Model):
     type_id = fields.Many2one(
         'project.type',
         'Type',
-        copy=False)
+    )
