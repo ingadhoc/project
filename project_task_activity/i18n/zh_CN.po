@@ -5,12 +5,12 @@
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: odoo-addons (8.0)\n"
+"Project-Id-Version: project (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-05 15:16+0000\n"
-"PO-Revision-Date: 2015-10-22 16:30+0000\n"
-"Last-Translator: Juan Jose Scarafia <scarafia.juanjose@gmail.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/adhoc/ingadhoc-odoo-addons-8-0/language/zh_CN/)\n"
+"POT-Creation-Date: 2016-12-01 12:09+0000\n"
+"PO-Revision-Date: 2016-05-03 13:28+0000\n"
+"Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/adhoc/ingadhoc-project-8-0/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -26,13 +26,24 @@ msgid "Activities"
 msgstr ""
 
 #. module: project_task_activity
-#: field:project.task,activity_ids:0
+#: field:project.project,activities_done:0
+msgid "Activities done"
+msgstr ""
+
+#. module: project_task_activity
+#: field:project.project,activities_todo:0
+msgid "Activities to do"
+msgstr ""
+
+#. module: project_task_activity
+#: field:project.project,activity_ids:0 field:project.task,activity_ids:0
 #: view:project.task.activity:project_task_activity.view_project_task_activity_search
 msgid "Activity"
 msgstr ""
 
 #. module: project_task_activity
 #: view:project.task:project_task_activity.view_project_task_form
+#: view:project.task.activity:project_task_activity.view_project_task_activity_tree
 #: selection:project.task.activity,state:0
 msgid "Cancel"
 msgstr "取消(&C)"
@@ -53,7 +64,13 @@ msgid "Description"
 msgstr ""
 
 #. module: project_task_activity
+#: field:project.task.activity,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: project_task_activity
 #: view:project.task:project_task_activity.view_project_task_form
+#: view:project.task.activity:project_task_activity.view_project_task_activity_tree
 #: selection:project.task.activity,state:0
 msgid "Done"
 msgstr "已完成"
@@ -79,6 +96,11 @@ msgid "ID"
 msgstr ""
 
 #. module: project_task_activity
+#: field:project.task.activity,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: project_task_activity
 #: field:project.task.activity,write_uid:0
 msgid "Last Updated by"
 msgstr ""
@@ -95,6 +117,7 @@ msgstr "名称"
 
 #. module: project_task_activity
 #: view:project.task:project_task_activity.view_project_task_form
+#: view:project.task.activity:project_task_activity.view_project_task_activity_tree
 #: selection:project.task.activity,state:0
 msgid "Pending"
 msgstr "等待中"
@@ -107,6 +130,8 @@ msgstr ""
 #. module: project_task_activity
 #: code:addons/project_task_activity/project.py:56
 #: code:addons/project_task_activity/project.py:82
+#: field:project.project,progress_activities:0
+#: field:project.task,activities_progress:0
 #, python-format
 msgid "Progress"
 msgstr "进行"

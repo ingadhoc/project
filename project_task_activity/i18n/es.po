@@ -1,20 +1,21 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* project_task_activity
-#
+# * project_task_activity
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 8.0\n"
+"Project-Id-Version: project (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-01 14:29+0000\n"
-"PO-Revision-Date: 2015-10-01 11:29-0300\n"
-"Last-Translator: <>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2016-12-01 12:09+0000\n"
+"PO-Revision-Date: 2016-08-11 15:13+0000\n"
+"Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/adhoc/ingadhoc-project-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: \n"
-"X-Generator: Poedit 1.5.4\n"
+"Content-Transfer-Encoding: \n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: project_task_activity
 #: model:ir.actions.act_window,name:project_task_activity.action_activity
@@ -25,13 +26,24 @@ msgid "Activities"
 msgstr "Actividades"
 
 #. module: project_task_activity
-#: field:project.task,activity_ids:0
+#: field:project.project,activities_done:0
+msgid "Activities done"
+msgstr ""
+
+#. module: project_task_activity
+#: field:project.project,activities_todo:0
+msgid "Activities to do"
+msgstr ""
+
+#. module: project_task_activity
+#: field:project.project,activity_ids:0 field:project.task,activity_ids:0
 #: view:project.task.activity:project_task_activity.view_project_task_activity_search
 msgid "Activity"
 msgstr "Actividad"
 
 #. module: project_task_activity
 #: view:project.task:project_task_activity.view_project_task_form
+#: view:project.task.activity:project_task_activity.view_project_task_activity_tree
 #: selection:project.task.activity,state:0
 msgid "Cancel"
 msgstr "Cancelar"
@@ -52,7 +64,13 @@ msgid "Description"
 msgstr "Descripcion"
 
 #. module: project_task_activity
+#: field:project.task.activity,display_name:0
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: project_task_activity
 #: view:project.task:project_task_activity.view_project_task_form
+#: view:project.task.activity:project_task_activity.view_project_task_activity_tree
 #: selection:project.task.activity,state:0
 msgid "Done"
 msgstr "Realizado"
@@ -78,6 +96,11 @@ msgid "ID"
 msgstr "ID"
 
 #. module: project_task_activity
+#: field:project.task.activity,__last_update:0
+msgid "Last Modified on"
+msgstr "Ultima Modificación en "
+
+#. module: project_task_activity
 #: field:project.task.activity,write_uid:0
 msgid "Last Updated by"
 msgstr "Last Updated by"
@@ -94,6 +117,7 @@ msgstr "Nombre"
 
 #. module: project_task_activity
 #: view:project.task:project_task_activity.view_project_task_form
+#: view:project.task.activity:project_task_activity.view_project_task_activity_tree
 #: selection:project.task.activity,state:0
 msgid "Pending"
 msgstr "Pendiente"
@@ -106,6 +130,8 @@ msgstr "Fecha Planificada"
 #. module: project_task_activity
 #: code:addons/project_task_activity/project.py:56
 #: code:addons/project_task_activity/project.py:82
+#: field:project.project,progress_activities:0
+#: field:project.task,activities_progress:0
 #, python-format
 msgid "Progress"
 msgstr "Avance"

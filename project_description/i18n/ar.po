@@ -1,0 +1,24 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * project_description
+# 
+# Translators:
+# Haitham EL-Sayed <freelancetranslator444@yahoo.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: project (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-01 12:09+0000\n"
+"PO-Revision-Date: 2016-07-12 19:20+0000\n"
+"Last-Translator: Haitham EL-Sayed <freelancetranslator444@yahoo.com>\n"
+"Language-Team: Arabic (http://www.transifex.com/adhoc/ingadhoc-project-8-0/language/ar/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#. module: project_description
+#: view:project.project:project_description.view_project_tags_project_form
+msgid "Terms and Conditions"
+msgstr "الشروط والاحكام"

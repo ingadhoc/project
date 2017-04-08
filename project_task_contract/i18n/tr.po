@@ -5,12 +5,12 @@
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: odoo-addons (8.0)\n"
+"Project-Id-Version: project (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-05 15:16+0000\n"
-"PO-Revision-Date: 2015-10-22 16:31+0000\n"
-"Last-Translator: Juan Jose Scarafia <scarafia.juanjose@gmail.com>\n"
-"Language-Team: Turkish (http://www.transifex.com/adhoc/ingadhoc-odoo-addons-8-0/language/tr/)\n"
+"POT-Creation-Date: 2016-12-01 12:09+0000\n"
+"PO-Revision-Date: 2016-01-18 16:28+0000\n"
+"Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>\n"
+"Language-Team: Turkish (http://www.transifex.com/adhoc/ingadhoc-project-8-0/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -75,6 +75,7 @@ msgstr "Görev"
 #. module: project_task_contract
 #: view:account.analytic.account:project_task_contract.analytic_account_inherited_form
 #: field:account.analytic.account,other_project_task_ids:0
+#: field:account.analytic.account,task_count:0
 #: model:ir.actions.act_window,name:project_task_contract.act_cotnract_2_project_task_all
 msgid "Tasks"
 msgstr "Görevler"
