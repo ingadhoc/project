@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Project Issue Solutions',
-    'version': '9.0.1.0.0',
+    'version': '9.0.2.0.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -35,6 +35,7 @@
     'data': [
         'project_issue_view.xml',
         'project_issue_solution_view.xml',
+        'project_tag_solution_view.xml',
         'security/ir.model.access.csv',
     ],
     'demo': [
