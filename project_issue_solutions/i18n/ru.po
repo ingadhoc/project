@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-06 11:26+0000\n"
-"PO-Revision-Date: 2017-04-06 11:26+0000\n"
+"POT-Creation-Date: 2017-04-10 23:31+0000\n"
+"PO-Revision-Date: 2017-04-10 23:31+0000\n"
 "Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2017\n"
 "Language-Team: Russian (https://www.transifex.com/adhoc/teams/46451/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -44,12 +44,19 @@ msgid "Add solution description..."
 msgstr ""
 
 #. module: project_issue_solutions
+#: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag_color
+msgid "Color Index"
+msgstr ""
+
+#. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_create_uid
+#: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag_create_uid
 msgid "Created by"
 msgstr "Дата создания"
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_create_date
+#: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag_create_date
 msgid "Created on"
 msgstr "Дата создания"
 
@@ -60,6 +67,7 @@ msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_display_name
+#: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag_display_name
 msgid "Display Name"
 msgstr ""
 
@@ -85,6 +93,7 @@ msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_id
+#: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag_id
 msgid "ID"
 msgstr "Код"
 
@@ -143,16 +152,19 @@ msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution___last_update
+#: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag___last_update
 msgid "Last Modified on"
 msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_write_uid
+#: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag_write_uid
 msgid "Last Updated by"
 msgstr "Автор изменения"
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_write_date
+#: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag_write_date
 msgid "Last Updated on"
 msgstr "Дата изменения"
 
@@ -168,6 +180,7 @@ msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_name
+#: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag_name
 msgid "Name"
 msgstr ""
 
@@ -202,6 +215,11 @@ msgid "Project Issue Solution"
 msgstr ""
 
 #. module: project_issue_solutions
+#: model:ir.model,name:project_issue_solutions.model_project_solution_tag
+msgid "Project Solution Tags"
+msgstr ""
+
+#. module: project_issue_solutions
 #: model:ir.ui.view,arch_db:project_issue_solutions.project_issue_solution_filter_view
 #: model:ir.ui.view,arch_db:project_issue_solutions.project_issue_solution_form_view
 #: model:ir.ui.view,arch_db:project_issue_solutions.project_issue_solution_tree_view
@@ -212,6 +230,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_description
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_solution_description
 msgid "Solution Description"
+msgstr ""
+
+#. module: project_issue_solutions
+#: model:ir.actions.act_window,name:project_issue_solutions.project_solution_tag_action
+#: model:ir.ui.menu,name:project_issue_solutions.menu_project_tag_solution
+msgid "Solutions Tags"
+msgstr ""
+
+#. module: project_issue_solutions
+#: sql_constraint:project.solution.tag:0
+msgid "Tag name already exists !"
 msgstr ""
 
 #. module: project_issue_solutions
