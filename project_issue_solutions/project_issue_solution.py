@@ -25,7 +25,7 @@ class ProjectIsssueSolution(models.Model):
         string='Issue Description'
     )
     tags_ids = fields.Many2many(
-        'project.tags',
+        'project.solution.tag',
         string='Tags'
     )
     project_issue_ids = fields.One2many(

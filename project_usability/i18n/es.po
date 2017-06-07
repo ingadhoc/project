@@ -1,9 +1,9 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * project_issue_order
+# * project_usability
 # 
 # Translators:
-# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2016
+# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2017
 # Nicolas Mac Rouillon <nmr@ingadhoc.com>, 2017
 msgid ""
 msgstr ""
@@ -19,17 +19,12 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. module: project_issue_order
-#: model:ir.model.fields,help:project_issue_order.field_project_issue_sequence
-msgid "Gives the sequence order when displaying a list of tasks."
-msgstr "Indica el orden de las tareas al mostrarlas en la lista"
+#. module: project_usability
+#: model:ir.ui.view,arch_db:project_usability.edit_project
+msgid "Dates"
+msgstr "Fechas"
 
-#. module: project_issue_order
-#: model:ir.model,name:project_issue_order.model_project_issue
+#. module: project_usability
+#: model:ir.model,name:project_usability.model_project_issue
 msgid "Project Issue"
-msgstr "Incidencia de Proyecto"
-
-#. module: project_issue_order
-#: model:ir.model.fields,field_description:project_issue_order.field_project_issue_sequence
-msgid "Sequence"
-msgstr "Sequencia"
+msgstr "Project Issue"

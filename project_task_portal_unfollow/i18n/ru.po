@@ -3,53 +3,52 @@
 # * project_task_portal_unfollow
 # 
 # Translators:
-# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2016
-# Nicolas Mac Rouillon <nmr@ingadhoc.com>, 2017
+# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-23 23:57+0000\n"
 "PO-Revision-Date: 2017-01-23 23:57+0000\n"
-"Last-Translator: Nicolas Mac Rouillon <nmr@ingadhoc.com>, 2017\n"
-"Language-Team: Spanish (https://www.transifex.com/adhoc/teams/46451/es/)\n"
+"Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2017\n"
+"Language-Team: Russian (https://www.transifex.com/adhoc/teams/46451/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #. module: project_task_portal_unfollow
 #: model:ir.model.fields,field_description:project_task_portal_unfollow.field_project_project_other_project_id
 msgid "Other Project"
-msgstr "Otro Proyecto"
+msgstr ""
 
 #. module: project_task_portal_unfollow
 #: model:ir.model,name:project_task_portal_unfollow.model_project_project
 msgid "Project"
-msgstr "Proyecto"
+msgstr "Проект"
 
 #. module: project_task_portal_unfollow
 #: model:ir.model.fields,field_description:project_task_portal_unfollow.field_project_project_task_project_type
 msgid "Project Type"
-msgstr "Tipos de Proyectos"
+msgstr ""
 
 #. module: project_task_portal_unfollow
 #: model:ir.model,name:project_task_portal_unfollow.model_project_task
 msgid "Task"
-msgstr "Tarea"
+msgstr ""
 
 #. module: project_task_portal_unfollow
 #: model:ir.model.fields,field_description:project_task_portal_unfollow.field_project_project_other_project_task_ids
 msgid "Tasks"
-msgstr "Tareas"
+msgstr ""
 
 #. module: project_task_portal_unfollow
 #: model:ir.model.fields,field_description:project_task_portal_unfollow.field_project_project_unfollow_portal_users
 msgid "Unfollow Portal Users"
-msgstr "Dejar de seguir a los usuarios del portal"
+msgstr ""
 
 #. module: project_task_portal_unfollow
 #: model:ir.model.fields,help:project_task_portal_unfollow.field_project_project_unfollow_portal_users
 msgid "Unfollow Portal Users from new tasks?"
-msgstr "¿Dejar de seguir a los usuarios del portal de nuevas tareas?"
+msgstr ""

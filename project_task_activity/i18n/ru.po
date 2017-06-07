@@ -3,21 +3,20 @@
 # * project_task_activity
 # 
 # Translators:
-# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2016
-# Nicolas Mac Rouillon <nmr@ingadhoc.com>, 2017
+# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-06 11:26+0000\n"
 "PO-Revision-Date: 2017-04-06 11:26+0000\n"
-"Last-Translator: Nicolas Mac Rouillon <nmr@ingadhoc.com>, 2017\n"
-"Language-Team: Spanish (https://www.transifex.com/adhoc/teams/46451/es/)\n"
+"Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2017\n"
+"Language-Team: Russian (https://www.transifex.com/adhoc/teams/46451/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #. module: project_task_activity
 #: model:ir.actions.act_window,name:project_task_activity.action_activity
@@ -25,173 +24,173 @@ msgstr ""
 #: model:ir.ui.view,arch_db:project_task_activity.view_project_edit_project
 #: model:ir.ui.view,arch_db:project_task_activity.view_project_task_form
 msgid "Activities"
-msgstr "Actividades"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.ui.view,arch_db:project_task_activity.view_project_task_kanban
 msgid "Activities :"
-msgstr "Actividades:"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activities_done
 msgid "Activities Done"
-msgstr "Actividades realizadas"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.actions.act_window,name:project_task_activity.action_task_activity
 msgid "Activities Task"
-msgstr "Actividades de tarea"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activities_total
 msgid "Activities Total"
-msgstr "Actividades Total"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_project_activities_done
 msgid "Activities done"
-msgstr "Actividades realizadas"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_project_activities_todo
 msgid "Activities to do"
-msgstr "Actividades para realizar"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_project_activity_ids
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity_ids
 #: model:ir.ui.view,arch_db:project_task_activity.view_project_task_activity_search
 msgid "Activity"
-msgstr "Actividad"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.ui.view,arch_db:project_task_activity.view_project_task_activity_tree
 #: model:ir.ui.view,arch_db:project_task_activity.view_project_task_form
 #: selection:project.task.activity,state:0
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity_create_uid
 msgid "Created by"
-msgstr "Created by"
+msgstr "Дата создания"
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity_create_date
 msgid "Created on"
-msgstr "Created on"
+msgstr "Дата создания"
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity_description
 msgid "Description"
-msgstr "Descripcion"
+msgstr "Описание"
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity_display_name
 msgid "Display Name"
-msgstr "Nombre mostrado "
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.ui.view,arch_db:project_task_activity.view_project_task_activity_tree
 #: model:ir.ui.view,arch_db:project_task_activity.view_project_task_form
 #: selection:project.task.activity,state:0
 msgid "Done"
-msgstr "Realizado"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity_done_date
 msgid "Done Date"
-msgstr "Fecha de FInalizacion"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.model.fields,help:project_task_activity.field_project_task_activity_sequence
 msgid "Gives the sequence order when selecting an activitiy."
-msgstr "Gives the sequence order when selecting an activitiy."
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.ui.view,arch_db:project_task_activity.view_project_task_activity_search
 msgid "Group By.."
-msgstr "Agrupar Por.."
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity_id
 msgid "ID"
-msgstr "ID"
+msgstr "Код"
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity___last_update
 msgid "Last Modified on"
-msgstr "Última modificación en "
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity_write_uid
 msgid "Last Updated by"
-msgstr "Last Updated by"
+msgstr "Автор изменения"
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity_write_date
 msgid "Last Updated on"
-msgstr "Last Updated on"
+msgstr "Дата изменения"
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity_name
 msgid "Name"
-msgstr "Nombre"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.ui.view,arch_db:project_task_activity.view_project_task_activity_tree
 #: model:ir.ui.view,arch_db:project_task_activity.view_project_task_form
 #: selection:project.task.activity,state:0
 msgid "Pending"
-msgstr "Pendiente"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity_planned_date
 msgid "Planned Date"
-msgstr "Fecha Planificada"
+msgstr ""
 
 #. module: project_task_activity
 #: code:addons/project_task_activity/project.py:92
 #: model:ir.model.fields,field_description:project_task_activity.field_project_project_progress_activities
 #, python-format
 msgid "Progress"
-msgstr "Avance"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.model,name:project_task_activity.model_project_project
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity_project_id
 #: model:ir.ui.view,arch_db:project_task_activity.view_project_task_activity_search
 msgid "Project"
-msgstr "Proyecto"
+msgstr "Проект"
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity_user_id
 msgid "Responsible"
-msgstr "Responsable"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity_sequence
 msgid "Sequence"
-msgstr "Sequencia"
+msgstr "Последовательность"
 
 #. module: project_task_activity
 #: model:ir.ui.view,arch_db:project_task_activity.view_project_task_activity_search
 msgid "Stage"
-msgstr "Etapa"
+msgstr "Стадия"
 
 #. module: project_task_activity
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity_state
 msgid "State"
-msgstr "Estado"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.model,name:project_task_activity.model_project_task
 #: model:ir.model.fields,field_description:project_task_activity.field_project_task_activity_task_id
 #: model:ir.ui.view,arch_db:project_task_activity.view_project_task_activity_search
 msgid "Task"
-msgstr "Tarea"
+msgstr ""
 
 #. module: project_task_activity
 #: model:ir.model,name:project_task_activity.model_project_task_activity
 msgid "project.task.activity"
-msgstr "project.task.activity"
+msgstr ""

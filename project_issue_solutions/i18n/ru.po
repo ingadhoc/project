@@ -3,45 +3,45 @@
 # * project_issue_solutions
 # 
 # Translators:
-# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2016
+# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-10 23:31+0000\n"
 "PO-Revision-Date: 2017-04-10 23:31+0000\n"
-"Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2016\n"
-"Language-Team: Spanish (https://www.transifex.com/adhoc/teams/46451/es/)\n"
+"Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2017\n"
+"Language-Team: Russian (https://www.transifex.com/adhoc/teams/46451/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_message_needaction
 msgid "Action Needed"
-msgstr "Acción Necesaria"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.ui.view,arch_db:project_issue_solutions.project_issue_solution_form_view
 msgid "Add a issue description..."
-msgstr "Agregar descripción de incidencia..."
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.ui.view,arch_db:project_issue_solutions.project_issue_solution_form_view
 msgid "Add a solution description..."
-msgstr "Agregar una descripción de solución..."
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.ui.view,arch_db:project_issue_solutions.project_issue_form_view
 msgid "Add issue description..."
-msgstr "Agregar descripción de incidencia..."
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.ui.view,arch_db:project_issue_solutions.project_issue_form_view
 msgid "Add solution description..."
-msgstr "Agregar descripción de solución..."
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag_color
@@ -52,167 +52,167 @@ msgstr ""
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_create_uid
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag_create_uid
 msgid "Created by"
-msgstr "Creado por"
+msgstr "Дата создания"
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_create_date
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag_create_date
 msgid "Created on"
-msgstr "Creadon en"
+msgstr "Дата создания"
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,help:project_issue_solutions.field_project_issue_solution_message_last_post
 msgid "Date of the last message posted on the record."
-msgstr "Date of the last message posted on the record."
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_display_name
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag_display_name
 msgid "Display Name"
-msgstr "Nombre mostrado "
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.ui.view,arch_db:project_issue_solutions.project_issue_solution_filter_view
 msgid "Everywhere"
-msgstr "En todos los campos"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_message_follower_ids
 msgid "Followers"
-msgstr "Seguidores"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_message_channel_ids
 msgid "Followers (Channels)"
-msgstr "Seguidores (Canales)"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_message_partner_ids
 msgid "Followers (Partners)"
-msgstr "Seguidores (Partners)"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_id
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag_id
 msgid "ID"
-msgstr "ID"
+msgstr "Код"
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,help:project_issue_solutions.field_project_issue_solution_message_unread
 msgid "If checked new messages require your attention."
-msgstr "Si se marca, los nuevos mensajes requieren su atención"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,help:project_issue_solutions.field_project_issue_solution_message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Si se marca, los nuevos mensajes requieren su atención"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.ui.view,arch_db:project_issue_solutions.project_issue_form_view
 msgid "Internal Description"
-msgstr "Descripción interna"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_message_is_follower
 msgid "Is Follower"
-msgstr "Es Seguidor"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.ui.view,arch_db:project_issue_solutions.project_issue_form_view
 msgid "Issue Data"
-msgstr "Información de Incidencia"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_issue_description
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_issue_description
 msgid "Issue Description"
-msgstr "Descripción de Incidencia"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.actions.act_window,name:project_issue_solutions.project_issue_solution_act0
 #: model:ir.ui.menu,name:project_issue_solutions.menu_project_issue_solution
 msgid "Issue Solutions"
-msgstr "Soluciones de Incidencia"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_issue_count
 msgid "Issue count"
-msgstr "Contador de Problemas"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_project_issue_ids
 #: model:ir.ui.view,arch_db:project_issue_solutions.project_issue_solution_form_view
 msgid "Issues"
-msgstr "Incidencias"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_message_last_post
 msgid "Last Message Date"
-msgstr "Last Message Date"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution___last_update
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag___last_update
 msgid "Last Modified on"
-msgstr "Última modificación en "
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_write_uid
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag_write_uid
 msgid "Last Updated by"
-msgstr "Last Updated by"
+msgstr "Автор изменения"
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_write_date
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag_write_date
 msgid "Last Updated on"
-msgstr "Last Updated on"
+msgstr "Дата изменения"
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_project_issue_solution_id
 msgid "Linked Solution"
-msgstr "Solución Vinculada"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_message_ids
 msgid "Messages"
-msgstr "Mensajes"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_name
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_solution_tag_name
 msgid "Name"
-msgstr "Nombre"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.ui.view,arch_db:project_issue_solutions.project_issue_solution_form_view
 msgid "Name..."
-msgstr "Nombre..."
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_message_needaction_counter
 msgid "Number of Actions"
-msgstr "Cantidad de acciones "
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,help:project_issue_solutions.field_project_issue_solution_message_needaction_counter
 msgid "Number of messages which requires an action"
-msgstr "Cantidad de mensajes que requieren una acción"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,help:project_issue_solutions.field_project_issue_solution_message_unread_counter
 msgid "Number of unread messages"
-msgstr "Cantidad de mensajes sin leer"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model,name:project_issue_solutions.model_project_issue
 msgid "Project Issue"
-msgstr "Incidencia proyecto"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model,name:project_issue_solutions.model_project_issue_solution
 msgid "Project Issue Solution"
-msgstr "Solución de Incidencia de Proyecto"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model,name:project_issue_solutions.model_project_solution_tag
@@ -224,13 +224,13 @@ msgstr ""
 #: model:ir.ui.view,arch_db:project_issue_solutions.project_issue_solution_form_view
 #: model:ir.ui.view,arch_db:project_issue_solutions.project_issue_solution_tree_view
 msgid "Solution"
-msgstr "Solución"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_description
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_solution_description
 msgid "Solution Description"
-msgstr "Descripción de Solución"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.actions.act_window,name:project_issue_solutions.project_solution_tag_action
@@ -246,7 +246,7 @@ msgstr ""
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_tags_ids
 msgid "Tags"
-msgstr "Tags"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.actions.act_window,help:project_issue_solutions.project_issue_solution_act0
@@ -254,15 +254,13 @@ msgid ""
 "The OpenERP issue solutions allows you to efficiantly \n"
 "                manage the solutions for issues."
 msgstr ""
-"Las soluciones de problemas de OpenERP le permiten\n"
-"Gestionar las soluciones para los problemas."
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_message_unread
 msgid "Unread Messages"
-msgstr "Mensajes sin leer"
+msgstr ""
 
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_message_unread_counter
 msgid "Unread Messages Counter"
-msgstr "Contador de mensajes no leídos"
+msgstr ""
