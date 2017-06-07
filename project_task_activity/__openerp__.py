@@ -40,7 +40,7 @@
         'security/project_security.xml',
     ],
     'demo': [
-        'demo/project_task_activity_demo.yml'
+        'demo/project_task_activity_demo.yml',
         'demo/project_activity_demo.xml',
     ],
     'test': [
