@@ -6,12 +6,9 @@
 from openerp import models, fields
 
 
-class project(models.Model):
-    _inherit = 'project.project'
+class ProjectTag(models.Model):
 
-    project_tag_ids = fields.Many2many(
-        'project_tags.project_tag',
-        'project_project_tag_ids_rel',
-        'project_id',
-        'project_tag_id',
-        string='Tags')
+    _name = 'project_tags.project_tag'
+    _description = 'project_tag'
+
+    name = fields.Char(string='Name', required=True, size=64)

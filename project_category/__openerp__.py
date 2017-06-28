@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Project Category',
-    'version': '9.0.1.1.0',
+    'version': '9.0.1.2.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -34,7 +34,6 @@
     ],
     'data': [
         'view/project_view.xml',
-        'view/menu_item.xml',
         'security/ir.model.access.csv',
     ],
     'demo': [

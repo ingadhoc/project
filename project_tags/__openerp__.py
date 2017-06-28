@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Project Tags',
-    'version': '9.0.1.0.0',
+    'version': '9.0.1.1.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -35,6 +35,7 @@
     'data': [
         'security/ir.model.access.csv',
         'view/project_view.xml',
+        'view/project_tags_view.xml',
     ],
     'demo': [
     ],
