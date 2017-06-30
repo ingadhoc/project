@@ -7,7 +7,7 @@ Project Usability Improvements
 ==============================
 
 Several improovements to project:
-#. Add to project form view visible the fields Dates and Analytic Account.
+#. Make Dates and Analytic Account fields visible on project form view.
 
 
 Installation

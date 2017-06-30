@@ -6,8 +6,8 @@
 Project Usability Issue
 =======================
 
-Several improovements to project:
-#. Add to project issue to search by "Days Since Creation".
+Several improvements:
+#. Allow to search by "Days Since Creation" on issues.
 
 
 Installation
