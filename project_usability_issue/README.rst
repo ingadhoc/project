@@ -2,12 +2,12 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==============================
-Project Usability Improvements
-==============================
+=======================
+Project Usability Issue
+=======================
 
-Several improovements to project:
-#. Make Dates and Analytic Account fields visible on project form view.
+Several improvements:
+#. Allow to search by "Days Since Creation" on issues.
 
 
 Installation

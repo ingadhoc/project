@@ -19,8 +19,8 @@
 #
 ##############################################################################
 {
-    'name': 'Project Usability Improvements',
-    'version': '9.0.1.4.0',
+    'name': 'Project Usability Issue',
+    'version': '9.0.1.0.0',
     'category': 'Project Management',
     'sequence': 14,
     'summary': '',
@@ -30,7 +30,7 @@
     'images': [
     ],
     'depends': [
-        'project',
+        'project_issue',
     ],
     'data': [
         'views/project_view.xml',
