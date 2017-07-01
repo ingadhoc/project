@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * project_usability
+# * project_usability_issue
 # 
 # Translators:
 # Juan José Scarafía <scarafia.juanjose@gmail.com>, 2017
@@ -18,7 +18,7 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. module: project_usability
-#: model:ir.ui.view,arch_db:project_usability.edit_project
-msgid "Dates"
-msgstr "Fechas"
+#. module: project_usability_issue
+#: model:ir.model,name:project_usability_issue.model_project_issue
+msgid "Project Issue"
+msgstr "Project Issue"
