@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-10 23:31+0000\n"
-"PO-Revision-Date: 2017-04-10 23:31+0000\n"
+"POT-Creation-Date: 2017-08-09 15:30+0000\n"
+"PO-Revision-Date: 2017-08-09 15:30+0000\n"
 "Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2017\n"
 "Language-Team: Russian (https://www.transifex.com/adhoc/teams/46451/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -105,6 +105,13 @@ msgstr ""
 #. module: project_issue_solutions
 #: model:ir.model.fields,help:project_issue_solutions.field_project_issue_solution_message_needaction
 msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: project_issue_solutions
+#: model:ir.model.fields,help:project_issue_solutions.field_project_task_type_solution_required
+msgid ""
+"If you set it to true, then issues that moves into this stage will require a"
+" solution."
 msgstr ""
 
 #. module: project_issue_solutions
@@ -233,6 +240,11 @@ msgid "Solution Description"
 msgstr ""
 
 #. module: project_issue_solutions
+#: model:ir.model.fields,field_description:project_issue_solutions.field_project_task_type_solution_required
+msgid "Solution Required?"
+msgstr ""
+
+#. module: project_issue_solutions
 #: model:ir.actions.act_window,name:project_issue_solutions.project_solution_tag_action
 #: model:ir.ui.menu,name:project_issue_solutions.menu_project_tag_solution
 msgid "Solutions Tags"
@@ -249,6 +261,11 @@ msgid "Tags"
 msgstr ""
 
 #. module: project_issue_solutions
+#: model:ir.model,name:project_issue_solutions.model_project_task_type
+msgid "Task Stage"
+msgstr "Этап задачи"
+
+#. module: project_issue_solutions
 #: model:ir.actions.act_window,help:project_issue_solutions.project_issue_solution_act0
 msgid ""
 "The OpenERP issue solutions allows you to efficiantly \n"
@@ -263,4 +280,10 @@ msgstr ""
 #. module: project_issue_solutions
 #: model:ir.model.fields,field_description:project_issue_solutions.field_project_issue_solution_message_unread_counter
 msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: project_issue_solutions
+#: code:addons/project_issue_solutions/project_issue.py:31
+#, python-format
+msgid "You need to complete solution description to change the stage"
 msgstr ""
