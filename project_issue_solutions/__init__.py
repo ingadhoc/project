@@ -7,3 +7,4 @@
 from . import project_issue
 from . import project_solution_tags
 from . import project_issue_solution
+from . import project_task_type

@@ -6,7 +6,8 @@
 Project Issue Solutions
 =======================
 
-This module add new object call solutions and adds a m2o field from issues to solutions
+#. Add new object call solutions and adds a m2o field from issues to solutions.
+#. Add to the stages of the tasks and issues, a Boolean field to require the description solution.
 
 Installation
 ============
@@ -38,7 +39,7 @@ Bug Tracker
 ===========
 
 Bugs are tracked on `GitHub Issues
-<https://github.com/ingadhoc/{project_repo}/issues>`_. In case of trouble, please
+<https://github.com/ingadhoc/project/issues>`_. In case of trouble, please
 check there if your issue has already been reported. If you spotted it first,
 help us smashing it by providing a detailed and welcomed feedback.
 
