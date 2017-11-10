@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<openerp>
+<odoo>
     <data>
         <record id="edit_project" model="ir.ui.view">
             <field name="name">project.project.inherit</field>
@@ -13,11 +13,33 @@
                         <field name="date" class="oe_inline"/>
                     </div>
                 </field>
+                <field name="user_id" position="attributes">
+                    <attribute name="groups"></attribute>
+                </field>
+                <xpath expr="//notebook//group[@groups='base.group_no_one']" position="attributes">
+                    <attribute name="groups"></attribute>
+                </xpath>
                 <field name="analytic_account_id" position="replace"/>
                 <field name="sequence" position="before">
                     <field name="analytic_account_id" required="False"/>
                 </field>
             </field>
         </record>
+
+        <record id="view_task_form2" model="ir.ui.view">
+            <field name="name">project.task2.inherit</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <h1 class="o_row" position="before">
+                    <h2 class="o_row">
+                        <field name="template_task_id" placeholder="Task Template" class="oe_edit_only"/>
+                    </h2>
+                </h1>
+                <field name="partner_id" position="after">
+                    <field name="template_task"/>
+                </field>
+            </field>
+        </record>
     </data>
-</openerp>
+</odoo>
