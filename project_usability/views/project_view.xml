@@ -23,6 +23,11 @@
                 <field name="sequence" position="before">
                     <field name="analytic_account_id" required="False"/>
                 </field>
+                 <xpath expr="//notebook//page[2]" position="after">
+                    <page string="Project Stages" attrs="{'invisible': [('use_tasks', '=', False)]}" name="project_stages">
+                        <field name="type_ids"/>
+                    </page>
+                </xpath>
             </field>
         </record>
 
