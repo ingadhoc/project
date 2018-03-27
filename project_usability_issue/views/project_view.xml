@@ -11,5 +11,29 @@
                 </field>
             </field>
         </record>
+
+
+        <record id="project_issue_form_view" model="ir.ui.view">
+            <field name="name">project.issue.form.inherit</field>
+            <field name="model">project.issue</field>
+            <field name="inherit_id" ref="project_issue.project_issue_form_view"/>
+            <field name="arch" type="xml">
+                <field name="id" position="replace"/>
+                <field name="date_action_last" position="replace"/>
+                <field name="date_last_stage_update" position="replace"/>
+                <field name="partner_id" position="before">
+                    <field name="id"/>
+                </field>
+                <xpath expr="//notebook//page[@name='extra_info']//group" position="after">
+                    <group string="Dates">
+                        <field name="create_date"/>
+                        <field name="date_closed" string="Closure Date" readonly="0"/>
+                        <field name="date_open" string="Assignation Date" readonly="0"/>
+                        <field name="date_action_last" string="Last Accion Date" readonly="0"/>
+                        <field name="date_last_stage_update" string="Last Stage Update Date" readonly="0"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
     </data>
 </openerp>
