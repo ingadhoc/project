@@ -19,8 +19,6 @@
             <field name="inherit_id" ref="project_issue.project_issue_form_view"/>
             <field name="arch" type="xml">
                 <field name="id" position="replace"/>
-                <field name="date_action_last" position="replace"/>
-                <field name="date_last_stage_update" position="replace"/>
                 <field name="partner_id" position="before">
                     <field name="id"/>
                 </field>
