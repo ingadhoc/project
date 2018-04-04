@@ -28,7 +28,7 @@
                         <field name="date_closed" string="Closure Date"/>
                         <field name="date_open" string="Assignation Date"/>
                         <field name="date_action_last" string="Last Accion Date"/>
-                        <field name="date_last_stage_update" string="Last Stage Update Date"/>
+                        <field name="date_last_stage_update" string="Last Stage Update Date" readonly="1"/>
                     </group>
                 </xpath>
             </field>
