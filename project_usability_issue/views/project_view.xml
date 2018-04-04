@@ -25,10 +25,10 @@
                 <xpath expr="//notebook//page[@name='extra_info']//group" position="after">
                     <group string="Dates">
                         <field name="create_date"/>
-                        <field name="date_closed" string="Closure Date" readonly="0"/>
-                        <field name="date_open" string="Assignation Date" readonly="0"/>
-                        <field name="date_action_last" string="Last Accion Date" readonly="0"/>
-                        <field name="date_last_stage_update" string="Last Stage Update Date" readonly="0"/>
+                        <field name="date_closed" string="Closure Date"/>
+                        <field name="date_open" string="Assignation Date"/>
+                        <field name="date_action_last" string="Last Accion Date"/>
+                        <field name="date_last_stage_update" string="Last Stage Update Date"/>
                     </group>
                 </xpath>
             </field>
