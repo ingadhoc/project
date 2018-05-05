@@ -47,7 +47,7 @@ projects of type "followers only"
     ],
     'test': [
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application': False,
 }
