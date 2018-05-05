@@ -41,8 +41,6 @@ as it is done when making copy of project
     ],
     'demo': [
     ],
-    'test': [
-    ],
     'installable': False,
     'auto_install': False,
     'application': False,

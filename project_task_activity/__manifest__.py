@@ -42,8 +42,6 @@
         'demo/project_task_activity_demo.yml',
         'demo/project_activity_demo.xml',
     ],
-    'test': [
-    ],
     'installable': False,
     'auto_install': False,
     'application': False,

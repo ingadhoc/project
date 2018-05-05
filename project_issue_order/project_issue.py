@@ -12,7 +12,7 @@ class project_issue(models.Model):
              "duration, create_date desc"
 
     sequence = fields.Integer('Sequence',
-                              select=True,
+                              index=True,
                               default=10,
                               help="Gives the sequence order when "
                                    "displaying a list of tasks.")

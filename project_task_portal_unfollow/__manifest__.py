@@ -38,8 +38,6 @@
     'demo': [
         'demo/project_task_portal_unfollow_demo.yml'
     ],
-    'test': [
-    ],
     'installable': False,
     'auto_install': False,
     'application': False,

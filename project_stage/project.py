@@ -36,7 +36,7 @@ class project(models.Model):
         'project.stage',
         'Stage',
         track_visibility='onchange',
-        select=True,
+        index=True,
         copy=False)
     kanban_state = fields.Selection(
         [('normal', 'In Progress'), ('blocked', 'Blocked'),
