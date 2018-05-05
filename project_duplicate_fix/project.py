@@ -5,7 +5,7 @@
 ##############################################################################
 
 
-from openerp import models, api
+from odoo import models, api
 
 
 class project(models.Model):

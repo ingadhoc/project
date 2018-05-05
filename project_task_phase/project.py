@@ -5,7 +5,7 @@
 ##############################################################################
 
 
-from openerp import fields, models
+from odoo import fields, models
 
 
 class project_task_type(models.Model):

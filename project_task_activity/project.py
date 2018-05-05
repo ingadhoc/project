@@ -3,7 +3,7 @@
 # For copyright and license notices, see __manifest__.py file in module root
 # directory
 ##############################################################################
-from openerp import models, api, fields, _
+from odoo import models, api, fields, _
 from datetime import datetime
 # import json
 

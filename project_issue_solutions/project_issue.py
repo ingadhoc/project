@@ -3,9 +3,9 @@
 # For copyright and license notices, see __manifest__.py file in module root
 # directory
 ##############################################################################
-from openerp import fields, models, api, _
-from openerp.tools import html2plaintext
-from openerp.exceptions import UserError
+from odoo import fields, models, api, _
+from odoo.tools import html2plaintext
+from odoo.exceptions import UserError
 
 
 class ProjectIssue(models.Model):

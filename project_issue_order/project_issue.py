@@ -4,7 +4,7 @@
 # directory
 ##############################################################################
 
-from openerp import fields, models
+from odoo import fields, models
 
 
 class project_issue(models.Model):

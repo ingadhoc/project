@@ -6,8 +6,8 @@
 
 
 import re
-from openerp import netsvc
-from openerp.osv import osv, fields
+from odoo import netsvc
+from odoo.osv import osv, fields
 
 
 class project(osv.osv):
