@@ -1,13 +1,12 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
-# For copyright and license notices, see __openerp__.py file in module root
+# For copyright and license notices, see __manifest__.py file in module root
 # directory
 ##############################################################################
 
 
 import re
-from openerp import netsvc
-from openerp.osv import osv, fields
+from odoo import netsvc
+from odoo.osv import osv, fields
 
 
 class project(osv.osv):

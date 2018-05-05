@@ -22,7 +22,7 @@
 ##############################################################################
 
 -->
-<openerp>
+<odoo>
     <data>
 	<record model="ir.module.category" id="module_category_project_related_projects">
 	    <field name="name">Projects related projects</field>
@@ -32,6 +32,6 @@
     </record>
 
     </data>
-</openerp>
+</odoo>
 <!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
      -->

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Sistemas ADHOC - ADHOC SA
@@ -41,8 +40,6 @@ as it is done when making copy of project
     'data': [
     ],
     'demo': [
-    ],
-    'test': [
     ],
     'installable': False,
     'auto_install': False,

@@ -1,9 +1,8 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
-# For copyright and license notices, see __openerp__.py file in module root
+# For copyright and license notices, see __manifest__.py file in module root
 # directory
 ##############################################################################
-from openerp import models, fields
+from odoo import models, fields
 
 
 class project_type(models.Model):
@@ -37,7 +36,7 @@ class project(models.Model):
         'project.stage',
         'Stage',
         track_visibility='onchange',
-        select=True,
+        index=True,
         copy=False)
     kanban_state = fields.Selection(
         [('normal', 'In Progress'), ('blocked', 'Blocked'),

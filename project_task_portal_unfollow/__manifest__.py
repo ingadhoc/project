@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Copyright (C) 2015  ADHOC SA  (http://www.adhoc.com.ar)
@@ -38,8 +37,6 @@
     ],
     'demo': [
         'demo/project_task_portal_unfollow_demo.yml'
-    ],
-    'test': [
     ],
     'installable': False,
     'auto_install': False,
