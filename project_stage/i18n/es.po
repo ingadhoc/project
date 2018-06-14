@@ -1,33 +1,27 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * project_stage
-# 
-# Translators:
-# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2016
-# Nicolas Mac Rouillon <nmr@ingadhoc.com>, 2017
+#	* project_stage
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 9.0c\n"
+"Project-Id-Version: Odoo Server 11.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-06 11:26+0000\n"
-"PO-Revision-Date: 2017-04-06 11:26+0000\n"
-"Last-Translator: Nicolas Mac Rouillon <nmr@ingadhoc.com>, 2017\n"
-"Language-Team: Spanish (https://www.transifex.com/adhoc/teams/46451/es/)\n"
+"POT-Creation-Date: 2018-06-14 16:05+0000\n"
+"PO-Revision-Date: 2018-06-14 16:05+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: \n"
 
 #. module: project_stage
 #: model:ir.model.fields,help:project_stage.field_project_project_kanban_state
-msgid ""
-"A task's kanban state indicates special situations affecting it:\n"
+msgid "A task's kanban state indicates special situations affecting it:\n"
 " * Normal is the default situation\n"
 " * Blocked indicates something is preventing the progress of this task\n"
 " * Ready for next stage indicates the task is ready to be pulled to the next stage"
-msgstr ""
-"El estado Kanban de una tarea indica situaciones especiales que lo afectan: \n"
+msgstr "El estado Kanban de una tarea indica situaciones especiales que lo afectan: \n"
 "* Normal, es la situación predeterminada\n"
 "* Bloqueado, indica que algo está impidiendo el progreso de esta tarea\n"
 "* Listo para la siguiente etapa, indica que la tarea está lista para ser llevada a la siguiente etapa."
@@ -50,41 +44,7 @@ msgstr "Creado por"
 #. module: project_stage
 #: model:ir.model.fields,field_description:project_stage.field_project_stage_create_date
 msgid "Created on"
-msgstr "Creadon en"
-
-#. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_case_default
-msgid "Default for New Projects"
-msgstr "Predeterminado para nuevos proyectos"
-
-#. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_description
-msgid "Description"
-msgstr "Descripción"
-
-#. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_display_name
-msgid "Display Name"
-msgstr "Nombre mostrado "
-
-#. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_fold
-msgid "Folded in Kanban View"
-msgstr "Replegado en la vista kanban"
-
-#. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_id
-msgid "ID"
-msgstr "ID"
-
-#. module: project_stage
-#: model:ir.model.fields,help:project_stage.field_project_stage_case_default
-msgid ""
-"If you check this field, this stage will be proposed by default on each new "
-"project. It will not assign this stage to existing projects."
-msgstr ""
-"Si marca este campo, esta etapa se propondrá por defecto en cada nuevo "
-"proyecto. No asignará esta etapa a los proyectos existentes."
+msgstr "Creado en"
 
 #. module: project_stage
 #: selection:project.project,kanban_state:0
@@ -97,19 +57,14 @@ msgid "Kanban State"
 msgstr "Estado Kanban"
 
 #. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage___last_update
-msgid "Last Modified on"
-msgstr "Última modificación en"
-
-#. module: project_stage
 #: model:ir.model.fields,field_description:project_stage.field_project_stage_write_uid
 msgid "Last Updated by"
-msgstr "Last Updated by"
+msgstr "Última actualización realizada por"
 
 #. module: project_stage
 #: model:ir.model.fields,field_description:project_stage.field_project_stage_write_date
 msgid "Last Updated on"
-msgstr "Last Updated on"
+msgstr "Última actualización el"
 
 #. module: project_stage
 #: model:ir.model,name:project_stage.model_project_project
@@ -132,20 +87,10 @@ msgid "Ready for next stage"
 msgstr "Listo para siguiente etapa"
 
 #. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_sequence
-msgid "Sequence"
-msgstr "Sequencia"
-
-#. module: project_stage
 #: model:ir.model.fields,field_description:project_stage.field_project_project_stage_id
 #: model:ir.ui.view,arch_db:project_stage.project_search
 msgid "Stage"
 msgstr "Etapa"
-
-#. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_name
-msgid "Stage Name"
-msgstr "Nombre de la Etapa"
 
 #. module: project_stage
 #: model:ir.actions.act_window,name:project_stage.action_project_stage
@@ -157,11 +102,3 @@ msgstr "Etapas"
 msgid "Task Stage"
 msgstr "Etapa de la tarea"
 
-#. module: project_stage
-#: model:ir.model.fields,help:project_stage.field_project_stage_fold
-msgid ""
-"This stage is folded in the kanban view whenthere are no records in that "
-"stage to display."
-msgstr ""
-"Esta etapa se repliega en la vista kanban cuando no hay registros para "
-"mostrar en la misma."
