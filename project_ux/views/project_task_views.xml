@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_task_form2" model="ir.ui.view">
+        <field name="name">project.task2.inherit</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <h1 class="o_row" position="before">
+                <h2 class="o_row">
+                    <field name="template_task_id" placeholder="Task Template" class="oe_edit_only" context="{'default_template_task': 1}"/>
+                </h2>
+            </h1>
+            <field name="partner_id" position="after">
+                <field name="template_task"/>
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -9,7 +9,6 @@ class ProjectTask(models.Model):
     _inherit = 'project.task'
 
     template_task = fields.Boolean(
-        'Template Task',
         copy=False,
     )
 
@@ -30,8 +29,8 @@ class ProjectTask(models.Model):
     def onchange_template(self):
         if self.template_task_id:
             data = self.template_task_id.copy_data()
-            for k, v in data[0].iteritems():
+            for k, v in data[0].items():
                 if k in ['project_id', 'partner_id',
                          'company_id', 'message_last_post']:
                     continue
-                self[k] = v
+                self.update({k: v})
