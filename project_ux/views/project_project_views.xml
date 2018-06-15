@@ -1,5 +1,27 @@
 <?xml version="1.0"?>
 <odoo>
+    <record id="project.act_project_project_2_project_task_all" model="ir.actions.act_window">
+        <field name="context">{
+            'group_by': 'stage_id',
+            'search_default_project_id': [active_id],
+            'default_project_id': active_id,
+            'search_default_is_task': 1,
+        }</field>
+    </record>
+    <record id="act_project_project_2_project_sub_task_all" model="ir.actions.act_window">
+        <field name="name">Tasks</field>
+        <field name="res_model">project.task</field>
+        <field name="view_mode">kanban,tree,form,calendar,pivot,graph</field>
+        <field name="context">{
+            'group_by': 'stage_id',
+            'search_default_project_id': [active_id],
+            'default_project_id': active_id,
+            'search_default_is_sub_task': 1,
+        }</field>
+        <field name="domain">[('parent_id','!=', False)]</field>
+        <field name="search_view_id" ref="view_task_search_form"/>
+    </record>
+
     <record id="edit_project" model="ir.ui.view">
         <field name="name">project.project.inherit</field>
         <field name="model">project.project</field>
@@ -27,6 +49,26 @@
                     <field name="type_ids"/>
                 </page>
             </xpath>
+        </field>
+    </record>
+
+    <record id="view_project_kanban" model="ir.ui.view">
+        <field name="name">project.project.kanban.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban"/>
+        <field name="arch" type="xml">
+            <field name="task_count" position="after">
+                <field name="sub_task_count"/>
+            </field>
+            <a name="%(project.act_project_project_2_project_task_all)d" position="before">
+                <a class="o_project_kanban_box" name="%(act_project_project_2_project_sub_task_all)d" type="action">
+                    <div>
+                        <span class="o_value"><t t-esc="record.sub_task_count.value"/></span>
+                        <span class="o_label">Sub: <t t-esc="record.label_tasks.value"/></span>
+                    </div>
+                </a>
+            </a>
+                
         </field>
     </record>
 </odoo>

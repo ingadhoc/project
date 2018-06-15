@@ -31,8 +31,8 @@
         'project',
     ],
     'data': [
-        'views/project_project_views.xml',
         'views/project_task_views.xml',
+        'views/project_project_views.xml',
     ],
     'demo': [
     ],
