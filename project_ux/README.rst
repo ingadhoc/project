@@ -23,10 +23,14 @@ Several improvements to project:
 Installation
 ============
 
+To install this module, you need to:
 
 Configuration
 =============
 
+To configure this module, you need to:
+
+#. Nothing to configure
 
 Usage
 =====

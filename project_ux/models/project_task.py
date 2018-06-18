@@ -27,10 +27,11 @@ class ProjectTask(models.Model):
 
     @api.onchange('template_task_id')
     def onchange_template(self):
-        if self.template_task_id:
-            data = self.template_task_id.copy_data()
-            for k, v in data[0].items():
-                if k in ['project_id', 'partner_id',
-                         'company_id', 'message_last_post']:
-                    continue
-                self.update({k: v})
+        if not self.template_task_id:
+            return
+        data = self.template_task_id.copy_data()
+        for k, v in data[0].items():
+            if k in ['project_id', 'partner_id',
+                     'company_id', 'message_last_post']:
+                continue
+            self.update({k: v})
