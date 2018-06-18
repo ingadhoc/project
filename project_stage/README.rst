@@ -14,19 +14,33 @@
 Project Stage
 =============
 
-This module create class project stage and add it on project header form and project search.
+This module create a new model Project Stage that let us to manage project lifecycle more 
+than just active/inactive status. This new stages works like Tasks Stage original model from 
+Odoo were we can add sequences, fold stages, kanban status, etc.
 
 Installation
 ============
+
+To install this module, you need to:
+
+#. Just install the module.
 
 
 Configuration
 =============
 
+To configure this module, you need to:
+
+#. Nothing to configure.
 
 Usage
 =====
 
+To use this module, you need to:
+
+#. Go to Project Configurations/Project Stages.
+#. Create the Stages.
+#. Go to a project o create new one and see the status bar with the stage generated.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot

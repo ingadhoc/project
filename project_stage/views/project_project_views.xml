@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-   <record id="project_form" model="ir.ui.view">
-        <field name="name">project_stage.form.inherit</field>
+   <record id="edit_project" model="ir.ui.view">
+        <field name="name">project.stage.form.inherit</field>
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.edit_project"/>
         <field name="arch" type="xml">
@@ -22,7 +22,7 @@
                 <field name="stage_id" string="Stage"/>
             </field>
             <group expand="0">
-                <filter string="Stage" name="stage_id" help="Stage" context="{'group_by':'stage_id'}"/>
+                <filter string="Stage" name="group_by_stage_id" help="Stage" context="{'group_by':'stage_id'}"/>
             </group>
         </field>
     </record>

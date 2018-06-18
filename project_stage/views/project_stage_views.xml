@@ -4,7 +4,7 @@
         <field name="name">project.stage.form</field>
         <field name="model">project.stage</field>
         <field name="arch" type="xml">
-            <form string="Task Stage">
+            <form string="Project Stage">
                 <group>
                     <group>
                         <field name="name"/>
@@ -20,7 +20,7 @@
         </field>
     </record>
     <record id="action_project_stage" model="ir.actions.act_window">
-        <field name="name">Stages</field>
+        <field name="name">Project Stages</field>
         <field name="res_model">project.stage</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
