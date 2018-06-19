@@ -18,11 +18,10 @@
 #
 ##############################################################################
 {
-    'name': 'Project Usability Improvements',
-    'version': '9.0.1.7.0',
+    'name': 'Project UX',
+    'version': '11.0.1.0.0',
     'category': 'Project Management',
     'sequence': 14,
-    'summary': '',
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
@@ -32,11 +31,12 @@
         'project',
     ],
     'data': [
-        'views/project_view.xml',
+        'views/project_task_views.xml',
+        'views/project_project_views.xml',
     ],
     'demo': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }
