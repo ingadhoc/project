@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <record id="edit_project" model="ir.ui.view">
+        <field name="name">project.stage.form.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <sheet position="before">
+                <header>
+                    <field name="stage_id" widget="statusbar" clickable="True" options="{'fold_field': 'fold'}"/>
+                </header>
+            </sheet>
+        </field>
+    </record>
+
+    <record id="project_search" model="ir.ui.view">
+        <field name="name">project_stage.search.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_project_filter"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="stage_id" string="Stage"/>
+            </field>
+            <group expand="0">
+                <filter string="Stage" name="group_by_stage_id" help="Stage" context="{'group_by':'stage_id'}"/>
+            </group>
+        </field>
+    </record>
+
+    <record id="project_kanban_form" model="ir.ui.view">
+        <field name="name">project_stage.kanban</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban"/>
+        <field name="arch" type="xml">
+            <kanban class="oe_background_grey o_kanban_dashboard o_project_kanban o_emphasize_colors">
+                <field name="stage_id"/>
+                <field name="sequence"/>
+            </kanban>
+            <kanban class="oe_background_grey o_kanban_dashboard o_project_kanban o_emphasize_colors" position="attributes">
+                <attribute name="default_group_by">stage_id</attribute>
+            </kanban>
+        </field>
+    </record>
+
+</odoo>

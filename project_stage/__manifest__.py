@@ -19,7 +19,7 @@
 ##############################################################################
 {
     'name': 'Project Stage',
-    'version': '9.0.1.1.0',
+    'version': '11.0.1.0.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -30,15 +30,16 @@
     ],
     'depends': [
         'project',
+        'sales_team',
     ],
     'data': [
-        'view/project_view.xml',
-        'view/menu_item.xml',
+        'views/project_project_views.xml',
+        'views/project_stage_views.xml',
         'security/ir.model.access.csv',
     ],
     'demo': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }
