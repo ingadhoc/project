@@ -19,6 +19,7 @@ Several improvements to project:
 
 #. Make Dates and Analytic Account fields visible on project form view.
 #. Add template in tasks for auto complete the data.
+#. Add to enter the project with a click on the project card from the kanban view.
 
 Installation
 ============
