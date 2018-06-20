@@ -19,7 +19,7 @@
 ##############################################################################
 {
     'name': 'Project Description',
-    'version': '9.0.1.0.0',
+    'version': '11.0.1.0.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -32,11 +32,11 @@
         'project',
     ],
     'data': [
-        'view/project_view.xml',
+        'views/project_project_views.xml',
     ],
     'demo': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }

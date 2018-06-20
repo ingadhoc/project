@@ -5,11 +5,10 @@
 from odoo import models, fields
 
 
-class account_analytic_account(models.Model):
+class AccountAnalyticAccount(models.Model):
     _inherit = 'account.analytic.account'
 
     # para simplificar volvemos a crear el mismo campo que ya existia antes
     description = fields.Text(
-        'Description',
-        help="Account analytic account description"
+        help="Description of the project",
     )
