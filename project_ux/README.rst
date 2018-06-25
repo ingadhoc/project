@@ -10,37 +10,31 @@
    :target: https://www.gnu.org/licenses/agpl
    :alt: License: AGPL-3
 
-=============
-Project Stage
-=============
+==========
+Project UX
+==========
 
-This module create a new model Project Stage that let us to manage project lifecycle more 
-than just active/inactive status. This new stages works like Tasks Stage original model from 
-Odoo were we can add sequences, fold stages, kanban status, etc.
+
+Several improvements to project:
+
+#. Make Dates and Analytic Account fields visible on project form view.
+#. Add template in tasks for auto complete the data.
 
 Installation
 ============
 
 To install this module, you need to:
 
-#. Just install the module.
-
-
 Configuration
 =============
 
 To configure this module, you need to:
 
-#. Nothing to configure.
+#. Nothing to configure
 
 Usage
 =====
 
-To use this module, you need to:
-
-#. Go to Project Configurations/Project Stages.
-#. Create the Stages.
-#. Go to a project o create new one and see the status bar with the stage generated.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot

@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_issues_solutions_project_user,project_issue_solution.project_user,project_issue_solutions.model_project_issue_solution,project.group_project_user,1,1,1,1
-access_solutions_tag,project_solution.tag,project_issue_solutions.model_project_solution_tag,,1,1,1,1
