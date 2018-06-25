@@ -19,12 +19,14 @@ Several improvements to project:
 
 #. Make Dates and Analytic Account fields visible on project form view.
 #. Add template in tasks for auto complete the data.
-#. Add to enter the project with a click on the project card from the kanban view.
+#. Change default behavior when click on the project card in the kanban view, now will go to the project form view instead of the project task kanban view.
 
 Installation
 ============
 
 To install this module, you need to:
+
+#. Just install the module.
 
 Configuration
 =============
@@ -36,6 +38,7 @@ To configure this module, you need to:
 Usage
 =====
 
+#. Just Use the module.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
