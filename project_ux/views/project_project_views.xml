@@ -44,7 +44,7 @@
                 <a class="o_project_kanban_box" name="%(act_project_project_2_project_sub_task_all)d" type="action">
                     <div>
                         <span class="o_value"><t t-esc="record.sub_task_count.value"/></span>
-                        <span class="o_label">Sub: <t t-esc="record.label_tasks.value"/></span>
+                        <span class="o_label">Sub<t t-esc="record.label_tasks.value"/></span>
                     </div>
                 </a>
             </a>
