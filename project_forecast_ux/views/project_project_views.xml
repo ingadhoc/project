@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="project_view_kanban_inherit_project_forecast" model="ir.ui.view">
+        <field name="name">project.project.kanban.inherit.forecast</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project_forecast.project_view_kanban_inherit_project_forecast"/>
+        <field name="arch" type="xml">
+            <xpath expr="//a[@t-if='record.allow_forecast.raw_value']//div" position="replace">
+                    <div>
+                        <span class="o_label"><span title="Forecast" class="fa fa-tasks"/></span>
+                    </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
