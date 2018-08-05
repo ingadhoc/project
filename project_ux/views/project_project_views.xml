@@ -28,6 +28,9 @@
                     <field name="type_ids"/>
                 </page>
             </xpath>
+            <div class="oe_chatter">
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
         </field>
     </record>
 
