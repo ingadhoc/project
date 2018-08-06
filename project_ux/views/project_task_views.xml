@@ -53,6 +53,9 @@
                 <filter string="Is Task" name="is_task" domain="[('parent_id','=', False)]"/>
                 <filter string="Is Sub-Task" name="is_sub_task" domain="[('parent_id','!=', False)]"/>
             </filter>
+            <filter name="User" position="before">
+                <filter string="Parent Task" context="{'group_by':'parent_id'}"/>
+            </filter>
         </field>
     </record>
 
