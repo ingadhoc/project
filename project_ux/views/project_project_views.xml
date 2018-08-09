@@ -42,8 +42,7 @@
             <field name="task_count" position="after">
                 <field name="sub_task_count"/>
             </field>
-            <a name="%(project.act_project_project_2_project_task_all)d" position="before">
-                <a type="open"/>
+            <a name="%(project.act_project_project_2_project_task_all)d" position="after">
                 <a class="o_project_kanban_box" name="%(act_project_project_2_project_sub_task_all)d" type="action" groups="project.group_subtask_project">
                     <div>
                         <span class="o_value"><t t-esc="record.sub_task_count.value"/></span>
