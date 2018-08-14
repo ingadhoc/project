@@ -54,6 +54,9 @@
                     </div>
                 </a>
             </a>
+            <a name="%(project.act_project_project_2_project_task_all)d" position="before">
+                <a type="open"/>
+            </a>
             <div class="o_project_kanban_boxes">
                 <field name="activity_ids" widget="kanban_activity"/>
             </div>
