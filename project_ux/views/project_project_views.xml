@@ -30,6 +30,7 @@
             </xpath>
             <div class="oe_chatter">
                 <field name="message_ids" widget="mail_thread"/>
+                <field name="activity_ids" widget="mail_activity"/>
             </div>
         </field>
     </record>
@@ -37,10 +38,13 @@
     <record id="view_project_kanban" model="ir.ui.view">
         <field name="name">project.project.kanban.inherit</field>
         <field name="model">project.project</field>
+        <field name="priority" eval="50"/>
         <field name="inherit_id" ref="project.view_project_kanban"/>
         <field name="arch" type="xml">
             <field name="task_count" position="after">
                 <field name="sub_task_count"/>
+                <field name="activity_ids"/>
+                <field name="activity_state"/>
             </field>
             <a name="%(project.act_project_project_2_project_task_all)d" position="after">
                 <a class="o_project_kanban_box" name="%(act_project_project_2_project_sub_task_all)d" type="action" groups="project.group_subtask_project">
@@ -50,6 +54,12 @@
                     </div>
                 </a>
             </a>
+            <a name="%(project.act_project_project_2_project_task_all)d" position="before">
+                <a type="open"/>
+            </a>
+            <div class="o_project_kanban_boxes">
+                <field name="activity_ids" widget="kanban_activity"/>
+            </div>
         </field>
     </record>
 </odoo>

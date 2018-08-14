@@ -20,6 +20,9 @@ class ProjectTask(models.Model):
         copy=False,
         readonly=False,
     )
+    child_ids = fields.One2many(
+        copy=True,
+    )
 
     @api.multi
     def _compute_template_task_id(self):
