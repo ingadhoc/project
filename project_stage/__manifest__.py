@@ -19,7 +19,7 @@
 ##############################################################################
 {
     'name': 'Project Stage',
-    'version': '11.0.1.0.0',
+    'version': '11.0.1.1.0',
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
@@ -35,6 +35,7 @@
     'data': [
         'views/project_project_views.xml',
         'views/project_stage_views.xml',
+        'views/webclient_templates.xml',
         'security/ir.model.access.csv',
     ],
     'demo': [
