@@ -38,6 +38,7 @@
             </kanban>
             <kanban class="oe_background_grey o_kanban_dashboard o_project_kanban o_emphasize_colors" position="attributes">
                 <attribute name="default_group_by">stage_id</attribute>
+                <attribute name="class">oe_background_grey o_kanban_dashboard o_project_kanban o_emphasize_colors o_kanban_dashboard_project</attribute>
             </kanban>
         </field>
     </record>
