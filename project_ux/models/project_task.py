@@ -28,28 +28,26 @@ class ProjectTask(models.Model):
     def _compute_template_task_id(self):
         return None
 
-    @api.multi
-    def copy_data(self, default=None):
-        if default is None:
-            default = {}
-        res = super(ProjectTask, self).copy_data(default)
-        if self._context.get('onchange_template'):
-            for rec in res:
-                for item in list(rec):
-                    if item in [
-                            'project_id', 'partner_id',
-                            'company_id', 'message_last_post']:
-                        rec.pop(item)
-        return res
-
     @api.onchange('template_task_id')
     def onchange_template(self):
         if not self.template_task_id:
             return
-        data = self.template_task_id.with_context(
-            onchange_template=True).copy_data()
+        copy_data_default = {
+            'project_id': self.project_id.id,
+            'partner_id': self.partner_id.id,
+            'company_id': self.company_id.id,
+            'message_last_post': False,
+            'child_ids': False,
+        }
+        data = self.template_task_id.copy_data(copy_data_default)
         for k, v in data[0].items():
             self[k] = v
+
+        childs = []
+        copy_data_default['project_id'] = self.subtask_project_id.id
+        for child in self.template_task_id.child_ids:
+            childs.append((0, 0, child.copy_data(copy_data_default)[0]))
+        self.child_ids = childs
 
     # We overwrite this function because it is not possible to inherit it and
     # we do that calculates only the subtasks that are in the closed stages.
