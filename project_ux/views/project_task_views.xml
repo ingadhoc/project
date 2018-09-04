@@ -28,7 +28,7 @@
                             <field name="remaining_hours" widget="float_time" sum="Remaining Hours" readonly="1"/>
                             <field name="date_deadline" invisible="context.get('deadline_visible',True)"/>
                             <field name="stage_id"/>
-                            <field name="priority"/>
+                            <field name="priority" widget="priority"/>
                             <field name="parent_id" invisible="1"/>
                             <field name="tag_ids" invisible="1"/>
                             <field name="notes" invisible="1"/>
