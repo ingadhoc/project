@@ -65,3 +65,10 @@ class ProjectTask(models.Model):
         if action.get('context', {}).get('search_default_is_task', False):
             action.get('context').pop('search_default_is_task')
         return action
+
+    @api.constrains('project_id')
+    def change_project_id(self):
+        for rec in self.filtered('child_ids'):
+            rec.child_ids.update(
+                {'project_id': rec.subtask_project_id.id,
+                 })
