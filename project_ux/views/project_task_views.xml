@@ -6,6 +6,9 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_form2"/>
         <field name="arch" type="xml">
+            <button name="action_assign_to_me" position="attributes">
+                <attribute name="attrs">{}</attribute>
+            </button>
             <field name="child_ids" position="replace"/>
             <h1 class="o_row" position="before">
                 <h2 class="o_row">
