@@ -69,6 +69,6 @@ class ProjectTask(models.Model):
     @api.constrains('project_id')
     def change_project_id(self):
         for rec in self.filtered('child_ids'):
-            rec.child_ids.update(
+            rec.child_ids.write(
                 {'project_id': rec.subtask_project_id.id,
                  })
