@@ -20,7 +20,7 @@
 ##############################################################################
 {
     "name": "Project Task Issues",
-    'version': '9.0.1.0.0',
+    'version': '9.0.1.1.0',
     'category': 'Project',
     'sequence': 14,
     'summary': '',
