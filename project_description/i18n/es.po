@@ -4,13 +4,15 @@
 # 
 # Translators:
 # Juan José Scarafía <scarafia.juanjose@gmail.com>, 2018
+# emiquinodoz <eq@ingadhoc.com>, 2019
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-21 18:14+0000\n"
-"PO-Revision-Date: 2018-09-21 18:14+0000\n"
-"Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-10-26 00:15+0000\n"
+"PO-Revision-Date: 2018-08-23 20:46+0000\n"
+"Last-Translator: emiquinodoz <eq@ingadhoc.com>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/adhoc/teams/46451/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,4 +36,4 @@ msgstr "Descripción "
 #: model:ir.model.fields,help:project_description.field_account_analytic_account_description
 #: model:ir.model.fields,help:project_description.field_project_project_description
 msgid "Description of the project"
-msgstr ""
+msgstr "Descripción del proyecto"
