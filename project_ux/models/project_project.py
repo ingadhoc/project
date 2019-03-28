@@ -40,13 +40,13 @@ class ProjectProject(models.Model):
 
     @api.multi
     def copy(self, default=None):
-        tasks = self.task_ids
         project = super(ProjectProject, self).copy(default)
-        # We setting the if the subtask project and the project are the same
-        # the new id of the subtask project and the new project
-        #  for the new tasks
+        # If we have subtasks we need to fix the project of this substasks
+        # manually asigning the new project_id, if not the new subtasks will
+        # refer to the template project
         if self.subtask_project_id == self:
-            (self.tasks - tasks).update({'project_id': project.id})
+            subtasks = self.tasks.filtered('parent_id')
+            subtasks.write({'project_id': project.id})
             project.subtask_project_id = project.id
         return project
 
