@@ -45,7 +45,7 @@ class ProjectProject(models.Model):
         # manually asigning the new project_id, if not the new subtasks will
         # refer to the template project
         if self.subtask_project_id == self:
-            subtasks = self.tasks.filtered('parent_id')
+            subtasks = project.tasks.filtered('parent_id')
             subtasks.write({'project_id': project.id})
             project.subtask_project_id = project.id
         return project
