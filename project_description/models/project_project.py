@@ -5,8 +5,8 @@
 from odoo import models, fields
 
 
-class AccountAnalyticAccount(models.Model):
-    _inherit = 'account.analytic.account'
+class ProjectProject(models.Model):
+    _inherit = 'project.project'
 
     # para simplificar volvemos a crear el mismo campo que ya existia antes
     description = fields.Text(
