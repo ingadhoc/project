@@ -10,7 +10,7 @@
                 <attribute name="attrs">{}</attribute>
             </button>
             <field name="child_ids" position="replace"/>
-            <h1 class="o_row" position="before">
+            <h1 class="d-flex flex-row justify-content-between" position="before">
                 <h2 class="o_row">
                     <field name="template_task_id" placeholder="Task Template" class="oe_edit_only" context="{'default_template_task': 1}"/>
                 </h2>
@@ -28,7 +28,6 @@
                             <field name="project_id"/>
                             <field name="user_id"/>
                             <field name="planned_hours"/>
-                            <field name="remaining_hours" widget="float_time" sum="Remaining Hours" readonly="1"/>
                             <field name="date_deadline" invisible="context.get('deadline_visible',True)"/>
                             <field name="stage_id" options="{'no_create': True, 'no_open': True}"/>
                             <field name="priority" widget="priority"/>
@@ -84,8 +83,8 @@
                 <filter string="Is Sub-Task" name="is_sub_task" domain="[('parent_id','!=', False)]"/>
                 <separator/>
             </filter>
-            <filter name="User" position="before">
-                <filter string="Parent Task" context="{'group_by':'parent_id'}"/>
+            <filter name="user" position="before">
+                <filter string="Parent Task" name="parent_task" context="{'group_by':'parent_id'}"/>
             </filter>
         </field>
     </record>

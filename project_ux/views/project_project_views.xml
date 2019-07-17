@@ -19,10 +19,6 @@
             <xpath expr="//notebook//group[@groups='base.group_no_one']" position="attributes">
                 <attribute name="groups"></attribute>
             </xpath>
-            <field name="analytic_account_id" position="replace"/>
-            <field name="sequence" position="before">
-                <field name="analytic_account_id" required="False"/>
-            </field>
              <xpath expr="//notebook//page[1]" position="after">
                 <page string="Project Stages" attrs="{'invisible': [('task_count', '=', 0)]}" name="project_stages">
                     <field name="type_ids"/>
