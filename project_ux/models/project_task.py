@@ -10,6 +10,7 @@ class ProjectTask(models.Model):
 
     template_task = fields.Boolean(
         copy=False,
+        string="Is task template?"
     )
 
     template_task_id = fields.Many2one(
