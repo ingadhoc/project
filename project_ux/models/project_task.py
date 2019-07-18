@@ -10,6 +10,7 @@ class ProjectTask(models.Model):
 
     template_task = fields.Boolean(
         copy=False,
+        string="Is task template?",
     )
 
     template_task_id = fields.Many2one(
@@ -51,9 +52,8 @@ class ProjectTask(models.Model):
 
     # We overwrite this function because it is not possible to inherit it and
     # we do that calculates only the subtasks that are in the closed stages.
-    @api.multi
     def _compute_subtask_count(self):
-        for task in self:
+        for task in self.filtered(lambda t: isinstance(t.id, int)):
             task.subtask_count = self.search_count(
                 [('id', 'child_of', task.id),
                  ('id', '!=', task.id),
