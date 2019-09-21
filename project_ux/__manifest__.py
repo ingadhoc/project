@@ -19,7 +19,7 @@
 ##############################################################################
 {
     'name': 'Project UX',
-    'version': '12.0.1.0.0',
+    'version': '12.0.1.1.0',
     'category': 'Project Management',
     'sequence': 14,
     'author': 'ADHOC SA',
@@ -33,6 +33,7 @@
     'data': [
         'views/project_task_views.xml',
         'views/project_project_views.xml',
+        'views/webclient_templates.xml',
     ],
     'demo': [
     ],
