@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="portal_my_task" inherit_id="project.portal_my_task" name="Portal">
+        <xpath expr="//span[@t-field='task.create_date']//.." position="inside">
+            <div class="col-md">
+                <strong>Estimated Hs:</strong> <span t-field="task.planned_hours" t-field-options="{&quot;widget&quot;: &quot;hour&quot;}"/>
+            </div>
+            <div class="col-md">
+                <strong>Remaining Hs:</strong> <span t-field="task.remaining_hours" t-field-options="{&quot;widget&quot;: &quot;hour&quot;}"/>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>
