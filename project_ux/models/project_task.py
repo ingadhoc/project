@@ -34,7 +34,6 @@ class ProjectTask(models.Model):
             'project_id': self.project_id.id,
             'partner_id': self.partner_id.id,
             'company_id': self.company_id.id,
-            'message_last_post': False,
             'child_ids': False,
         }
         data = self.template_task_id.copy_data(copy_data_default)
