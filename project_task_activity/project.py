@@ -3,7 +3,7 @@
 # For copyright and license notices, see __openerp__.py file in module root
 # directory
 ##############################################################################
-from openerp import models, api, fields, _
+from openerp import models, api, fields, _, SUPERUSER_ID
 from datetime import datetime
 # import json
 
@@ -58,6 +58,28 @@ class ProjectTask(models.Model):
     activities_total = fields.Char(
         string="Activities Total",
         compute='_get_activities_total')
+    message_partner_ids = fields.Many2many(
+        'res.partner',
+        'task_msg_partner_rel',
+        'msg_id',
+        'partner_id',
+        compute='_compute_following_partners'
+    )
+
+    @api.multi
+    @api.depends('message_follower_ids')
+    def _compute_following_partners(self):
+        for task in self:
+            task.message_partner_ids = [
+                (6, False, [
+                    x.id for x in task.message_follower_ids.mapped('partner_id')
+                ])
+            ]
+
+    def init(self, cr):
+        ids = self.search(cr, SUPERUSER_ID, [])
+        for task in self.browse(cr, SUPERUSER_ID, ids):
+            task._compute_following_partners()
 
     @api.one
     @api.depends('activity_ids.state')
@@ -91,6 +113,28 @@ class ProjectProject(models.Model):
     progress_activities = fields.Float(
         string=_("Progress"),
         compute='_get_progress_activities')
+    message_partner_ids = fields.Many2many(
+        'res.partner',
+        'project_msg_partner_rel',
+        'msg_id',
+        'partner_id',
+        compute='_compute_following_partners'
+    )
+
+    @api.multi
+    @api.depends('message_follower_ids')
+    def _compute_following_partners(self):
+        for project in self:
+            project.message_partner_ids = [
+                (6, False, [
+                    x.id for x in project.message_follower_ids.mapped('partner_id')
+                ])
+            ]
+
+    def init(self, cr):
+        ids = self.search(cr, SUPERUSER_ID, [])
+        for project in self.browse(cr, SUPERUSER_ID, ids):
+            project._compute_following_partners()
 
     @api.one
     def _get_task_activity(self):
