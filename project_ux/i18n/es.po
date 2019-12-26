@@ -1,0 +1,100 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * project_ux
+# 
+# Translators:
+# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-26 00:39+0000\n"
+"PO-Revision-Date: 2019-07-18 23:39+0000\n"
+"Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2019\n"
+"Language-Team: Spanish (https://www.transifex.com/adhoc/teams/46451/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: project_ux
+#: model_terms:ir.ui.view,arch_db:project_ux.portal_my_task
+msgid "<strong>Estimated Hs:</strong>"
+msgstr ""
+
+#. module: project_ux
+#: model_terms:ir.ui.view,arch_db:project_ux.portal_my_task
+msgid "<strong>Remaining Hs:</strong>"
+msgstr ""
+
+#. module: project_ux
+#: model_terms:ir.ui.view,arch_db:project_ux.edit_project
+msgid "Dates"
+msgstr "Fechas"
+
+#. module: project_ux
+#: model_terms:ir.ui.view,arch_db:project_ux.view_task_search_form
+msgid "Is Sub-Task"
+msgstr "Is Sub-Task"
+
+#. module: project_ux
+#: model_terms:ir.ui.view,arch_db:project_ux.view_task_search_form
+msgid "Is Task"
+msgstr "Is Task"
+
+#. module: project_ux
+#: model:ir.model.fields,field_description:project_ux.field_project_task__template_task
+msgid "Is task template?"
+msgstr ""
+
+#. module: project_ux
+#: model_terms:ir.ui.view,arch_db:project_ux.view_task_search_form
+msgid "Parent Task"
+msgstr "Tarea padre"
+
+#. module: project_ux
+#: model:ir.model,name:project_ux.model_project_project
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: project_ux
+#: model_terms:ir.ui.view,arch_db:project_ux.edit_project
+msgid "Project Stages"
+msgstr "Etapas del proyecto"
+
+#. module: project_ux
+#: model_terms:ir.ui.view,arch_db:project_ux.view_project_kanban
+msgid "Sub"
+msgstr "Sub"
+
+#. module: project_ux
+#: model:ir.model.fields,field_description:project_ux.field_project_project__sub_task_count
+msgid "Sub Task Count"
+msgstr "Recuento de subtareas"
+
+#. module: project_ux
+#: model:ir.actions.act_window,name:project_ux.act_project_project_2_project_sub_task_all
+msgid "Sub Tasks"
+msgstr "Sub Tasks"
+
+#. module: project_ux
+#: model_terms:ir.ui.view,arch_db:project_ux.view_task_form2
+msgid "Subtasks"
+msgstr "Subtarea"
+
+#. module: project_ux
+#: model:ir.model,name:project_ux.model_project_task
+msgid "Task"
+msgstr "Tarea"
+
+#. module: project_ux
+#: model_terms:ir.ui.view,arch_db:project_ux.view_task_form2
+msgid "Task Template"
+msgstr "Task Template"
+
+#. module: project_ux
+#: model:ir.model.fields,field_description:project_ux.field_project_task__template_task_id
+msgid "Template Task"
+msgstr "Plantilla de Tarea"

@@ -3,16 +3,15 @@
 # * project_stage
 # 
 # Translators:
-# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2018
-# emiquinodoz <eq@ingadhoc.com>, 2019
+# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 11.0\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 00:15+0000\n"
-"PO-Revision-Date: 2018-08-23 20:46+0000\n"
-"Last-Translator: emiquinodoz <eq@ingadhoc.com>, 2019\n"
+"POT-Creation-Date: 2019-12-26 00:39+0000\n"
+"PO-Revision-Date: 2019-07-17 22:55+0000\n"
+"Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/adhoc/teams/46451/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,47 +20,47 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: project_stage
-#: model:ir.ui.view,arch_db:project_stage.project_stage_form
+#: model_terms:ir.ui.view,arch_db:project_stage.project_stage_form
 msgid "Add a description..."
 msgstr "Agregar una Descripción"
 
 #. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_create_uid
+#: model:ir.model.fields,field_description:project_stage.field_project_stage__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_create_date
+#: model:ir.model.fields,field_description:project_stage.field_project_stage__create_date
 msgid "Created on"
 msgstr "Creado en"
 
 #. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_case_default
+#: model:ir.model.fields,field_description:project_stage.field_project_stage__case_default
 msgid "Default for New Projects"
 msgstr "Predeterminado para nuevos proyectos"
 
 #. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_description
+#: model:ir.model.fields,field_description:project_stage.field_project_stage__description
 msgid "Description"
 msgstr "Descripción "
 
 #. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_display_name
+#: model:ir.model.fields,field_description:project_stage.field_project_stage__display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
 
 #. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_fold
+#: model:ir.model.fields,field_description:project_stage.field_project_stage__fold
 msgid "Folded in Kanban View"
 msgstr "Doblado en vista Kanban"
 
 #. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_id
+#: model:ir.model.fields,field_description:project_stage.field_project_stage__id
 msgid "ID"
 msgstr "ID"
 
 #. module: project_stage
-#: model:ir.model.fields,help:project_stage.field_project_stage_case_default
+#: model:ir.model.fields,help:project_stage.field_project_stage__case_default
 msgid ""
 "If you check this field, this stage will be proposed by default on each new "
 "project. It will not assign this stage to existing projects."
@@ -70,17 +69,17 @@ msgstr ""
 " nuevo proyecto. No asignará esta etapa a proyectos existentes."
 
 #. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage___last_update
+#: model:ir.model.fields,field_description:project_stage.field_project_stage____last_update
 msgid "Last Modified on"
 msgstr "Última modificación en"
 
 #. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_write_uid
+#: model:ir.model.fields,field_description:project_stage.field_project_stage__write_uid
 msgid "Last Updated by"
 msgstr "Última actualización realizada por"
 
 #. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_write_date
+#: model:ir.model.fields,field_description:project_stage.field_project_stage__write_date
 msgid "Last Updated on"
 msgstr "Última actualización el"
 
@@ -91,7 +90,7 @@ msgstr "Proyecto"
 
 #. module: project_stage
 #: model:ir.model,name:project_stage.model_project_stage
-#: model:ir.ui.view,arch_db:project_stage.project_stage_form
+#: model_terms:ir.ui.view,arch_db:project_stage.project_stage_form
 msgid "Project Stage"
 msgstr "Etapa del Proyecto"
 
@@ -102,23 +101,23 @@ msgid "Project Stages"
 msgstr "Etapas del proyecto"
 
 #. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_sequence
+#: model:ir.model.fields,field_description:project_stage.field_project_stage__sequence
 msgid "Sequence"
 msgstr "Secuencia"
 
 #. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_project_stage_id
-#: model:ir.ui.view,arch_db:project_stage.project_search
+#: model:ir.model.fields,field_description:project_stage.field_project_project__stage_id
+#: model_terms:ir.ui.view,arch_db:project_stage.project_search
 msgid "Stage"
 msgstr "Etapa"
 
 #. module: project_stage
-#: model:ir.model.fields,field_description:project_stage.field_project_stage_name
+#: model:ir.model.fields,field_description:project_stage.field_project_stage__name
 msgid "Stage Name"
 msgstr "Nombre de la etapa"
 
 #. module: project_stage
-#: model:ir.model.fields,help:project_stage.field_project_stage_fold
+#: model:ir.model.fields,help:project_stage.field_project_stage__fold
 msgid ""
 "This stage is folded in the kanban view whenthere are no records in that "
 "stage to display."

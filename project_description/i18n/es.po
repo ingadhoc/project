@@ -3,16 +3,15 @@
 # * project_description
 # 
 # Translators:
-# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2018
-# emiquinodoz <eq@ingadhoc.com>, 2019
+# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 11.0\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 00:15+0000\n"
-"PO-Revision-Date: 2018-08-23 20:46+0000\n"
-"Last-Translator: emiquinodoz <eq@ingadhoc.com>, 2019\n"
+"POT-Creation-Date: 2019-12-26 00:39+0000\n"
+"PO-Revision-Date: 2019-07-16 20:28+0000\n"
+"Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/adhoc/teams/46451/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,19 +20,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: project_description
-#: model:ir.model,name:project_description.model_account_analytic_account
-msgid "Analytic Account"
-msgstr "Cuenta Analítica"
-
-#. module: project_description
-#: model:ir.model.fields,field_description:project_description.field_account_analytic_account_description
-#: model:ir.model.fields,field_description:project_description.field_project_project_description
-#: model:ir.ui.view,arch_db:project_description.edit_project
+#: model:ir.model.fields,field_description:project_description.field_project_project__description
+#: model_terms:ir.ui.view,arch_db:project_description.edit_project
 msgid "Description"
 msgstr "Descripción "
 
 #. module: project_description
-#: model:ir.model.fields,help:project_description.field_account_analytic_account_description
-#: model:ir.model.fields,help:project_description.field_project_project_description
+#: model:ir.model.fields,help:project_description.field_project_project__description
 msgid "Description of the project"
 msgstr "Descripción del proyecto"
+
+#. module: project_description
+#: model:ir.model,name:project_description.model_project_project
+msgid "Project"
+msgstr "Proyecto"
