@@ -14,9 +14,7 @@
 Project Stage
 =============
 
-This module create a new model Project Stage that let us to manage project lifecycle more 
-than just active/inactive status. This new stages works like Tasks Stage original model from 
-Odoo were we can add sequences, fold stages, kanban status, etc.
+This module create a new model Project Stage that let us to manage project lifecycle more than just active/inactive status. This new stages works like Tasks Stage original model from Odoo were we can add sequences, fold stages, kanban status, etc.
 
 Installation
 ============

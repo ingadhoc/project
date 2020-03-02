@@ -22,7 +22,6 @@
     <record id="action_project_stage" model="ir.actions.act_window">
         <field name="name">Project Stages</field>
         <field name="res_model">project.stage</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 
