@@ -22,7 +22,6 @@ class ProjectTask(models.Model):
         readonly=False,
     )
 
-    @api.multi
     def _compute_template_task_id(self):
         return None
 
