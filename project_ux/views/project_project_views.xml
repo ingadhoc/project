@@ -9,17 +9,14 @@
             <field name="user_id" position="after">
                 <label for="date_start" string="Dates"/>
                 <div  class="oe_inline">
-                    <field name="date_start"  class="oe_inline"/> - 
+                    <field name="date_start"  class="oe_inline"/> -
                     <field name="date" class="oe_inline"/>
                 </div>
             </field>
             <field name="user_id" position="attributes">
                 <attribute name="groups"></attribute>
             </field>
-            <xpath expr="//notebook//group[@groups='base.group_no_one']" position="attributes">
-                <attribute name="groups"></attribute>
-            </xpath>
-             <xpath expr="//notebook//page[1]" position="after">
+            <xpath expr="//notebook//page[1]" position="after">
                 <page string="Project Stages" attrs="{'invisible': [('task_count', '=', 0)]}" name="project_stages">
                     <field name="type_ids"/>
                 </page>

@@ -19,11 +19,11 @@
                 <field name="template_task"/>
             </field>
             <page name="extra_info" position="after">
-                <page name="subtasks" string="Subtasks" attrs="{'invisible': [('parent_id', '!=', False)]}">
-                    <!-- 'default_name': name + ':' -->
+                <page name="subtasks" string="Subtasks" attrs="{'invisible': [('parent_id', '!=', False)]}" groups="project.group_subtask_project">
                     <field name="child_ids" context="{'default_parent_id': id, 'default_project_id': subtask_project_id, 'default_partner_id': partner_id}">
                         <tree editable ="bottom" decoration-danger="date_deadline and (date_deadline&lt;current_date)">
                             <field name="sequence" invisible="1"/>
+                            <field name="company_id" invisible="1"/>
                             <field name="name"/>
                             <field name="project_id"/>
                             <field name="user_id"/>
@@ -33,7 +33,6 @@
                             <field name="priority" widget="priority"/>
                             <field name="parent_id" invisible="1"/>
                             <field name="tag_ids" invisible="1"/>
-                            <field name="notes" invisible="1"/>
                             <field name="color" invisible="1"/>
                             <field name="description" invisible="1"/>
                             <field name="displayed_image_id" invisible="1"/>
