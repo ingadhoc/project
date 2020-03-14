@@ -22,9 +22,9 @@ class ProjectTask(models.Model):
         readonly=False,
     )
 
-    @api.multi
     def _compute_template_task_id(self):
-        return None
+        for rec in self:
+            rec.template_task_id = self.env['project.task']
 
     @api.onchange('template_task_id')
     def onchange_template(self):
@@ -49,15 +49,12 @@ class ProjectTask(models.Model):
     # We overwrite this function because it is not possible to inherit it and
     # we do that calculates only the subtasks that are in the closed stages.
     def _compute_subtask_count(self):
-        for task in self.filtered(lambda t: isinstance(t.id, int)):
+        tasks = self.filtered(lambda t: isinstance(t.id, int))
+        tasks_new_ids = self - tasks
+        tasks_new_ids.update({'subtask_count': 0})
+        for task in tasks:
             task.subtask_count = self.search_count(
                 [('id', 'child_of', task.id),
                  ('id', '!=', task.id),
                  '|', ('stage_id.fold', '=', False),
                  ('stage_id', '=', False)])
-
-    def action_subtask(self):
-        action = super(ProjectTask, self).action_subtask()
-        if action.get('context', {}).get('search_default_is_task', False):
-            action.get('context').pop('search_default_is_task')
-        return action

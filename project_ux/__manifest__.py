@@ -19,7 +19,7 @@
 ##############################################################################
 {
     'name': 'Project UX',
-    'version': '12.0.1.2.0',
+    'version': '13.0.1.0.0',
     'category': 'Project Management',
     'sequence': 14,
     'author': 'ADHOC SA',
@@ -38,7 +38,7 @@
     ],
     'demo': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }
