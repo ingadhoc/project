@@ -33,7 +33,6 @@
     'data': [
         'views/project_task_views.xml',
         'views/project_project_views.xml',
-        'views/webclient_templates.xml',
         'views/project_portal_templates.xml',
     ],
     'demo': [
