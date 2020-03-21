@@ -35,7 +35,6 @@
     'data': [
         'views/project_project_views.xml',
         'views/project_stage_views.xml',
-        'views/webclient_templates.xml',
         'security/ir.model.access.csv',
     ],
     'demo': [
