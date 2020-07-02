@@ -5,11 +5,9 @@
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.edit_project"/>
         <field name="arch" type="xml">
-            <sheet position="before">
-                <header>
-                    <field name="stage_id" widget="statusbar" clickable="True" options="{'fold_field': 'fold'}"/>
-                </header>
-            </sheet>
+            <header>
+                <field name="stage_id" widget="statusbar" options="{'clickable': '1', 'fold_field': 'fold'}"/>
+            </header>
         </field>
     </record>
 
