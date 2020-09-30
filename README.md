@@ -3,7 +3,7 @@
 [![Coverage Status](https://coveralls.io/repos/ingadhoc/project/badge.png?branch=13.0)](https://coveralls.io/r/ingadhoc/project?branch=13.0)
 [![Code Climate](https://codeclimate.com/github/ingadhoc/project/badges/gpa.svg)](https://codeclimate.com/github/ingadhoc/project)
 
-# ADHOC project
+# ADHOC-An Amazing project
 
 ADHOC Odoo project Modules
 
