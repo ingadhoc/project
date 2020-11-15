@@ -17,7 +17,7 @@
                 <attribute name="groups"></attribute>
             </field>
             <xpath expr="//notebook//page[1]" position="after">
-                <page string="Project Stages" attrs="{'invisible': [('task_count', '=', 0)]}" name="project_stages">
+                <page string="Project Stages" name="project_stages">
                     <field name="type_ids"/>
                 </page>
             </xpath>
