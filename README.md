@@ -3,7 +3,7 @@
 
 # ADHOC project
 
-ADHOC Odoo project Modules
+Odoo project Modules
 
 [//]: # (addons)
 [//]: # (end addons)
