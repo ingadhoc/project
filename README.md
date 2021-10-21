@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/ingadhoc/project/badge.png?branch=13.0)](https://coveralls.io/r/ingadhoc/project?branch=13.0)
+[![Coverage Status](https://coveralls.io/repos/ingadhoc/project/badge.png?branch=15.0)](https://coveralls.io/r/ingadhoc/project?branch=15.0)
 [![Code Climate](https://codeclimate.com/github/ingadhoc/project/badges/gpa.svg)](https://codeclimate.com/github/ingadhoc/project)
 
 # ADHOC project
@@ -10,7 +10,7 @@ ADHOC Odoo project Modules
 
 Translation Status
 ------------------
-[![Transifex Status](https://www.transifex.com/projects/p/ingadhoc-project-13-0/chart/image_png)](https://www.transifex.com/projects/p/ingadhoc-project-13-0)
+[![Transifex Status](https://www.transifex.com/projects/p/ingadhoc-project-15-0/chart/image_png)](https://www.transifex.com/projects/p/ingadhoc-project-15-0)
 
 ----
 
