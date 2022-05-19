@@ -19,7 +19,7 @@
 ##############################################################################
 {
     'name': 'Project UX',
-    'version': '13.0.1.1.0',
+    'version': "15.0.1.0.0",
     'category': 'Project Management',
     'sequence': 14,
     'author': 'ADHOC SA',
@@ -33,11 +33,10 @@
     'data': [
         'views/project_task_views.xml',
         'views/project_project_views.xml',
-        'views/project_portal_templates.xml',
     ],
     'demo': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }

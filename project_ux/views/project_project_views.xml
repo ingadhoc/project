@@ -6,13 +6,6 @@
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.edit_project"/>
         <field name="arch" type="xml">
-            <field name="user_id" position="after">
-                <label for="date_start" string="Dates"/>
-                <div  class="oe_inline">
-                    <field name="date_start"  class="oe_inline"/> -
-                    <field name="date" class="oe_inline"/>
-                </div>
-            </field>
             <field name="user_id" position="attributes">
                 <attribute name="groups"></attribute>
             </field>
@@ -21,10 +14,6 @@
                     <field name="type_ids"/>
                 </page>
             </xpath>
-            <div class="oe_chatter">
-                <field name="message_ids" widget="mail_thread"/>
-                <field name="activity_ids" widget="mail_activity"/>
-            </div>
         </field>
     </record>
 
@@ -39,20 +28,23 @@
                 <field name="activity_ids"/>
                 <field name="activity_state"/>
             </field>
-            <a name="%(project.act_project_project_2_project_task_all)d" position="after">
-                <a class="o_project_kanban_box" name="%(act_project_project_2_project_sub_task_all)d" type="action" groups="project.group_subtask_project">
-                    <div>
-                        <span class="o_value"><t t-esc="record.sub_task_count.value"/></span>
-                        <span class="o_label">Sub<t t-esc="record.label_tasks.value"/></span>
-                    </div>
-                </a>
-            </a>
-            <a name="%(project.act_project_project_2_project_task_all)d" position="before">
-                <a type="open"/>
-            </a>
-            <div class="o_project_kanban_boxes">
-                <field name="activity_ids" widget="kanban_activity"/>
-            </div>
+        </field>
+    </record>
+
+    <record id="project_kanban_form" model="ir.ui.view">
+        <field name="name">project.project.kanban</field>
+        <field name="model">project.project</field>
+        <field name="groups_id" eval="[(4,ref('project.group_project_stages'))]"/>
+        <field name="inherit_id" ref="project.view_project_kanban"/>
+        <field name="arch" type="xml">
+            <kanban class="oe_background_grey o_kanban_dashboard o_project_kanban o_emphasize_colors">
+                <field name="stage_id"/>
+                <field name="sequence"/>
+            </kanban>
+            <kanban class="oe_background_grey o_kanban_dashboard o_project_kanban o_emphasize_colors" position="attributes">
+                <attribute name="default_group_by">stage_id</attribute>
+                <attribute name="class">oe_background_grey o_kanban_dashboard o_project_kanban o_emphasize_colors o_kanban_dashboard_project</attribute>
+            </kanban>
         </field>
     </record>
 </odoo>
