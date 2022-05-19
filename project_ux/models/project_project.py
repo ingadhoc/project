@@ -24,16 +24,3 @@ class ProjectProject(models.Model):
              data['project_id_count']) for data in task_data)
         for project in self:
             project.update({'sub_task_count': result.get(project.id, 0)})
-
-    # We rewrite the method because it is not very heritable,
-    # and we need to count only the tasks, not the subtasks
-    def _compute_task_count(self):
-        task_data = self.env['project.task'].read_group([
-            ('parent_id', '=', False),
-            ('project_id', 'in', self.ids), '|', (
-                'stage_id.fold', '=', False),
-            ('stage_id', '=', False)], ['project_id'], ['project_id'])
-        result = dict((data['project_id'][0], data['project_id_count'])
-                      for data in task_data)
-        for project in self:
-            project.update({'task_count': result.get(project.id, 0)})

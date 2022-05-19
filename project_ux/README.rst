@@ -17,11 +17,9 @@ Project UX
 
 Several improvements to project:
 
-#. Make Dates and Analytic Account fields visible on project form view.
-#. Add template in tasks for auto complete the data.
+#. Make Dates fields visible on project form view.
 #. Change default behavior when click on the project card in the kanban view, now will go to the project form view instead of the project task kanban view.
-#. Restore chatter on project form (it was deprecated on v10) (TODO perhups on next versions we could move this messages to a task a deprecate chatter on projects also)
-#. Add activities to projects.
+#. Add the default "stage_id" on kanban project view.
 
 Installation
 ============
