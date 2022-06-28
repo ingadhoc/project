@@ -6,8 +6,7 @@ from odoo import models, fields
 
 
 class ProjectProject(models.Model):
-    _name = 'project.project'
-    _inherit = ['project.project', 'mail.activity.mixin']
+    _inherit = 'project.project'
 
     sub_task_count = fields.Integer(
         compute='_compute_sub_task_count',

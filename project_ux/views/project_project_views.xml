@@ -28,6 +28,9 @@
                 <field name="activity_ids"/>
                 <field name="activity_state"/>
             </field>
+            <xpath expr="/kanban//div[hasclass('o_kanban_record_bottom')]//a[@name='action_view_tasks']" position="before">
+                <a type="open" name="action_view_kanban_project"/>
+            </xpath>
         </field>
     </record>
 
