@@ -9,6 +9,9 @@
             <button name="action_assign_to_me" position="attributes">
                 <attribute name="attrs">{}</attribute>
             </button>
+            <field name="recurring_task" position="after">
+                <field name="dont_send_stage_email" widget="boolean_toggle"/>
+            </field>
         </field>
     </record>
 
