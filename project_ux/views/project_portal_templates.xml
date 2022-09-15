@@ -5,7 +5,7 @@
             <div class="col-md">
                 <strong>Estimated Hs:</strong> <span t-field="task.planned_hours" t-field-options="{&quot;widget&quot;: &quot;hour&quot;}"/>
             </div>
-            <div class="col-md">
+            <div class="col-md" t-if='"remaining_hours" in task'>
                 <strong>Remaining Hs:</strong> <span t-field="task.remaining_hours" t-field-options="{&quot;widget&quot;: &quot;hour&quot;}"/>
             </div>
         </xpath>
