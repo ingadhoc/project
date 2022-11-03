@@ -17,9 +17,10 @@ Project UX
 
 Several improvements to project:
 
-#. Make Dates fields visible on project form view.
 #. Change default behavior when click on the project card in the kanban view, now will go to the project form view instead of the project task kanban view.
-#. Add the default "stage_id" on kanban project view.
+#. Add a boolean toggle button called "Don´t send stage email" that gives the user the chance to avioid sending the email if the stage has an automatic template set. After the stage changes, this valure returns to false.
+#. Add a button "i" in the card kanban view that links directly to the proyect updates.
+#. Adds 3 new filters: "Is Task", "Is Sub-Task" & "Parent-Task".
 
 Installation
 ============

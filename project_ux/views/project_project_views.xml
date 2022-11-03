@@ -1,53 +1,29 @@
 <?xml version="1.0"?>
 <odoo>
 
-    <record id="edit_project" model="ir.ui.view">
-        <field name="name">project.project.inherit</field>
-        <field name="model">project.project</field>
-        <field name="inherit_id" ref="project.edit_project"/>
-        <field name="arch" type="xml">
-            <field name="user_id" position="attributes">
-                <attribute name="groups"></attribute>
-            </field>
-            <xpath expr="//notebook//page[1]" position="after">
-                <page string="Project Stages" name="project_stages">
-                    <field name="type_ids"/>
-                </page>
-            </xpath>
-        </field>
-    </record>
-
     <record id="view_project_kanban" model="ir.ui.view">
-        <field name="name">project.project.kanban.inherit</field>
-        <field name="model">project.project</field>
-        <field name="priority" eval="50"/>
-        <field name="inherit_id" ref="project.view_project_kanban"/>
-        <field name="arch" type="xml">
-            <field name="task_count" position="after">
-                <field name="sub_task_count"/>
-                <field name="activity_ids"/>
-                <field name="activity_state"/>
-            </field>
-            <xpath expr="/kanban//div[hasclass('o_kanban_record_bottom')]//a[@name='action_view_tasks']" position="before">
-                <a type="open" name="action_view_kanban_project"/>
-            </xpath>
-        </field>
-    </record>
-
-    <record id="project_kanban_form" model="ir.ui.view">
         <field name="name">project.project.kanban</field>
         <field name="model">project.project</field>
-        <field name="groups_id" eval="[(4,ref('project.group_project_stages'))]"/>
         <field name="inherit_id" ref="project.view_project_kanban"/>
         <field name="arch" type="xml">
             <kanban class="oe_background_grey o_kanban_dashboard o_project_kanban o_emphasize_colors">
-                <field name="stage_id"/>
-                <field name="sequence"/>
+                <kanban default_group_by="stage_id"/>
+                <field name="stage_id" groups="project.group_project_stages"/>
+                <field name="sequence" groups="project.group_project_stages"/>
             </kanban>
             <kanban class="oe_background_grey o_kanban_dashboard o_project_kanban o_emphasize_colors" position="attributes">
-                <attribute name="default_group_by">stage_id</attribute>
                 <attribute name="class">oe_background_grey o_kanban_dashboard o_project_kanban o_emphasize_colors o_kanban_dashboard_project</attribute>
+                <attribute name="action"></attribute>
             </kanban>
+            <xpath expr="/kanban//div[hasclass('o_kanban_record_bottom')]//a[@name='action_view_tasks']" position="before">
+                <div>
+                    <span class="o_label">
+                        <a name="project.project_update_all_action" type="action">
+                            <span title="Project Updates" class="fa fa-info"/>
+                        </a>
+                    </span>
+                </div>
+            </xpath>
         </field>
     </record>
 </odoo>
