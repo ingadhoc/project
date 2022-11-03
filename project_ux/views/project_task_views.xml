@@ -6,24 +6,8 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_form2"/>
         <field name="arch" type="xml">
-            <button name="action_assign_to_me" position="attributes">
-                <attribute name="attrs">{}</attribute>
-            </button>
-            <field name="recurring_task" position="after">
+            <field name="tag_ids" position="after">
                 <field name="dont_send_stage_email" widget="boolean_toggle"/>
-            </field>
-        </field>
-    </record>
-
-    <record id="view_task_form2_subtask" model="ir.ui.view">
-        <field name="name">project.task2.inherit.subtask</field>
-        <field name="model">project.task</field>
-        <field name="inherit_id" ref="view_task_form2"/>
-        <field name="priority">90</field>
-        <field name="mode">primary</field>
-        <field name="arch" type="xml">
-            <field name="project_id" position="before">
-                <field name="parent_id" required="True" domain="[('project_id', '=', project_id)]"/>
             </field>
         </field>
     </record>
@@ -57,26 +41,14 @@
         </field>
     </record>
 
-    <record id="act_project_project_2_project_sub_task_all" model="ir.actions.act_window">
-        <field name="name">Sub Tasks</field>
-        <field name="res_model">project.task</field>
-        <field name="view_mode">kanban,tree,form,calendar,pivot,graph</field>
-        <field name="context">{
-            'group_by': 'stage_id',
-            'search_default_project_id': [active_id],
-            'default_project_id': active_id,
-        }</field>
-        <field name="domain">[('parent_id','!=', False)]</field>
-        <field name="view_ids" eval="[(5,0,0),(0, 0, {'view_mode': 'kanban', 'view_id': ref('view_task_kanban_inherit')}),
-                   (0, 0, {'view_mode': 'form', 'view_id': ref('view_task_form2_subtask')})]"/>
-        <field name="search_view_id" ref="project.view_task_search_form"/>
+    <record id="project.project_task_action_sub_task" model="ir.actions.act_window">
+        <field name="view_ids" eval="[(5,0,0),(0, 0, {'view_mode': 'kanban', 'view_id': ref('view_task_kanban_inherit')})]"/>
     </record>
 
     <record id="project.act_project_project_2_project_task_all" model="ir.actions.act_window">
         <field name="context">{
-            'group_by': 'stage_id',
-            'search_default_project_id': [active_id],
             'default_project_id': active_id,
+            'show_project_update': True,
             'search_default_is_task': 1,
         }</field>
     </record>
