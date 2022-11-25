@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="project_task_search_inherit" model="ir.ui.view">
+        <field name="name">project.task.search.form.extended.inherit</field>
+        <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_search_form_extended"/>
+            <field name="arch" type="xml">
+               <xpath expr="//filter[@name='my_followed_projects']" position="after">
+                    <separator/>
+                    <filter string="Abierto" domain="[('stage_id.is_closed','=',False)]" name="is_open"/>
+                    <filter string="Cerrado" domain="[('stage_id.is_closed','=',True)]" name="is_close"/>
+                    <separator/>
+                </xpath>
+            </field>
+    </record>
+</odoo>
