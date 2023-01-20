@@ -3,37 +3,26 @@
 # 	* project_ux
 # 
 # Translators:
-# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2020
-# Juan Rivero <jr@adhoc.com.ar>, 2021
+# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: Odoo Server 15.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-15 10:25+0000\n"
-"PO-Revision-Date: 2020-03-14 01:37+0000\n"
-"Last-Translator: Juan Rivero <jr@adhoc.com.ar>, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/adhoc/teams/46451/es/)\n"
+"POT-Creation-Date: 2022-09-09 16:30+0000\n"
+"PO-Revision-Date: 2022-05-31 09:49+0000\n"
+"Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2022\n"
+"Language-Team: Spanish (https://www.transifex.com/adhoc/teams/133229/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. module: project_ux
-#: model_terms:ir.ui.view,arch_db:project_ux.portal_my_task
-msgid "<strong>Estimated Hs:</strong>"
+#: model:ir.model.fields,field_description:project_ux.field_project_project__algolia_search
+msgid "Algolia Search"
 msgstr ""
-
-#. module: project_ux
-#: model_terms:ir.ui.view,arch_db:project_ux.portal_my_task
-msgid "<strong>Remaining Hs:</strong>"
-msgstr ""
-
-#. module: project_ux
-#: model_terms:ir.ui.view,arch_db:project_ux.edit_project
-msgid "Dates"
-msgstr "Fechas"
 
 #. module: project_ux
 #: model_terms:ir.ui.view,arch_db:project_ux.view_task_search_form
@@ -44,11 +33,6 @@ msgstr "Es Sub-Tarea"
 #: model_terms:ir.ui.view,arch_db:project_ux.view_task_search_form
 msgid "Is Task"
 msgstr "Es Tarea"
-
-#. module: project_ux
-#: model:ir.model.fields,field_description:project_ux.field_project_task__template_task
-msgid "Is task template?"
-msgstr ""
 
 #. module: project_ux
 #: model_terms:ir.ui.view,arch_db:project_ux.view_task_search_form
@@ -66,11 +50,6 @@ msgid "Project Stages"
 msgstr "Etapas del proyecto"
 
 #. module: project_ux
-#: model_terms:ir.ui.view,arch_db:project_ux.view_project_kanban
-msgid "Sub"
-msgstr "Sub"
-
-#. module: project_ux
 #: model:ir.model.fields,field_description:project_ux.field_project_project__sub_task_count
 msgid "Sub Task Count"
 msgstr "Recuento de subtareas"
@@ -79,23 +58,3 @@ msgstr "Recuento de subtareas"
 #: model:ir.actions.act_window,name:project_ux.act_project_project_2_project_sub_task_all
 msgid "Sub Tasks"
 msgstr "Sub Tareas"
-
-#. module: project_ux
-#: model_terms:ir.ui.view,arch_db:project_ux.view_task_form2
-msgid "Subtasks"
-msgstr "Subtarea"
-
-#. module: project_ux
-#: model:ir.model,name:project_ux.model_project_task
-msgid "Task"
-msgstr "Tarea"
-
-#. module: project_ux
-#: model_terms:ir.ui.view,arch_db:project_ux.view_task_form2
-msgid "Task Template"
-msgstr "Plantilla de Tarea"
-
-#. module: project_ux
-#: model:ir.model.fields,field_description:project_ux.field_project_task__template_task_id
-msgid "Template Task"
-msgstr "Plantilla de Tarea"
