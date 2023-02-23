@@ -26,4 +26,19 @@
             </xpath>
         </field>
     </record>
+
+    <record id="edit_project" model="ir.ui.view">
+        <field name="name">project.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='project_update_all_action']" position="attributes">
+                <attribute name="groups">project.group_project_user</attribute>
+            </xpath>
+            <xpath expr="//button[hasclass('o_project_not_clickable')]" position="attributes">
+                <attribute name="groups">!project.group_project_user</attribute>
+            </xpath>
+        </field>
+    </record>
+
 </odoo>
