@@ -33,6 +33,7 @@
     'data': [
         'views/project_task_views.xml',
         'views/project_project_views.xml',
+        'views/project_task_search_inherit.xml',
     ],
     'demo': [
     ],
