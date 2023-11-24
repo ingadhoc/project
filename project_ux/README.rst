@@ -21,6 +21,7 @@ Several improvements to project:
 #. Add a boolean toggle button called "Don´t send stage email" that gives the user the chance to avioid sending the email if the stage has an automatic template set. After the stage changes, this valure returns to false.
 #. Add a button "i" in the card kanban view that links directly to the proyect updates.
 #. Adds 3 new filters: "Is Task", "Is Sub-Task" & "Parent-Task".
+#. Re-incorporates the Planned Date field in the task form view. In the migration to v16 this field was by default hidden, and the only way to see (and edit) this field was assigning a date in the gantt view first.
 
 Installation
 ============
