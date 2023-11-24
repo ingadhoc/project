@@ -19,7 +19,7 @@
 ##############################################################################
 {
     'name': 'Project UX',
-    'version': "16.0.1.1.0",
+    'version': "16.0.1.2.0",
     'category': 'Project Management',
     'sequence': 14,
     'author': 'ADHOC SA',
