@@ -18,9 +18,13 @@ Project UX
 Several improvements to project:
 
 #. Change default behavior when click on the project card in the kanban view, now will go to the project form view instead of the project task kanban view.
-#. Add a boolean toggle button called "Don´t send stage email" that gives the user the chance to avioid sending the email if the stage has an automatic template set. After the stage changes, this valure returns to false.
+#. Add a boolean toggle button called "Don´t send stage email" that gives the user the chance to avoid sending the email if the stage has an automatic template set. After the stage changes, this value returns to false if the stage has an email template.
 #. Add a button "i" in the card kanban view that links directly to the proyect updates.
-#. Adds 3 new filters: "Is Task", "Is Sub-Task" & "Parent-Task".
+#. Adds:
+   - 2 new filters: "Is Task"& "Is Sub-Task"
+   - 1 new agroupation: "Parent-Task"
+#. Re-incorporates the wizard that allows to select an existing task to be converted as a sub-task in the sub-task tab (in the migration to 17, when you press on "Add line" in the sub-task tab, you could only create new sub-tasks, not convert the existing tasks to sub-tasks)
+
 
 Installation
 ============
