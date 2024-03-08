@@ -19,7 +19,7 @@
 ##############################################################################
 {
     'name': 'Project UX',
-    'version': "16.0.1.2.0",
+    'version': "17.0.1.0.0",
     'category': 'Project Management',
     'sequence': 14,
     'author': 'ADHOC SA',
@@ -29,6 +29,7 @@
     ],
     'depends': [
         'project',
+        'project_enterprise',
     ],
     'data': [
         'views/project_task_views.xml',
@@ -36,7 +37,7 @@
     ],
     'demo': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }
