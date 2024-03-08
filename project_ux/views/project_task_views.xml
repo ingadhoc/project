@@ -56,4 +56,18 @@
             'search_default_is_task': 1,
         }</field>
     </record>
+
+    <record id="project_task_view_form" model="ir.ui.view">
+        <field name="name">project.task.view.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project_enterprise.project_task_view_form"/>
+        <field name="arch" type="xml">
+            <label for="planned_date_begin" position="attributes">
+                <attribute name="attrs">{'invisible': []}</attribute>
+            </label>
+            <xpath expr="//field[@name='planned_date_begin']/../.." position="attributes">
+                <attribute name="attrs">{'invisible': []}</attribute>
+            </xpath>
+        </field>
+    </record>
 </odoo>

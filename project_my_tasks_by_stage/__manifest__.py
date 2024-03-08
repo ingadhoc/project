@@ -1,8 +1,8 @@
 {
     'name': 'Project My Tasks By Stage',
-    'version': "16.0.1.0.0",
+    'version': "17.0.1.0.0",
     'category': 'Services/Project',
-    'sequence': 14,
+    'sequence': 50,
     'summary': '',
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
@@ -15,7 +15,7 @@
     'data': [
         'views/project_task_views.xml',
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }
