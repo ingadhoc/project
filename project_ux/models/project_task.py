@@ -2,7 +2,7 @@
 # For copyright and license notices, see __manifest__.py file in module root
 # directory
 ##############################################################################
-from odoo import models, fields
+from odoo import models, fields, api
 
 
 class Task(models.Model):
@@ -22,7 +22,7 @@ class Task(models.Model):
         if 'stage_id' in changes and task.stage_id.mail_template_id:
             res['stage_id'] = (task.stage_id.mail_template_id, {
                 'message_type': 'comment',
-                'auto_delete_message': True,
+                'auto_delete_keep_log': False,
                 'email_layout_xmlid': 'mail.mail_notification_light'})
         if 'stage_id' in res and task.dont_send_stage_email and task.stage_id.mail_template_id:
             res.pop('stage_id')

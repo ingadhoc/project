@@ -9,6 +9,10 @@
             <field name="tag_ids" position="after">
                 <field name="dont_send_stage_email" widget="boolean_toggle"/>
             </field>
+            <xpath expr="//field[@name='child_ids']" position="attributes">
+                <attribute name="widget">many2many</attribute>
+                <attribute name="domain">[('project_id', '=', project_id)]</attribute>
+            </xpath>
         </field>
     </record>
 
@@ -58,11 +62,8 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project_enterprise.project_task_view_form"/>
         <field name="arch" type="xml">
-            <label for="planned_date_begin" position="attributes">
-                <attribute name="attrs">{'invisible': []}</attribute>
-            </label>
             <xpath expr="//field[@name='planned_date_begin']/../.." position="attributes">
-                <attribute name="attrs">{'invisible': []}</attribute>
+                <attribute name="invisible">[]</attribute>
             </xpath>
         </field>
     </record>

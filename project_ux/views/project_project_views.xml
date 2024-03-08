@@ -6,13 +6,13 @@
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.view_project_kanban"/>
         <field name="arch" type="xml">
-            <kanban class="oe_background_grey o_kanban_dashboard o_project_kanban o_emphasize_colors">
+             <kanban class="o_kanban_dashboard o_project_kanban o_emphasize_colors">
                 <kanban default_group_by="stage_id"/>
                 <field name="stage_id" groups="project.group_project_stages"/>
                 <field name="sequence" groups="project.group_project_stages"/>
             </kanban>
-            <kanban class="oe_background_grey o_kanban_dashboard o_project_kanban o_emphasize_colors" position="attributes">
-                <attribute name="class">oe_background_grey o_kanban_dashboard o_project_kanban o_emphasize_colors o_kanban_dashboard_project</attribute>
+            <kanban class="o_kanban_dashboard o_project_kanban o_emphasize_colors" position="attributes">
+                <attribute name="class">o_kanban_dashboard o_project_kanban o_emphasize_colors</attribute>
                 <attribute name="action"></attribute>
             </kanban>
             <xpath expr="/kanban//div[hasclass('o_kanban_record_bottom')]//a[@name='action_view_tasks']" position="before">
