@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <odoo>
 
-    <record id="view_project_kanban" model="ir.ui.view">
+  <record id="view_project_kanban" model="ir.ui.view">
         <field name="name">project.project.kanban</field>
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.view_project_kanban"/>
@@ -32,6 +32,24 @@
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.edit_project"/>
         <field name="arch" type="xml">
+            <field name="user_id" position="attributes">
+                <attribute name="groups"></attribute>
+            </field>
+            <xpath expr="//notebook//page[1]" position="after">
+                <page string="Tasks Stages" name="project_stages">
+                    <field name="type_ids">
+                        <tree>
+                            <field name="sequence" optional="show"/>
+                            <field name="name"/>
+                            <field name="mail_template_id" optional="hide"/>
+                            <field name="rating_template_id" optional="hide" groups="project.group_project_rating"/>
+                            <field name="project_ids" optional="show" widget="many2many_tags" options="{'color_field': 'color'}" />
+                            <field name="fold" optional="show"/>
+                            <field name="user_id" optional="show"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
             <xpath expr="//button[@name='project_update_all_action']" position="attributes">
                 <attribute name="groups">project.group_project_user</attribute>
             </xpath>
