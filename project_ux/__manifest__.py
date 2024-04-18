@@ -19,7 +19,13 @@
 ##############################################################################
 {
     'name': 'Project UX',
+<<<<<<< HEAD
     'version': "17.0.1.0.0",
+||||||| parent of 376add9 (temp)
+    'version': "16.0.1.2.0",
+=======
+    'version': "16.0.1.3.0",
+>>>>>>> 376add9 (temp)
     'category': 'Project Management',
     'sequence': 14,
     'author': 'ADHOC SA',

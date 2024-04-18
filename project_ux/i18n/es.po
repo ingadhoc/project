@@ -61,3 +61,8 @@ msgid ""
 "no email will be send. After the stage changes, this value returns to False "
 "so that new stage changes will send emails."
 msgstr ""
+
+#. module: project_ux
+#: model_terms:ir.ui.view,arch_db:project_ux.edit_project
+msgid "Tasks Stages"
+msgstr "Etapas de tareas"
