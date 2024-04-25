@@ -55,9 +55,65 @@ msgid "Task"
 msgstr "Tarea"
 
 #. module: project_ux
+#: model:ir.model,name:project_ux.model_project_task
+msgid "Folded in Kanban"
+msgstr "Plegado en Kanban"
+
+#. module: project_ux
 #: model:ir.model.fields,help:project_ux.field_project_task__dont_send_stage_email
 msgid ""
 "When the task's stage changes, if the stage has an automatic template set, "
 "no email will be send. After the stage changes, this value returns to False "
 "so that new stage changes will send emails."
 msgstr ""
+
+#. module: project_ux
+#: model_terms:ir.ui.view,arch_db:project_ux.edit_project
+msgid "Tasks Stages"
+msgstr "Etapas de tareas"
+
+#. module: project_ux
+#: model:ir.model,name:project_ux.model_project_task_type
+msgid "State Change"
+msgstr "Cambio de Estado"
+
+#. module: project_ux
+#: model:ir.model,name:project_ux.model_project_task_type
+msgid "Task State"
+msgstr "Estado de Tarea"
+
+#. module: project_ux
+#: model:ir.model.fields.selection,name:project_ux.selection__project_task_type_task_state_approved
+#, python-format
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: project_ux
+#: model:ir.model.fields.selection,name:project_ux.selection__project_task_type_task_state_approved
+#, python-format
+msgid "In Progress"
+msgstr "En Progreso"
+
+#. module: project_ux
+#: model:ir.model.fields.selection,name:project_ux.selection__project_task_type_task_state_approved
+#, python-format
+msgid "Done"
+msgstr "Hecho"
+
+#. module: project_ux
+#: model:ir.model.fields.selection,name:project_ux.selection__project_task_type_task_state_approved
+#, python-format
+msgid "Waiting"
+msgstr "Esperando"
+
+#. module: project_ux
+#: model:ir.model.fields.selection,name:project_ux.selection__project_task_type_task_state_approved
+#, python-format
+msgid "Canceled"
+msgstr "Cancelado"
+
+#. module: project_ux
+#: model:ir.model.fields.selection,name:project_ux.selection__project_task_type_task_state_approved
+#, python-format
+msgid "Changes Requested"
+msgstr "Cambios Requeridos"

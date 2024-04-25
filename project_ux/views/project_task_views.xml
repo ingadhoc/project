@@ -11,7 +11,6 @@
             </field>
             <xpath expr="//field[@name='child_ids']" position="attributes">
                 <attribute name="widget">many2many</attribute>
-                <attribute name="domain">[('project_id', '=', project_id)]</attribute>
             </xpath>
         </field>
     </record>
