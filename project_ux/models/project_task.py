@@ -28,6 +28,7 @@ class Task(models.Model):
             res['stage_id'] = (task.stage_id.mail_template_id, {
                 'message_type': 'comment',
                 'auto_delete_keep_log': False,
+                'subtype_id': self.env['ir.model.data']._xmlid_to_res_id('mail.mt_comment'),
                 'email_layout_xmlid': 'mail.mail_notification_light'})
         if 'stage_id' in res and task.dont_send_stage_email and task.stage_id.mail_template_id:
             res.pop('stage_id')
