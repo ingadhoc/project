@@ -3,16 +3,17 @@
 # 	* project_ux
 # 
 # Translators:
-# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2023
+# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2024
+# Mariano Garcia Cassis, 2024
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0+e\n"
+"Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-13 13:55+0000\n"
-"PO-Revision-Date: 2023-01-13 13:55+0000\n"
-"Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2023\n"
-"Language-Team: Spanish (https://www.transifex.com/adhoc/teams/46451/es/)\n"
+"POT-Creation-Date: 2024-05-31 20:08+0000\n"
+"PO-Revision-Date: 2024-03-08 14:27+0000\n"
+"Last-Translator: Mariano Garcia Cassis, 2024\n"
+"Language-Team: Spanish (https://app.transifex.com/adhoc/teams/46451/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -25,14 +26,14 @@ msgid "<span title=\"Project Updates\" class=\"fa fa-info\"/>"
 msgstr ""
 
 #. module: project_ux
-#: model:ir.model.fields,field_description:project_ux.field_project_task__algolia_search
-msgid "Algolia Search"
-msgstr ""
-
-#. module: project_ux
 #: model:ir.model.fields,field_description:project_ux.field_project_task__dont_send_stage_email
 msgid "Don't Send Stage Email"
-msgstr ""
+msgstr "No enviar plantilla automatica en cambio de etapa"
+
+#. module: project_ux
+#: model:ir.model.fields,field_description:project_ux.field_project_task__is_closed
+msgid "Folded in Kanban"
+msgstr "Plegado en Kanban"
 
 #. module: project_ux
 #: model_terms:ir.ui.view,arch_db:project_ux.view_task_search_form
@@ -50,14 +51,29 @@ msgid "Parent Task"
 msgstr "Tarea padre"
 
 #. module: project_ux
+#: model:ir.model.fields,field_description:project_ux.field_project_task_type__state_change
+msgid "State Change"
+msgstr "Cambio de estado"
+
+#. module: project_ux
 #: model:ir.model,name:project_ux.model_project_task
 msgid "Task"
 msgstr "Tarea"
 
 #. module: project_ux
-#: model:ir.model,name:project_ux.model_project_task
-msgid "Folded in Kanban"
-msgstr "Plegado en Kanban"
+#: model:ir.model,name:project_ux.model_project_task_type
+msgid "Task Stage"
+msgstr "Etapa de la tarea"
+
+#. module: project_ux
+#: model:ir.model.fields,field_description:project_ux.field_project_task_type__task_state
+msgid "Task State"
+msgstr "Estado de la tarea"
+
+#. module: project_ux
+#: model_terms:ir.ui.view,arch_db:project_ux.edit_project
+msgid "Tasks Stages"
+msgstr "Etapas de tareas"
 
 #. module: project_ux
 #: model:ir.model.fields,help:project_ux.field_project_task__dont_send_stage_email
@@ -66,54 +82,17 @@ msgid ""
 "no email will be send. After the stage changes, this value returns to False "
 "so that new stage changes will send emails."
 msgstr ""
+"Si cambia la tarea de etapa, si la etapa de destino tiene una plantilla de "
+"correo electrónico asignada dicha plantilla no será enviada. Una vez "
+"desplazada la tarea a dicha etapa, este valor se reestablece a falso y se "
+"reestablecerá el envío de las plantillas de correo electrónico."
 
 #. module: project_ux
-#: model_terms:ir.ui.view,arch_db:project_ux.edit_project
-msgid "Tasks Stages"
-msgstr "Etapas de tareas"
-
-#. module: project_ux
-#: model:ir.model,name:project_ux.model_project_task_type
-msgid "State Change"
-msgstr "Cambio de Estado"
-
-#. module: project_ux
-#: model:ir.model,name:project_ux.model_project_task_type
-msgid "Task State"
-msgstr "Estado de Tarea"
-
-#. module: project_ux
-#: model:ir.model.fields.selection,name:project_ux.selection__project_task_type_task_state_approved
-#, python-format
-msgid "Approved"
-msgstr "Aprobado"
-
-#. module: project_ux
-#: model:ir.model.fields.selection,name:project_ux.selection__project_task_type_task_state_approved
-#, python-format
-msgid "In Progress"
-msgstr "En Progreso"
-
-#. module: project_ux
-#: model:ir.model.fields.selection,name:project_ux.selection__project_task_type_task_state_approved
-#, python-format
-msgid "Done"
-msgstr "Hecho"
-
-#. module: project_ux
-#: model:ir.model.fields.selection,name:project_ux.selection__project_task_type_task_state_approved
-#, python-format
-msgid "Waiting"
-msgstr "Esperando"
-
-#. module: project_ux
-#: model:ir.model.fields.selection,name:project_ux.selection__project_task_type_task_state_approved
-#, python-format
-msgid "Canceled"
-msgstr "Cancelado"
-
-#. module: project_ux
-#: model:ir.model.fields.selection,name:project_ux.selection__project_task_type_task_state_approved
-#, python-format
-msgid "Changes Requested"
-msgstr "Cambios Requeridos"
+#: model:ir.model.fields,help:project_ux.field_project_task_type__state_change
+msgid ""
+"When the task's stage changes, if the state change is checked it will change"
+" the state of the task into the state selected"
+msgstr ""
+"Cuando se cambie una tarea de etapa, si la etapa tiene configurado un estado"
+" de tarea por defecto, cambiará el estado de las tareas al configurado "
+"dentro de la etapa."
