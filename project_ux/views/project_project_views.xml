@@ -43,7 +43,6 @@
                             <field name="name"/>
                             <field name="mail_template_id" optional="hide"/>
                             <field name="rating_template_id" optional="hide" groups="project.group_project_rating"/>
-                            <field name="project_ids" optional="show" widget="many2many_tags" options="{'color_field': 'color'}" />
                             <field name="fold" optional="show"/>
                             <field name="user_id" optional="show"/>
                         </tree>
