@@ -38,14 +38,14 @@
             <xpath expr="//notebook//page[1]" position="after">
                 <page string="Tasks Stages" name="project_stages">
                     <field name="type_ids">
-                        <tree>
+                        <list>
                             <field name="sequence" optional="show"/>
                             <field name="name"/>
                             <field name="mail_template_id" optional="hide"/>
                             <field name="rating_template_id" optional="hide" groups="project.group_project_rating"/>
                             <field name="fold" optional="show"/>
                             <field name="user_id" optional="show"/>
-                        </tree>
+                        </list>
                     </field>
                 </page>
             </xpath>
