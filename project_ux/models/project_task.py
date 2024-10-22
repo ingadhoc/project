@@ -19,7 +19,7 @@ class Task(models.Model):
         "no email will be send. After the stage changes, this value returns to False so that "
         "new stage changes will send emails."
     )
-    is_closed = fields.Boolean(related="stage_id.fold", string="Folded in Kanban", store=True, index=True)
+    is_closed = fields.Boolean(related="stage_id.fold", string="Folded in Kanban", index=True)
 
     def _track_template(self, changes):
         task = self[0]
