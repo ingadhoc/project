@@ -6,16 +6,16 @@
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.view_project_kanban"/>
         <field name="arch" type="xml">
-             <kanban class="o_kanban_dashboard o_project_kanban o_emphasize_colors">
+             <kanban class="o_project_kanban">
                 <kanban default_group_by="stage_id"/>
                 <field name="stage_id" groups="project.group_project_stages"/>
                 <field name="sequence" groups="project.group_project_stages"/>
             </kanban>
-            <kanban class="o_kanban_dashboard o_project_kanban o_emphasize_colors" position="attributes">
+            <kanban class="o_project_kanban" position="attributes">
                 <attribute name="class">o_kanban_dashboard o_project_kanban o_emphasize_colors</attribute>
                 <attribute name="action"></attribute>
             </kanban>
-            <xpath expr="/kanban//div[hasclass('o_kanban_record_bottom')]//a[@name='action_view_tasks']" position="before">
+            <xpath expr="/kanban//footer//a[@name='action_view_tasks']" position="before">
                 <div>
                     <span class="o_label">
                         <a name="project.project_update_all_action" type="action">
@@ -38,22 +38,19 @@
             <xpath expr="//notebook//page[1]" position="after">
                 <page string="Tasks Stages" name="project_stages">
                     <field name="type_ids">
-                        <tree>
+                        <list>
                             <field name="sequence" optional="show"/>
                             <field name="name"/>
                             <field name="mail_template_id" optional="hide"/>
                             <field name="rating_template_id" optional="hide" groups="project.group_project_rating"/>
                             <field name="fold" optional="show"/>
                             <field name="user_id" optional="show"/>
-                        </tree>
+                        </list>
                     </field>
                 </page>
             </xpath>
             <xpath expr="//button[@name='project_update_all_action']" position="attributes">
                 <attribute name="groups">project.group_project_user</attribute>
-            </xpath>
-            <xpath expr="//button[hasclass('o_project_not_clickable')]" position="attributes">
-                <attribute name="groups">!project.group_project_user</attribute>
             </xpath>
         </field>
     </record>
