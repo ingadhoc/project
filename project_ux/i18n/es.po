@@ -4,16 +4,14 @@
 # 
 # Translators:
 # Juan José Scarafía <scarafia.juanjose@gmail.com>, 2024
-# Mariano Garcia Cassis, 2024
-# Franco Leyes, 2024
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0+e\n"
+"Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-06 15:39+0000\n"
-"PO-Revision-Date: 2024-03-08 14:27+0000\n"
-"Last-Translator: Franco Leyes, 2024\n"
+"POT-Creation-Date: 2024-11-15 14:22+0000\n"
+"PO-Revision-Date: 2024-11-15 14:22+0000\n"
+"Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/adhoc/teams/46451/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +22,7 @@ msgstr ""
 #. module: project_ux
 #: model_terms:ir.ui.view,arch_db:project_ux.view_project_kanban
 msgid "<span title=\"Project Updates\" class=\"fa fa-info\"/>"
-msgstr "<span title=\"Project Updates\" class=\"fa fa-info\"/>"
+msgstr ""
 
 #. module: project_ux
 #: model:ir.model.fields,field_description:project_ux.field_project_task__dont_send_stage_email
@@ -34,7 +32,7 @@ msgstr "No enviar plantilla automatica en cambio de etapa"
 #. module: project_ux
 #: model:ir.model.fields,field_description:project_ux.field_project_task__is_closed
 msgid "Folded in Kanban"
-msgstr "Plegado en Kanban"
+msgstr "Estado cerrado"
 
 #. module: project_ux
 #: model_terms:ir.ui.view,arch_db:project_ux.view_task_search_form
