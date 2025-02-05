@@ -18,27 +18,25 @@
 #
 ##############################################################################
 {
-    'name': 'Project UX',
-    'version': "18.0.1.0.0",
-    'category': 'Project Management',
-    'sequence': 14,
-    'author': 'ADHOC SA',
-    'website': 'www.adhoc.com.ar',
-    'license': 'AGPL-3',
-    'images': [
+    "name": "Project UX",
+    "version": "18.0.1.0.0",
+    "category": "Project Management",
+    "sequence": 14,
+    "author": "ADHOC SA",
+    "website": "www.adhoc.com.ar",
+    "license": "AGPL-3",
+    "images": [],
+    "depends": [
+        "project",
+        "project_enterprise",
     ],
-    'depends': [
-        'project',
-        'project_enterprise',
+    "data": [
+        "views/project_task_views.xml",
+        "views/project_project_views.xml",
+        "views/project_task_type_views.xml",
     ],
-    'data': [
-        'views/project_task_views.xml',
-        'views/project_project_views.xml',
-        'views/project_task_type_views.xml',
-    ],
-    'demo': [
-    ],
-    'installable': True,
-    'auto_install': False,
-    'application': False,
+    "demo": [],
+    "installable": True,
+    "auto_install": False,
+    "application": False,
 }
