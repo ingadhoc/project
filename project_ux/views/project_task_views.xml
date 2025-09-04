@@ -49,6 +49,7 @@
     </record>
 
     <record id="project.act_project_project_2_project_task_all" model="ir.actions.act_window">
+        <field name="domain">[('project_id', '=', active_id)]</field>
         <field name="context">{
             'default_project_id': active_id,
             'show_project_update': True,
