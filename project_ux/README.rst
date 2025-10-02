@@ -23,7 +23,7 @@ Several improvements to project:
 #. Adds:
    - 2 new filters: "Is Task"& "Is Sub-Task"
    - 1 new agroupation: "Parent-Task"
-#. Re-incorporates the wizard that allows to select an existing task to be converted as a sub-task in the sub-task tab (in the migration to 17, when you press on "Add line" in the sub-task tab, you could only create new sub-tasks, not convert the existing tasks to sub-tasks)
+#. Re-incorporates the wizard that allows to select an existing task to be converted as a sub-task in the sub-task tab (allows converting existing tasks to sub-tasks)
 #. Incorporates a tab inside the project form view called "Task stages" that allows to select (or create) the task stages that will apply to that project.
 #. Incorporates an option inside the tasks stage configurations that allows to automatically set a state to the tasks when they are moved to these stages.
 #. Re-incorporate the field is_closed in the tasks, under the label "Folded in kanban"
