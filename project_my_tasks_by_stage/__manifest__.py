@@ -1,6 +1,6 @@
 {
     "name": "Project My Tasks By Stage",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "category": "Services/Project",
     "sequence": 50,
     "summary": "",
@@ -14,7 +14,7 @@
     "data": [
         "views/project_task_views.xml",
     ],
-    "installable": False,
+    "installable": True,
     "auto_install": False,
     "application": False,
 }
