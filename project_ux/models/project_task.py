@@ -58,3 +58,4 @@ class Task(models.Model):
                 task.state = "01_in_progress"
             if task.stage_id.task_state:
                 task.state = task.stage_id.task_state
+                task._inverse_state()
