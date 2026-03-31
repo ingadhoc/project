@@ -13,6 +13,31 @@ CLOSED_STATES = {
 class Task(models.Model):
     _inherit = "project.task"
 
+    display_in_project = fields.Boolean(default=True)
+
+    @api.depends("project_id")
+    def _compute_display_in_project(self):
+        """We always want subtasks to be displayed in the project pipeline.
+        By default Odoo hides subtasks that share the same project as their
+        parent, making them invisible in kanban/list views. We override to
+        always set True so every task is visible. Users can still manually
+        hide individual tasks using the 'Hide in pipeline' button.
+        """
+        for task in self:
+            task.display_in_project = True
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        """Force display_in_project=True on creation.
+        Odoo's views pass 'default_display_in_project': False in the context
+        when creating subtasks, which overrides both the field default and the
+        compute. We force it here so subtasks are always visible in the
+        pipeline.
+        """
+        for vals in vals_list:
+            vals["display_in_project"] = True
+        return super().create(vals_list)
+
     dont_send_stage_email = fields.Boolean(
         string="Don't Send Stage Email",
         default=False,
