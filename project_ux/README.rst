@@ -27,6 +27,7 @@ Several improvements to project:
 #. Incorporates a tab inside the project form view called "Task stages" that allows to select (or create) the task stages that will apply to that project.
 #. Incorporates an option inside the tasks stage configurations that allows to automatically set a state to the tasks when they are moved to these stages.
 #. Re-incorporate the field is_closed in the tasks, under the label "Folded in kanban"
+#. Subtasks are created visible in the project's kanban view by default (display_in_project = True).
 
 Installation
 ============
