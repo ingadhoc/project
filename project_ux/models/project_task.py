@@ -3,6 +3,7 @@
 # directory
 ##############################################################################
 from odoo import api, fields, models
+from odoo.fields import Domain
 
 CLOSED_STATES = {
     "1_done": "Done",
@@ -12,6 +13,29 @@ CLOSED_STATES = {
 
 class Task(models.Model):
     _inherit = "project.task"
+
+    @api.model
+    def _get_id_prefix_domain(self, prefix):
+        enabled_domain = Domain("project_id.show_task_id", "=", True)
+        max_task_id = self.search([("project_id.show_task_id", "=", True)], order="id desc", limit=1).id
+        if not max_task_id:
+            return Domain.FALSE
+
+        prefix_int = int(prefix)
+        prefix_domains = [Domain.AND([enabled_domain, Domain("id", "=", prefix_int)])]
+        factor = 10
+        while prefix_int * factor <= max_task_id:
+            prefix_domains.append(
+                Domain.AND(
+                    [
+                        enabled_domain,
+                        Domain("id", ">=", prefix_int * factor),
+                        Domain("id", "<", (prefix_int + 1) * factor),
+                    ]
+                )
+            )
+            factor *= 10
+        return Domain.OR(prefix_domains)
 
     display_in_project = fields.Boolean(default=True)
 
@@ -38,6 +62,7 @@ class Task(models.Model):
             vals["display_in_project"] = True
         return super().create(vals_list)
 
+    show_task_id = fields.Boolean(related="project_id.show_task_id", readonly=True)
     dont_send_stage_email = fields.Boolean(
         string="Don't Send Stage Email",
         default=False,
@@ -46,6 +71,25 @@ class Task(models.Model):
         "new stage changes will send emails.",
     )
     is_closed = fields.Boolean(related="stage_id.fold", string="Folded in Kanban", index=True)
+
+    @api.depends("name", "project_id.show_task_id")
+    def _compute_display_name(self):
+        super()._compute_display_name()
+        for task in self:
+            if task.project_id.show_task_id and task.id and task.display_name:
+                task.display_name = f"{task.display_name} (#{task.id})"
+
+    @api.model
+    def _search_display_name(self, operator, value):
+        domain = super()._search_display_name(operator, value)
+        normalized_name = (value or "").strip()
+        if normalized_name.startswith("#"):
+            normalized_name = normalized_name[1:].strip()
+
+        if normalized_name.isdigit() and operator in ("ilike", "like", "=ilike", "=like"):
+            return Domain.OR([domain, self._get_id_prefix_domain(normalized_name)])
+
+        return domain
 
     def _track_template(self, changes):
         task = self[0]

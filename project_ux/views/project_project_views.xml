@@ -52,6 +52,11 @@
             <xpath expr="//button[@name='project_update_all_action']" position="attributes">
                 <attribute name="groups">project.group_project_user</attribute>
             </xpath>
+            <xpath expr="//setting[@id='project_milestone_setting']" position="after">
+                <setting class="col-lg-12" id="task_id_display_setting" help="Show the task ID in the task form title and breadcrumb">
+                    <field name="show_task_id"/>
+                </setting>
+            </xpath>
         </field>
     </record>
 
