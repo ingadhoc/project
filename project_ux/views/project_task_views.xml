@@ -6,9 +6,17 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_form2"/>
         <field name="arch" type="xml">
+            <field name="tag_ids" position="before">
+                <field name="show_task_id" invisible="1"/>
+            </field>
             <field name="tag_ids" position="after">
                 <field name="dont_send_stage_email" widget="boolean_toggle"/>
             </field>
+            <xpath expr="//h1[hasclass('d-flex') and hasclass('w-100')]/field[@name='name']" position="before">
+                <span class="o_task_name_id text-nowrap me-2 text-muted fs-4 align-self-center" invisible="not show_task_id or not id">
+                    #<field name="id" readonly="1" nolabel="1" class="oe_inline"/>
+                </span>
+            </xpath>
             <xpath expr="//field[@name='child_ids']" position="attributes">
                 <attribute name="widget">many2many</attribute>
             </xpath>
@@ -33,6 +41,9 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_search_form"/>
         <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="id" string="Task ID" filter_domain="[('id', '=', self)]"/>
+            </field>
             <filter name="message_needaction" position="before">
                 <filter string="Is Task" name="is_task" domain="[('parent_id','=', False)]"/>
                 <filter string="Is Sub-Task" name="is_sub_task" domain="[('parent_id','!=', False)]"/>
