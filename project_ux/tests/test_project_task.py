@@ -1,3 +1,4 @@
+from odoo.tests import Form
 from odoo.tests.common import TransactionCase
 
 
@@ -94,3 +95,24 @@ class TestTaskModel(TransactionCase):
         result_ids = [task_id for task_id, __ in self.Task.name_search(str(self.test_task.id), limit=20)]
 
         self.assertNotIn(self.test_task.id, result_ids)
+
+    def _check_quick_create_keeps_title(self, title):
+        """Quick-create binds the "Task Title" to display_name (not name).
+        Selecting/changing the project must not wipe a title already typed.
+        """
+        with Form(self.Task, view="project.quick_create_task_form") as task_form:
+            task_form.display_name = title
+            task_form.project_id = self.test_project
+            self.assertEqual(task_form.display_name, title)
+        task = task_form.record
+        self.assertEqual(task.name, title)
+        self.assertEqual(task.project_id, self.test_project)
+
+    def test_quick_create_keeps_title_when_selecting_project(self):
+        self._check_quick_create_keeps_title("My Title")
+
+    def test_quick_create_keeps_title_when_project_shows_task_id(self):
+        # The title must survive the project onchange even though display_name
+        # depends on project_id.show_task_id.
+        self.test_project.show_task_id = True
+        self._check_quick_create_keeps_title("Another Title")

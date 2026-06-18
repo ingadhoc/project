@@ -79,6 +79,24 @@ class Task(models.Model):
             if task.project_id.show_task_id and task.id and task.display_name:
                 task.display_name = f"{task.display_name} (#{task.id})"
 
+    def onchange(self, values, field_names, fields_spec):
+        result = super().onchange(values, field_names, fields_spec)
+        # In the quick-create (My Tasks, project kanban) the "Task Title" input
+        # is bound to display_name and is only inversed into `name` on save.
+        # Because this module makes display_name depend on project_id (to append
+        # the task id), changing the project recomputes display_name from the
+        # still-empty `name`, blanking the title the user just typed. Restore the
+        # typed value in the onchange result so it survives the project change.
+        typed_title = values.get("display_name")
+        if (
+            "project_id" in (field_names or [])
+            and typed_title
+            and not values.get("name")
+            and not result.get("value", {}).get("display_name")
+        ):
+            result.setdefault("value", {})["display_name"] = typed_title
+        return result
+
     @api.model
     def _search_display_name(self, operator, value):
         domain = super()._search_display_name(operator, value)
