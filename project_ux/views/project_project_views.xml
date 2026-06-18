@@ -60,4 +60,19 @@
         </field>
     </record>
 
+    <!-- After creating a project from the "New" modal, open the project form
+         (so the user can finish configuring it) instead of redirecting to the
+         task pipeline / Kanban stages configuration. get_formview_action is the
+         standard base method that opens a record's own form view. -->
+    <record id="project_project_view_form_simplified_footer" model="ir.ui.view">
+        <field name="name">project.project.view.form.simplified.open.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.project_project_view_form_simplified_footer"/>
+        <field name="arch" type="xml">
+            <xpath expr="//footer/button[@name='action_view_tasks']" position="attributes">
+                <attribute name="name">get_formview_action</attribute>
+            </xpath>
+        </field>
+    </record>
+
 </odoo>
