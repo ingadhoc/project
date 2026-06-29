@@ -10,7 +10,7 @@
                 <label for="state_change"/>
                 <div class="o_row">
                     <field name="state_change"/>
-                    <field name="task_state" invisible='state_change == False'/>
+                    <field name="task_state" invisible='state_change == False' placeholder="Select a state..."/>
                 </div>
             </xpath>
         </field>
