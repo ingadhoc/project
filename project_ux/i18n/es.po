@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 19.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-08 13:35+0000\n"
-"PO-Revision-Date: 2025-12-11 18:11+0000\n"
+"PO-Revision-Date: 2026-06-30 15:01+0000\n"
 "Last-Translator: BAF <baf@adhoc.inc>\n"
 "Language-Team: Spanish <https://translation.dev-adhoc.com/projects/"
 "project-19-0/project-19-0-project_ux/es/>\n"
@@ -19,8 +19,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
-"0) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0)"
+" ? 1 : 2);\n"
 "X-Generator: Weblate 5.10.4\n"
 
 #. module: project_ux
@@ -70,18 +70,20 @@ msgstr "Tarea padre"
 #. module: project_ux
 #: model:ir.model,name:project_ux.model_project_project
 msgid "Project"
-msgstr ""
+msgstr "Proyecto"
 
 #. module: project_ux
 #: model:ir.model.fields,field_description:project_ux.field_project_project__show_task_id
 #: model:ir.model.fields,field_description:project_ux.field_project_task__show_task_id
 msgid "Show Task ID"
-msgstr ""
+msgstr "Mostrar ID de tareas"
 
 #. module: project_ux
 #: model_terms:ir.ui.view,arch_db:project_ux.edit_project
 msgid "Show the task ID in the task form title and breadcrumb"
 msgstr ""
+"Mostrar el ID de la tarea en el título del formulario de tarea y en la ruta "
+"de navegación (breadcrumb)"
 
 #. module: project_ux
 #: model:ir.model.fields,field_description:project_ux.field_project_task_type__state_change
@@ -96,7 +98,7 @@ msgstr "Tarea"
 #. module: project_ux
 #: model_terms:ir.ui.view,arch_db:project_ux.view_task_search_form
 msgid "Task ID"
-msgstr ""
+msgstr "ID de tarea"
 
 #. module: project_ux
 #: model:ir.model,name:project_ux.model_project_task_type
