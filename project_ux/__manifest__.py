@@ -19,7 +19,7 @@
 ##############################################################################
 {
     "name": "Project UX",
-    "version": "19.0.2.1.0",
+    "version": "19.0.2.2.0",
     "category": "Project Management",
     "sequence": 14,
     "author": "ADHOC SA",
@@ -35,6 +35,12 @@
         "views/project_project_views.xml",
         "views/project_task_type_views.xml",
     ],
+    "assets": {
+        "web.assets_backend": [
+            "project_ux/static/src/**/*.js",
+            "project_ux/static/src/**/*.xml",
+        ],
+    },
     "demo": [],
     "installable": True,
     "auto_install": False,
