@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="project_ux.ProjectTaskControlPanel"
+       t-inherit="project.ProjectTaskControlPanel"
+       t-inherit-mode="extension">
+        <xpath expr="//DropdownItem[@onSelected=&quot;() =&gt; this.onClickShowSubtasks()&quot;]" position="attributes">
+            <attribute name="class">effectiveShowSubtasks ? 'selected' : ''</attribute>
+        </xpath>
+    </t>
+
+    <t t-name="project_ux.MobileCombinedActionsDropdown"
+       t-inherit="project.MobileCombinedActionsDropdown"
+       t-inherit-mode="extension">
+        <xpath expr="//DropdownItem[@onSelected=&quot;() =&gt; this.onClickShowSubtasks()&quot;]" position="attributes">
+            <attribute name="class">effectiveShowSubtasks ? 'selected' : ''</attribute>
+        </xpath>
+    </t>
+
+</templates>
