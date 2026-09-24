@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_task_form2_inherit_project_stock_quick" model="ir.ui.view">
+        <field name="name">project.task.form.inherit.project.stock.quick</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <field name="is_template" position="after">
+                <field name="allow_stock_picking" invisible="1"/>
+                <field name="display_create_picking_button" invisible="1"/>
+            </field>
+            <xpath expr="//header/field[@name='stage_id']" position="before">
+                <button name="action_create_stock_picking" type="object"
+                        string="New Transfer" class="btn-secondary"
+                        groups="stock.group_stock_user"
+                        invisible="not display_create_picking_button or has_template_ancestor or has_project_template"/>
+            </xpath>
+            <xpath expr="//span[@id='end_button_box']" position="before">
+                <button name="action_view_stock_pickings" type="object"
+                        class="oe_stat_button" icon="fa-truck"
+                        groups="stock.group_stock_user"
+                        invisible="not allow_stock_picking or picking_count == 0 or has_template_ancestor or has_project_template">
+                    <field name="picking_count" widget="statinfo" string="Transfers"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
