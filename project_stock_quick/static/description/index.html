@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transferencias rápidas desde Tareas</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #F8F9FB;">
+  <div style="max-width: 780px; margin: 0 auto; background-color: #FFFFFF; padding: 48px 56px 72px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.7; color: #1C2333;">
+
+    <!-- Header -->
+    <div style="border-bottom: 2px solid #7C6CD8; padding-bottom: 20px; margin-bottom: 32px;">
+      <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #7C6CD8; margin-bottom: 6px;">ADHOC SA &nbsp;·&nbsp; OBA 19.0</div>
+      <h1 style="font-size: 1.7rem; font-weight: 700; color: #1C2333; margin: 0 0 6px;">Transferencias rápidas desde Tareas</h1>
+      <p style="font-size: 0.82rem; color: #6B7691; margin: 0;">Crea una transferencia de inventario desde la tarea en la que estás trabajando, y la deja vinculada a esa tarea.</p>
+    </div>
+
+    <!-- ═══════ QUÉ HACE ═══════ -->
+    <div id="que-hace">
+      <h1 style="color: #6B7691; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 2px solid #E4E2F0; padding-bottom: 6px; margin: 2.5rem 0 1rem;">¿Qué hace?</h1>
+      <p style="margin: 0 0 1rem;">Cuando un proyecto implica mover mercadería —entregar material en obra, recibir equipos para reparar, mandar repuestos a un cliente— el movimiento de stock y la tarea que lo motiva viven en pantallas separadas. Quien atiende la tarea tiene que salir a Inventario, crear la transferencia a mano, volver a buscar el contacto y el proyecto, y después no queda rastro de qué tarea la originó.</p>
+      <p style="margin: 0 0 1rem;">Este módulo cierra ese circuito. En los proyectos donde se habilita, cada tarea suma un botón que abre una transferencia nueva con el contacto, el proyecto y el documento de origen ya cargados. La transferencia queda enganchada a la tarea, y la tarea muestra cuántas lleva.</p>
+      <p style="margin: 0;">Lo gana el equipo que trabaja sobre la tarea: crea el movimiento sin cambiar de pantalla, y cualquiera que abra la tarea después ve qué se movió por ella.</p>
+    </div>
+
+    <!-- ═══════ CONFIGURACIÓN ═══════ -->
+    <div id="configuracion">
+      <h1 style="color: #6B7691; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 2px solid #E4E2F0; padding-bottom: 6px; margin: 2.5rem 0 1rem;">Configuración</h1>
+      <ol style="margin: 0 0 1rem; padding-left: 1.4rem;">
+        <li>Abrir el proyecto donde se quiere habilitar la funcionalidad.</li>
+        <li>Ir a la pestaña <strong>Ajustes</strong>.</li>
+        <li>En el grupo <strong>Inventario</strong>, activar <strong>Gestión de transferencias</strong>.</li>
+        <li>Se despliegan dos opciones, ambas opcionales:
+          <ul>
+            <li><strong>Tipo de operación por defecto</strong> — si se completa, las transferencias que se crean desde las tareas arrancan con ese tipo y no hay que elegirlo cada vez.</li>
+            <li><strong>Etapas que permiten transferencias</strong> — si se cargan etapas, el botón solo aparece cuando la tarea está en alguna de ellas. Si se deja vacío, se puede crear en cualquier etapa.</li>
+          </ul>
+        </li>
+        <li>Guardar.</li>
+      </ol>
+      <!-- 📸 Captura sugerida: pestaña Ajustes del proyecto con el grupo Inventario -->
+      <div style="background-color: #FFF8E6; border-left: 4px solid #D97706; border-radius: 6px; padding: 12px 16px; margin: 1rem 0; font-size: 0.93rem;">
+        <p style="margin: 0;">⚠️ La casilla y los botones solo los ven los usuarios con permisos de Inventario. Un usuario de proyecto sin esos permisos no ve nada distinto en la tarea.</p>
+      </div>
+      <div style="background-color: #EDE9FA; border-left: 4px solid #7C6CD8; border-radius: 6px; padding: 12px 16px; margin: 1rem 0; font-size: 0.93rem;">
+        <p style="margin: 0;">La configuración es por proyecto: se habilita solo donde hace falta, sin afectar al resto.</p>
+      </div>
+    </div>
+
+    <!-- ═══════ CÓMO USARLO ═══════ -->
+    <div id="como-usarlo">
+      <h1 style="color: #6B7691; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 2px solid #E4E2F0; padding-bottom: 6px; margin: 2.5rem 0 1rem;">Cómo usarlo</h1>
+
+      <h2 style="color: #1C2333; font-size: 1.05rem; margin: 1.5rem 0 0.4rem;">Crear una transferencia desde la tarea</h2>
+      <div style="background-color: #F0EFF8; border: 1px solid #E4E2F0; border-radius: 6px; padding: 14px 18px; margin: 1rem 0; font-family: 'SF Mono', Consolas, 'Cascadia Code', monospace; font-size: 0.85rem; white-space: pre; line-height: 1.8; overflow-x: auto;">Abrir la tarea
+→ Nueva transferencia
+    → se abre el formulario con contacto, proyecto y origen cargados
+        → elegir el tipo de operación y cargar los productos
+            → guardar</div>
+      <ol style="margin: 0 0 1rem; padding-left: 1.4rem;">
+        <li>Abrir la tarea. En el encabezado aparece el botón <strong>Nueva transferencia</strong>.</li>
+        <li>Presionarlo. Se abre el formulario de transferencia con el contacto de la tarea, el proyecto y el nombre de la tarea como documento de origen.</li>
+        <li>Elegir el <strong>tipo de operación</strong> —entrega, recepción o movimiento interno—, salvo que el proyecto ya declare uno por defecto.</li>
+        <li>Cargar los productos y guardar. La transferencia sigue después su circuito normal de Inventario.</li>
+      </ol>
+      <div style="background-color: #F0EFF8; border-left: 4px solid #7C6CD8; padding: 12px 16px; margin: 1rem 0; font-size: 0.91rem;">
+        <strong>Ejemplo:</strong><br/>
+        En el proyecto "Obra Sucursal Rosario", la tarea "Instalación de racks" necesita que salgan 12 racks del depósito central. El técnico abre la tarea, presiona Nueva transferencia, elige la operación de entrega del depósito central, carga los 12 racks y guarda. La transferencia queda con el contacto de la obra, el proyecto y "Instalación de racks" como origen.
+      </div>
+      <!-- 📸 Captura sugerida: encabezado de la tarea con el botón Nueva transferencia -->
+
+      <h2 style="color: #1C2333; font-size: 1.05rem; margin: 1.5rem 0 0.4rem;">Ver las transferencias de una tarea</h2>
+      <p style="margin: 0 0 1rem;">Apenas existe la primera, la tarea muestra el botón <strong>Transferencias</strong> con la cantidad vinculada. Si hay una sola, se abre directamente su formulario; si hay varias, se abre la lista filtrada por esa tarea.</p>
+      <!-- 📸 Captura sugerida: botón estadístico Transferencias en la tarea -->
+
+      <h2 style="color: #1C2333; font-size: 1.05rem; margin: 1.5rem 0 0.4rem;">Vincular una transferencia que ya existe</h2>
+      <p style="margin: 0 0 1rem;">En el formulario de la transferencia, dentro de <strong>Otra información</strong>, está el campo <strong>Tarea</strong>. Al elegir una tarea, el proyecto y el contacto se completan solos con los de esa tarea. Sirve para enganchar movimientos que se habían creado por afuera.</p>
+      <!-- 📸 Captura sugerida: campo Tarea en el formulario de transferencia -->
+    </div>
+
+    <!-- ═══════ VALIDACIONES ═══════ -->
+    <div id="validaciones">
+      <h1 style="color: #6B7691; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 2px solid #E4E2F0; padding-bottom: 6px; margin: 2.5rem 0 1rem;">Validaciones y restricciones</h1>
+      <div style="background-color: #FFF8E6; border-left: 4px solid #D97706; border-radius: 6px; padding: 12px 16px; margin: 1rem 0; font-size: 0.93rem;">
+        <p style="margin: 0;">⚠️ La tarea y la transferencia tienen que pertenecer a la misma compañía. Si no coinciden, Odoo no deja guardar.</p>
+      </div>
+      <div style="background-color: #FFF8E6; border-left: 4px solid #D97706; border-radius: 6px; padding: 12px 16px; margin: 1rem 0; font-size: 0.93rem;">
+        <p style="margin: 0;">⚠️ Si el proyecto no declara un tipo de operación por defecto, es el único dato que hay que completar a mano antes de guardar.</p>
+      </div>
+      <div style="background-color: #FFF8E6; border-left: 4px solid #D97706; border-radius: 6px; padding: 12px 16px; margin: 1rem 0; font-size: 0.93rem;">
+        <p style="margin: 0;">⚠️ Si la tarea no tiene contacto cargado, la transferencia se abre sin contacto. Conviene completar el contacto en la tarea antes de usar el botón.</p>
+      </div>
+      <div style="background-color: #FFF8E6; border-left: 4px solid #D97706; border-radius: 6px; padding: 12px 16px; margin: 1rem 0; font-size: 0.93rem;">
+        <p style="margin: 0;">⚠️ El tipo de operación por defecto tiene que ser de la misma compañía que el proyecto. Si no coinciden, el sistema no deja guardar la configuración.</p>
+      </div>
+      <div style="background-color: #EDE9FA; border-left: 4px solid #7C6CD8; border-radius: 6px; padding: 12px 16px; margin: 1rem 0; font-size: 0.93rem;">
+        <p style="margin: 0;">Cuando la tarea está en una etapa que no permite transferencias, el botón directamente no se muestra. Si se llega igual por otra vía, el sistema avisa y no crea nada.</p>
+      </div>
+      <div style="background-color: #EDE9FA; border-left: 4px solid #7C6CD8; border-radius: 6px; padding: 12px 16px; margin: 1rem 0; font-size: 0.93rem;">
+        <p style="margin: 0;">El botón no aparece en plantillas de tarea ni en tareas de proyectos plantilla.</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="margin-top: 3rem; padding-top: 20px; border-top: 1px solid #E4E2F0; font-size: 0.8rem; color: #6B7691; text-align: center;">
+      Desarrollado por <strong>ADHOC SA</strong>
+    </div>
+
+  </div>
+</body>
+</html>
