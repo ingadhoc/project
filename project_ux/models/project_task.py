@@ -38,6 +38,8 @@ class Task(models.Model):
         return Domain.OR(prefix_domains)
 
     display_in_project = fields.Boolean(default=True)
+    partner_id = fields.Many2one(index="btree_not_null")
+    recurrence_id = fields.Many2one(index="btree_not_null")
 
     @api.depends("project_id")
     def _compute_display_in_project(self):
