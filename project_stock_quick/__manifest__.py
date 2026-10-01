@@ -15,7 +15,7 @@
         "views/project_task_views.xml",
         "views/stock_picking_views.xml",
     ],
-    "installable": True,
+    "installable": False,
     "application": False,
     "auto_install": False,
 }
