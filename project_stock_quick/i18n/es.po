@@ -1,0 +1,171 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_stock_quick
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 16:25+0000\n"
+"PO-Revision-Date: 2026-09-29 16:25+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: project_stock_quick
+#: model_terms:ir.ui.view,arch_db:project_stock_quick.edit_project_inherit_project_stock_quick
+msgid "Any stage"
+msgstr ""
+
+#. module: project_stock_quick
+#: model:ir.model.fields,field_description:project_stock_quick.field_project_project__picking_type_id
+msgid "Default Operation Type"
+msgstr ""
+
+#. module: project_stock_quick
+#: model:ir.model.fields,field_description:project_stock_quick.field_project_task__display_create_picking_button
+msgid "Display Create Picking Button"
+msgstr ""
+
+#. module: project_stock_quick
+#: model:ir.model.fields,field_description:project_stock_quick.field_project_project__display_name
+#: model:ir.model.fields,field_description:project_stock_quick.field_project_task__display_name
+#: model:ir.model.fields,field_description:project_stock_quick.field_stock_picking__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: project_stock_quick
+#: model:ir.model.fields,help:project_stock_quick.field_project_project__allow_stock_picking
+#: model:ir.model.fields,help:project_stock_quick.field_project_task__allow_stock_picking
+msgid ""
+"Enables, on the tasks of this project, the button to create stock pickings "
+"and the counter of the ones already created."
+msgstr ""
+
+#. module: project_stock_quick
+#: model_terms:ir.ui.view,arch_db:project_stock_quick.edit_project_inherit_project_stock_quick
+msgid "Enables, on the tasks, the button to create stock pickings"
+msgstr ""
+
+#. module: project_stock_quick
+#: model:ir.model.fields,field_description:project_stock_quick.field_project_project__id
+#: model:ir.model.fields,field_description:project_stock_quick.field_project_task__id
+#: model:ir.model.fields,field_description:project_stock_quick.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: project_stock_quick
+#: model:ir.model.fields,help:project_stock_quick.field_project_project__picking_type_id
+msgid ""
+"If set, the pickings created from the tasks of this project start with this "
+"operation type. If empty, the user chooses it every time."
+msgstr ""
+
+#. module: project_stock_quick
+#: model_terms:ir.ui.view,arch_db:project_stock_quick.edit_project_inherit_project_stock_quick
+msgid "Inventory"
+msgstr ""
+
+#. module: project_stock_quick
+#. odoo-python
+#: code:addons/project_stock_quick/models/project_task.py:0
+#: model_terms:ir.ui.view,arch_db:project_stock_quick.view_task_form2_inherit_project_stock_quick
+msgid "New Transfer"
+msgstr ""
+
+#. module: project_stock_quick
+#. odoo-python
+#: code:addons/project_stock_quick/models/project_project.py:0
+msgid ""
+"Operation type '%(picking_type)s' belongs to company '%(picking_company)s' "
+"and project '%(project)s' belongs to '%(project_company)s'."
+msgstr ""
+
+#. module: project_stock_quick
+#: model:ir.model.fields,field_description:project_stock_quick.field_project_task__picking_count
+msgid "Picking Count"
+msgstr ""
+
+#. module: project_stock_quick
+#: model:ir.model,name:project_stock_quick.model_project_project
+msgid "Project"
+msgstr ""
+
+#. module: project_stock_quick
+#. odoo-python
+#: code:addons/project_stock_quick/models/project_task.py:0
+msgid "Project '%s' does not have transfer management enabled."
+msgstr ""
+
+#. module: project_stock_quick
+#. odoo-python
+#: code:addons/project_stock_quick/models/project_task.py:0
+msgid ""
+"Stage '%(stage)s' does not allow creating pickings on project '%(project)s'."
+msgstr ""
+
+#. module: project_stock_quick
+#: model:ir.model.fields,field_description:project_stock_quick.field_project_project__picking_stage_ids
+msgid "Stages That Allow Transfers"
+msgstr ""
+
+#. module: project_stock_quick
+#: model:ir.model,name:project_stock_quick.model_project_task
+#: model:ir.model.fields,field_description:project_stock_quick.field_stock_picking__task_id
+msgid "Task"
+msgstr ""
+
+#. module: project_stock_quick
+#: model:ir.model.fields,help:project_stock_quick.field_project_project__picking_stage_ids
+msgid ""
+"Task stages on which pickings can be created. If empty, they can be created "
+"on any stage."
+msgstr ""
+
+#. module: project_stock_quick
+#: model:ir.model.fields,help:project_stock_quick.field_stock_picking__task_id
+msgid "Task this picking was created from."
+msgstr ""
+
+#. module: project_stock_quick
+#: model:ir.model,name:project_stock_quick.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: project_stock_quick
+#: model:ir.model.fields,field_description:project_stock_quick.field_project_project__allow_stock_picking
+#: model:ir.model.fields,field_description:project_stock_quick.field_project_task__allow_stock_picking
+msgid "Transfer Management"
+msgstr ""
+
+#. module: project_stock_quick
+#. odoo-python
+#: code:addons/project_stock_quick/models/project_task.py:0
+#: model:ir.model.fields,field_description:project_stock_quick.field_project_task__picking_ids
+#: model_terms:ir.ui.view,arch_db:project_stock_quick.view_task_form2_inherit_project_stock_quick
+msgid "Transfers"
+msgstr ""
+
+#. module: project_stock_quick
+#: model:ir.model.fields,help:project_stock_quick.field_project_task__display_name
+msgid ""
+"Use these keywords in the title to set new tasks:\n"
+"\n"
+"            #tags Set tags on the task\n"
+"            @user Assign the task to a user\n"
+"            ! Set the task a medium priority\n"
+"            !! Set the task a high priority\n"
+"            !!! Set the task a urgent priority\n"
+"\n"
+"            Make sure to use the right format and order e.g. Improve the configuration screen #feature #v16 @Mitchell !"
+msgstr ""
+
+#. module: project_stock_quick
+#. odoo-python
+#: code:addons/project_stock_quick/models/project_task.py:0
+msgid "task_id"
+msgstr ""
