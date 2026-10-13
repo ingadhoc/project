@@ -18,7 +18,7 @@
             </xpath>
             <xpath expr="//span[@id='end_button_box']" position="before">
                 <button name="action_view_stock_pickings" type="object"
-                        class="oe_stat_button" icon="fa-truck"
+                        class="oe_stat_button" icon="local_shipping"
                         groups="stock.group_stock_user"
                         invisible="not allow_stock_picking or picking_count == 0 or has_template_ancestor or has_project_template">
                     <field name="picking_count" widget="statinfo" string="Transfers"/>
