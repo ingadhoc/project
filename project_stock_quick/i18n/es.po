@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 19.0+e\n"
+"Project-Id-Version: Odoo Server 20.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-13 18:39+0000\n"
 "PO-Revision-Date: 2026-10-13 18:39+0000\n"
@@ -211,7 +211,7 @@ msgstr "Cantidad de traslados"
 #. module: project_stock_quick
 #: model:ir.model,name:project_stock_quick.model_project_project
 msgid "Project"
-msgstr "Proyectos"
+msgstr "Proyecto"
 
 #. module: project_stock_quick
 #. odoo-python
@@ -257,7 +257,7 @@ msgstr "Tarea desde la que se creó este traslado."
 #. module: project_stock_quick
 #: model:ir.model,name:project_stock_quick.model_stock_picking
 msgid "Transfer"
-msgstr "Transferir"
+msgstr "Traslado"
 
 #. module: project_stock_quick
 #: model:ir.model.fields,field_description:project_stock_quick.field_project_project__allow_stock_picking
