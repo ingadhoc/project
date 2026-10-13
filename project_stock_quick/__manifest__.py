@@ -1,6 +1,6 @@
 {
     "name": "Project Stock Quick",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "category": "Services/Project",
     "author": "ADHOC SA",
     "website": "www.adhoc.com.ar",
@@ -15,7 +15,7 @@
         "views/project_task_views.xml",
         "views/stock_picking_views.xml",
     ],
-    "installable": False,
+    "installable": True,
     "application": False,
     "auto_install": False,
 }
