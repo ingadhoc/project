@@ -19,19 +19,19 @@ Create stock pickings from a project task and keep them linked to that task.
 The native ``project_stock`` module already links pickings to the **project**,
 but not to the **task**. This module adds that missing link:
 
-#. New boolean **Transfer management** on the project (Settings tab, Inventory
+#. New boolean **Transfer Management** on the project (Settings tab, Inventory
    group), only visible to inventory users.
 #. When enabled, two optional settings show up:
 
-   - **Default operation type**: pickings created from the tasks start with
+   - **Default Operation Type**: pickings created from the tasks start with
      that operation type. If empty, the user picks it.
-   - **Stages that allow transfers**: if set, the create button only shows up
+   - **Stages That Allow Transfers**: if set, the create button only shows up
      when the task is in one of those stages. If empty, any stage allows it.
-#. New **New transfer** header button on the task, which opens a picking form
+#. New **New Transfer** header button on the task, which opens a picking form
    with the task's partner, project, company and the task name as source
    document already set.
 #. New **Transfers** stat button on the task, with the count of pickings
-   originated on it.
+   originated on it. It only shows up when the task has at least one picking.
 #. New **Task** field on the picking form, next to the project that
    ``project_stock`` provides. Setting it by hand aligns project and partner.
 
@@ -60,18 +60,19 @@ Configuration
 To configure this module, you need to:
 
 #. Go to the project, Settings tab, Inventory group, and enable
-   **Transfer management**.
-#. Optionally set **Default operation type** and **Stages that allow
-   transfers**.
+   **Transfer Management**.
+#. Optionally set **Default Operation Type** and **Stages That Allow
+   Transfers**.
 
 Usage
 =====
 
 To use this module, you need to:
 
-#. Open a task of that project and press **New transfer**.
+#. Open a task of that project and press **New Transfer**.
 #. Complete the products and save: the picking stays linked to the task.
-#. Back on the task, the **Transfers** stat button shows the linked pickings.
+#. Back on the task, the **Transfers** stat button shows the linked pickings
+   (it only shows up once there is at least one).
 #. To link an existing picking, open it and set the **Task** field.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
