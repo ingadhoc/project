@@ -15,15 +15,6 @@
                 <attribute name="class">o_kanban_dashboard o_project_kanban o_emphasize_colors</attribute>
                 <attribute name="action"></attribute>
             </kanban>
-            <xpath expr="/kanban//footer//a[@name='action_view_tasks']" position="before">
-                <div>
-                    <span class="o_label">
-                        <a name="project.project_update_all_action" type="action">
-                            <span title="Project Updates" class="fa fa-info"/>
-                        </a>
-                    </span>
-                </div>
-            </xpath>
         </field>
     </record>
 

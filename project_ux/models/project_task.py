@@ -70,7 +70,6 @@ class Task(models.Model):
         "no email will be send. After the stage changes, this value returns to False so that "
         "new stage changes will send emails.",
     )
-    is_closed = fields.Boolean(related="stage_id.fold", string="Folded in Kanban", index=True)
 
     @api.depends("name", "project_id.show_task_id")
     def _compute_display_name(self):
