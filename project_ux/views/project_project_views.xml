@@ -27,6 +27,20 @@
         </field>
     </record>
 
+    <!-- The card action is emptied above, so the task counter of the card body
+         (a plain div in 20.0, opened by the card action) stops leading anywhere.
+         Wrap it in a link: it gets its own action and the card click skips it. -->
+    <record id="view_project_card" model="ir.ui.view">
+        <field name="name">project.project.card.tasks.counter.link</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_card"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='action_view_tasks']" position="replace">
+                <a name="action_view_tasks" type="object" class="d-block min-w-0">$0</a>
+            </xpath>
+        </field>
+    </record>
+
     <record id="edit_project" model="ir.ui.view">
         <field name="name">project.project.form</field>
         <field name="model">project.project</field>
@@ -62,7 +76,7 @@
 
     <!-- After creating a project from the "New" modal, open the project form
          (so the user can finish configuring it) instead of redirecting to the
-         task pipeline / Kanban stages configuration. get_formview_action is the
+         task pipeline / Kanban stages configuration. get_record_default_action is the
          standard base method that opens a record's own form view. -->
     <record id="project_project_view_form_simplified_footer" model="ir.ui.view">
         <field name="name">project.project.view.form.simplified.open.form</field>
@@ -70,7 +84,7 @@
         <field name="inherit_id" ref="project.project_project_view_form_simplified_footer"/>
         <field name="arch" type="xml">
             <xpath expr="//footer/button[@name='action_view_tasks']" position="attributes">
-                <attribute name="name">get_formview_action</attribute>
+                <attribute name="name">get_record_default_action</attribute>
             </xpath>
         </field>
     </record>
