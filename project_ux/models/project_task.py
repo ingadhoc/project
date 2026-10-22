@@ -70,7 +70,6 @@ class Task(models.Model):
         "no email will be send. After the stage changes, this value returns to False so that "
         "new stage changes will send emails.",
     )
-    is_closed = fields.Boolean(related="stage_id.fold", string="Folded in Kanban", index=True)
 
     @api.depends("name", "project_id.show_task_id")
     def _compute_display_name(self):
@@ -109,10 +108,10 @@ class Task(models.Model):
 
         return domain
 
-    def _track_template(self, changes):
+    def _track_template_parameters(self, tracked_fields):
         task = self[0]
-        res = super()._track_template(changes)
-        if "stage_id" in changes and task.stage_id.mail_template_id:
+        res = super()._track_template_parameters(tracked_fields)
+        if "stage_id" in tracked_fields and task.stage_id.mail_template_id:
             res["stage_id"] = (
                 task.stage_id.mail_template_id,
                 {
