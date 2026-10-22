@@ -5,7 +5,7 @@
        t-inherit="project.ProjectTaskControlPanel"
        t-inherit-mode="extension">
         <xpath expr="//DropdownItem[@onSelected=&quot;() => this.onClickShowSubtasks()&quot;]" position="attributes">
-            <attribute name="class">effectiveShowSubtasks ? 'selected' : ''</attribute>
+            <attribute name="class">this.effectiveShowSubtasks ? 'selected' : ''</attribute>
         </xpath>
     </t>
 
@@ -13,7 +13,7 @@
        t-inherit="project.MobileCombinedActionsDropdown"
        t-inherit-mode="extension">
         <xpath expr="//DropdownItem[@onSelected=&quot;() => this.onClickShowSubtasks()&quot;]" position="attributes">
-            <attribute name="class">effectiveShowSubtasks ? 'selected' : ''</attribute>
+            <attribute name="class">this.effectiveShowSubtasks ? 'selected' : ''</attribute>
         </xpath>
     </t>
 
