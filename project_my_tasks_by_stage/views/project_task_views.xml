@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="project.action_view_my_task" model="ir.actions.act_window">
-        <field name="context">{'search_default_open_tasks': 1, 'all_task': 0, 'default_user_ids': [(4, uid)], 'group_by': 'stage_id'}</field>
+    <record id="view_task_kanban_inherit_my_task" model="ir.ui.view">
+        <field name="name">project.task.kanban.inherit.my.task.by.stage</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_kanban_inherit_my_task"/>
+        <field name="arch" type="xml">
+            <kanban position="attributes">
+                <attribute name="default_group_by">stage_id</attribute>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="open_view_my_tasks_list_view" model="ir.ui.view">
+        <field name="name">open.view.my.tasks.list.view.by.stage</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.open_view_my_tasks_list_view"/>
+        <field name="arch" type="xml">
+            <list position="attributes">
+                <attribute name="default_group_by">stage_id</attribute>
+            </list>
+        </field>
     </record>
 </odoo>
