@@ -18,6 +18,6 @@ patch(ProjectTaskControlPanel.prototype, {
      * it, to avoid the confusing "off but showing sub-tasks" state.
      */
     get effectiveShowSubtasks() {
-        return this.state.showSubtasks || this.isSubtaskFilterActive;
+        return this.embeddedPanelState.showSubtasks || this.isSubtaskFilterActive;
     },
 });

@@ -5,11 +5,6 @@
 from odoo import api, fields, models
 from odoo.fields import Domain
 
-CLOSED_STATES = {
-    "1_done": "Done",
-    "1_canceled": "Canceled",
-}
-
 
 class Task(models.Model):
     _inherit = "project.task"
@@ -70,7 +65,6 @@ class Task(models.Model):
         "no email will be send. After the stage changes, this value returns to False so that "
         "new stage changes will send emails.",
     )
-    is_closed = fields.Boolean(related="stage_id.fold", string="Folded in Kanban", index=True)
 
     @api.depends("name", "project_id.show_task_id")
     def _compute_display_name(self):
@@ -109,10 +103,10 @@ class Task(models.Model):
 
         return domain
 
-    def _track_template(self, changes):
+    def _track_template_parameters(self, tracked_fields):
         task = self[0]
-        res = super()._track_template(changes)
-        if "stage_id" in changes and task.stage_id.mail_template_id:
+        res = super()._track_template_parameters(tracked_fields)
+        if "stage_id" in tracked_fields and task.stage_id.mail_template_id:
             res["stage_id"] = (
                 task.stage_id.mail_template_id,
                 {
@@ -127,22 +121,13 @@ class Task(models.Model):
             task.dont_send_stage_email = False
         return res
 
-    @api.depends("stage_id", "depend_on_ids.state", "project_id.allow_task_dependencies")
+    # Only the extra dependency is declared: the ORM merges the depends of every
+    # _compute_state in the MRO, so the core ones still apply.
+    @api.depends("project_id.allow_task_dependencies")
     def _compute_state(self):
+        """Let the stage force the task state, on top of the core computation."""
+        super()._compute_state()
         for task in self:
-            dependent_open_tasks = []
-            if task.allow_task_dependencies:
-                dependent_open_tasks = [
-                    dependent_task for dependent_task in task.depend_on_ids if dependent_task.state not in CLOSED_STATES
-                ]
-            # if one of the blocking task is in a blocking state
-            if dependent_open_tasks:
-                # here we check that the blocked task is not already in a closed state (if the task is already done we don't put it in waiting state)
-                if task.state not in CLOSED_STATES:
-                    task.state = "04_waiting_normal"
-            # if the task as no blocking dependencies and is in waiting_normal, the task goes back to in progress
-            elif task.state not in CLOSED_STATES:
-                task.state = "01_in_progress"
             if task.stage_id.task_state:
                 task.state = task.stage_id.task_state
                 task._inverse_state()
