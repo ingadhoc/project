@@ -116,3 +116,31 @@ class TestTaskModel(TransactionCase):
         # depends on project_id.show_task_id.
         self.test_project.show_task_id = True
         self._check_quick_create_keeps_title("Another Title")
+
+    def test_recomputing_the_state_keeps_the_approval_states(self):
+        """Odoo 20 only sends Waiting back to In Progress. Recomputing must not
+        reset Approved or Changes Requested, as the copied 19.0 body did.
+        """
+        for state in ("02_changes_requested", "03_approved"):
+            with self.subTest(state=state):
+                self.test_task.state = state
+                self.test_task._compute_state()
+                self.assertEqual(self.test_task.state, state)
+
+    def test_enabling_task_dependencies_keeps_the_approval_states(self):
+        """The project setting is a dependency of the compute, so toggling it
+        recomputes every task of the project.
+        """
+        self.test_task.state = "03_approved"
+
+        self.test_project.allow_task_dependencies = True
+
+        self.assertEqual(self.test_task.state, "03_approved")
+
+    def test_changing_to_a_stage_with_task_state_forces_the_task_state(self):
+        closing_stage = self.Stage.create({"name": "Closing Stage", "state_change": True, "task_state": "1_done"})
+        self.test_task.state = "03_approved"
+
+        self.test_task.stage_id = closing_stage
+
+        self.assertEqual(self.test_task.state, "1_done")
